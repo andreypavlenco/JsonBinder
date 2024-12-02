@@ -4,52 +4,30 @@ import { BrandsCreateService } from 'src/brands-create-data/brands-create.servic
 import { CategoriesCreateService } from 'src/categories-create-data/categories-create.service';
 import { FileReadService } from 'src/fs/fs.read/fs.read.service';
 import { writeFile, mkdir } from 'fs/promises';
+
 @Injectable()
 export class WriteFileService {
   constructor(
-    private readonly brandsCreateSercie: BrandsCreateService,
-    private readonly categotiesCreateSercie: CategoriesCreateService,
-    private readonly readFile: FileReadService,
+    private readonly updateProductService: UpdateProductService,
+    private readonly readFileService: FileReadService,
   ) {}
 
-  async findAll() {
+  async saveUpdatedProducts(): Promise<void> {
     try {
-      const brands = await this.brandsCreateSercie.findAll();
-      const categories = await this.categotiesCreateSercie.findAll();
-      const products: Products[] = await this.readFile.readData(
+      const products: Products[] = await this.readFileService.readData(
         './data/products.json',
       );
-
-      const updatedBrandsProducts = products.map((product) => {
-        const brand = brands.find((brand) => brand.name === product.brand);
-        if (brand) {
-          product.brandId = brand.id;
-        }
-        return product;
-      });
-
-      const updatedCategoriesProducts = updatedBrandsProducts.map((product) => {
-        const productFirstWord = product.title.split(' ')[0];
-
-        const category = categories.find(
-          (category) => category.name.split(' ')[0] === productFirstWord,
+      const updatedProducts =
+        await this.updateProductService.updateProductsWithBrandsAndCategories(
+          products,
         );
 
-        if (category) {
-          product.categoryId = category.id;
-        }
-
-        return product;
-      });
-
-      const data = await writeFile(
+      await writeFile(
         './data/products.json',
-        JSON.stringify(updatedCategoriesProducts, null, 2),
+        JSON.stringify(updatedProducts, null, 2),
       );
-
-      return [brands, categories, updatedBrandsProducts];
     } catch (error) {
-      throw new BadRequestException(error);
+      throw new BadRequestException('Error saving updated products', error);
     }
   }
 }
