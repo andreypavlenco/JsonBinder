@@ -8,19 +8,29 @@ import { CreateProductsDto } from 'src/products/dto/create-products-dto';
 export class ProductRepository implements IProductsRepository {
   constructor(private readonly prisma: PrismaService) {}
 
-  async createMany(dto: CreateProductsDto[]): Promise<Products[]> {
+  async createMany(dto: CreateProductsDto[]): Promise<{ count: number }> {
     return await this.prisma.products.createMany({
       data: dto.map((product) => ({
-        brand_id: product.brandId,
-        category_id: product.categoryId,
         title: product.title,
+        description: product.description,
+        brand: product.brand,
         price: product.price,
         img: product.img,
-        description: product.description,
         rating: product.rating,
+        category_id: product.categoryId,
+        brant_id: product.brandId,
         createdAt: new Date(product.createdAt),
         updatedAt: new Date(product.updatedAt),
-        //brand: product.brand,
+        brandEntity: {
+          connect: {
+            id: product.brandId,
+          },
+        },
+        categories: {
+          connect: {
+            id: product.categoryId,
+          },
+        },
       })),
     });
   }

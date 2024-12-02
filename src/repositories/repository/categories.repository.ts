@@ -8,8 +8,8 @@ import { ICategoriesRepository } from '../interfaces/categories-repository.inter
 export class CategoriesRepository implements ICategoriesRepository {
   constructor(private readonly prisma: PrismaService) {}
 
-  async create(data: CreateProductDto): Promise<Categories> {
-    return this.prisma.categories.create({
+  async createMany(data: CreateProductDto): Promise<Categories> {
+    return await this.prisma.categories.create({
       data: {
         ...data,
         brand: { connect: { id: data.brandId } },
