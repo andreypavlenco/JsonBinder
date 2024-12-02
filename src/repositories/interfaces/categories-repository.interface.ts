@@ -1,6 +1,6 @@
 import { Categories } from '@prisma/client';
 
 export interface ICategoriesRepository {
-  create(): Promise<Categories>;
+  create(dto: Categories[]): Promise<{ count: number }>;
   findAll(): Promise<Categories[]>;
 }

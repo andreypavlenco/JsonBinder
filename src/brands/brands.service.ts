@@ -1,5 +1,4 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
-import { FileReadService } from 'src/fs/fs.read/fs.read.service';
 import { BrandsRepository } from 'src/repositories/repository/brands.repository';
 import { CreateBrandsDto } from './dto/create-brands-dto';
 
@@ -7,7 +6,6 @@ import { CreateBrandsDto } from './dto/create-brands-dto';
 export class BrandsCreateService {
   constructor(
     private readonly brandRepository: BrandsRepository,
-    private readonly readFile: FileReadService,
   ) {}
 
   async createMany(dto: CreateBrandsDto[]) {
