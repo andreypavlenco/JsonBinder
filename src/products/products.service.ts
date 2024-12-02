@@ -8,7 +8,7 @@ import { CreateProductsDto } from './dto/create-products-dto';
 export class ProductsCreateService {
   constructor(private readonly productsRepository: ProductRepository) {}
 
-  createMany(dto: CreateProductsDto[]): Promise<Products[]> {
+  createMany(dto: Products[]): Promise<Products[]> {
     try {
       return this.productsRepository.createMany(dto);
       // const products: Products[] = await this.readFile.readData(

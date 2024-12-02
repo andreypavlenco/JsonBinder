@@ -4,9 +4,7 @@ import { CreateBrandsDto } from './dto/create-brands-dto';
 
 @Injectable()
 export class BrandsCreateService {
-  constructor(
-    private readonly brandRepository: BrandsRepository,
-  ) {}
+  constructor(private readonly brandRepository: BrandsRepository) {}
 
   async createMany(dto: CreateBrandsDto[]) {
     try {
