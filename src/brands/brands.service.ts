@@ -7,7 +7,7 @@ import { extractUniqueBrands } from './utils/extract-brands';
 export class BrandsCreateService {
   constructor(
     private readonly brandRepository: BrandsRepository,
-    private readonly readFileService: FileReadService, // сервис для чтения данных из файлов
+    private readonly readFileService: FileReadService,
   ) {}
 
   async createFromFile(filePath: string) {

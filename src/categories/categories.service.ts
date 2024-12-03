@@ -1,50 +1,62 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
-import { Categories, Products } from '@prisma/client';
-import { PrismaService } from 'prisma/prisma.service';
+import { Products } from '@prisma/client';
 import { FileReadService } from 'src/fs/fs.read/fs.read.service';
+import { CategoriesRepository } from 'src/repositories/repository/categories.repository';
+import { CreateCategoriesDto } from './dto/create-categories-dto';
+import { extractUniqueCategories } from './utils/extract-categories';
 
 @Injectable()
-export class CategoriesCreateService {
+export class CategoriesService {
   constructor(
-    private readonly prisma: PrismaService,
-    private readonly readFile: FileReadService,
+    private readonly categoriesRepository: CategoriesRepository,
+    private readonly fileReadService: FileReadService,
   ) {}
 
-  async create() {
-    //  const categories: string[] = await this.parse();
-    // return await this.prisma.categories.createMany({
-    //   data: categories.map((category) => ({
-    //     name: category,
-    //     createdAt: new Date(),
-    //   })),
-    // });
+  async createCategoriesFromFile(filePath: string): Promise<void> {
+    try {
+      const products: Products[] =
+        await this.fileReadService.readData(filePath);
+      const uniqueBrands = extractUniqueCategories(products);
+      await this.createManyFromList(uniqueBrands);
+    } catch (error) {
+      throw new BadRequestException('Error while creating categories', error);
+    }
   }
 
-  // async parse() {
-  //   try {
-  //     const products: Products[] = await this.readFile.readData(
-  //       './data/products.json',
-  //     );
-  //     const namesCategiries: string[] = [];
+  private async createManyFromList(
+    categories: string[],
+  ): Promise<{ count: number }> {
+    try {
+      const createCategoriesDto: CreateCategoriesDto[] = categories.map(
+        (category) => ({
+          name: category,
+          createdAt: new Date(),
+        }),
+      );
 
-  //     products.forEach((product) => {
-  //       namesCategiries.push(product.title);
-  //     });
-  //     const categiries: string[] = namesCategiries.map(
-  //       (item) => item.match(/^\S+/)[0],
-  //     );
-  //     const uniqueСategiries = Array.from(new Set(categiries));
-  //     return uniqueСategiries;
-  //   } catch (error) {
-  //     console.error('Error inserting products:', error);
-  //   }
-  // }
+      return await this.saveCategories(createCategoriesDto);
+    } catch (error) {
+      console.error('Error while parsing categories:', error);
+      throw new BadRequestException('Failed to parse categories');
+    }
+  }
+
+  private async saveCategories(
+    categories: CreateCategoriesDto[],
+  ): Promise<{ count: number }> {
+    try {
+      return await this.categoriesRepository.createMany(categories);
+    } catch (error) {
+      console.error('Error while saving categories:', error);
+      throw new BadRequestException('Failed to save categories');
+    }
+  }
 
   async findAll() {
     try {
-      return await this.prisma.categories.findMany();
+      return await this.categoriesRepository.findAll();
     } catch (error) {
-      throw new BadRequestException(error);
+      throw new BadRequestException('Failed to fetch categories', error);
     }
   }
 }
