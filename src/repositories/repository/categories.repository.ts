@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 import { Categories, Products } from '@prisma/client';
-import { CreateProductDto } from './dto';
 import { PrismaService } from 'prisma/prisma.service';
 import { ICategoriesRepository } from '../interfaces/categories-repository.interface';
 
@@ -8,12 +7,12 @@ import { ICategoriesRepository } from '../interfaces/categories-repository.inter
 export class CategoriesRepository implements ICategoriesRepository {
   constructor(private readonly prisma: PrismaService) {}
 
-  async createMany(data: CreateProductDto): Promise<Categories> {
-    return await this.prisma.categories.create({
-      data: {
-        ...data,
-        brand: { connect: { id: data.brandId } },
-      },
+  async createMany(dto: Categories[]): Promise<{ count: number }> {
+    return await this.prisma.categories.createMany({
+      data: dto.map((category) => ({
+        name: category.name,
+        createdAt: new Date(category.createdAt),
+      })),
     });
   }
 
