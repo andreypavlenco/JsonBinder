@@ -5,8 +5,8 @@ import { Module } from '@nestjs/common';
 import { FileReadModule } from 'src/fs/fs.read/fs.read.module';
 
 @Module({
-  imports: [PrismaModule, FileReadModule],
-  controllers: [BrandsCreateController],
+
+  imports: [FileReadModule],
   providers: [BrandsCreateService],
   exports: [BrandsCreateService],
 })

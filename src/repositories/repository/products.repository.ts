@@ -2,12 +2,13 @@ import { Injectable } from '@nestjs/common';
 import { Products } from '@prisma/client';
 import { PrismaService } from 'prisma/prisma.service';
 import { IProductsRepository } from '../interfaces/products-repository.interface';
+import { CreateProductsDto } from 'src/products/dto/create-products-dto';
 
 @Injectable()
 export class ProductRepository implements IProductsRepository {
   constructor(private readonly prisma: PrismaService) {}
 
-  async createMany(dto: Products[]): Promise<{ count: number }> {
+  async createMany(dto: CreateProductsDto[]): Promise<{ count: number }> {
     return await this.prisma.products.createMany({
       data: dto.map((product) => ({
         title: product.title,
@@ -32,5 +33,9 @@ export class ProductRepository implements IProductsRepository {
         },
       })),
     });
+  }
+
+  async findAll(): Promise<Products[]> {
+    return this.prisma.products.findMany();
   }
 }
