@@ -1,6 +1,6 @@
 import { Brands } from '@prisma/client';
 
 export interface IBrandsRepository {
-  create(): Promise<Brands>;
+  createMany(dto: Brands[]): Promise<{ count: number }>;
   findAll(): Promise<Brands[]>;
 }

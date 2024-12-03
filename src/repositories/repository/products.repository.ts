@@ -1,19 +1,36 @@
 import { Injectable } from '@nestjs/common';
 import { Products } from '@prisma/client';
-import { CreateProductDto } from './dto';
 import { PrismaService } from 'prisma/prisma.service';
-import { IProductRepository } from '../interfaces/products-repository.interface';
+import { IProductsRepository } from '../interfaces/products-repository.interface';
 
 @Injectable()
-export class ProductRepository implements IProductRepository {
+export class ProductRepository implements IProductsRepository {
   constructor(private readonly prisma: PrismaService) {}
 
-  async create(data: CreateProductDto): Promise<Products> {
-    return this.prisma.products.create({
-      data: {
-        ...data,
-        brand: { connect: { id: data.brandId } },
-      },
+  async createMany(dto: Products[]): Promise<{ count: number }> {
+    return await this.prisma.products.createMany({
+      data: dto.map((product) => ({
+        title: product.title,
+        description: product.description,
+        brand: product.brand,
+        price: product.price,
+        img: product.img,
+        rating: product.rating,
+        category_id: product.categoryId,
+        brant_id: product.brandId,
+        createdAt: new Date(product.createdAt),
+        updatedAt: new Date(product.updatedAt),
+        brandEntity: {
+          connect: {
+            id: product.brandId,
+          },
+        },
+        categories: {
+          connect: {
+            id: product.categoryId,
+          },
+        },
+      })),
     });
   }
 }
