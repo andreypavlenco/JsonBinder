@@ -1,6 +1,7 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { BrandsRepository } from 'src/repositories/repository/brands.repository';
 import { CreateBrandsDto } from './dto/create-brands-dto';
+import { extractUniqueBrands } from './utils/extract-brands';
 
 @Injectable()
 export class BrandsCreateService {
@@ -12,11 +13,15 @@ export class BrandsCreateService {
   async createFromFile(filePath: string) {
     try {
       const products = await this.readFileService.readData(filePath);
-      const uniqueBrands = this.extractUniqueBrands(products);
+
+      const uniqueBrands = extractUniqueBrands(products);
 
       return await this.createManyFromList(uniqueBrands);
     } catch (error) {
-      throw new BadRequestException('Error reading products or creating brands', error);
+      throw new BadRequestException(
+        'Error reading products or creating brands',
+        error,
+      );
     }
   }
 
@@ -31,19 +36,7 @@ export class BrandsCreateService {
       throw new BadRequestException('Error creating many brands', error);
     }
   }
-
-  private extractUniqueBrands(products: Products[]): string[] {
-    const brandSet = new Set<string>();
-
-    products.forEach((product) => {
-      if (product.brand) {
-        brandSet.add(product.brand);
-      }
-    });
-
-    return Array.from(brandSet).filter(brand => brand !== '');
-  }
-
+  
   async findAll() {
     try {
       return await this.brandRepository.findAll();
