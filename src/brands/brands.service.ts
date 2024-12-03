@@ -30,13 +30,13 @@ export class BrandsCreateService {
       const createBrandsDto: CreateBrandsDto[] = brands.map((brand) => ({
         name: brand,
       }));
-      
+
       return await this.brandRepository.createMany(createBrandsDto);
     } catch (error) {
       throw new BadRequestException('Error creating many brands', error);
     }
   }
-  
+
   async findAll() {
     try {
       return await this.brandRepository.findAll();
@@ -45,4 +45,3 @@ export class BrandsCreateService {
     }
   }
 }
-
