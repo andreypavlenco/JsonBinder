@@ -4,41 +4,45 @@ import { CreateBrandsDto } from './dto/create-brands-dto';
 
 @Injectable()
 export class BrandsCreateService {
-  constructor(private readonly brandRepository: BrandsRepository) {}
+  constructor(
+    private readonly brandRepository: BrandsRepository,
+    private readonly readFileService: FileReadService, // сервис для чтения данных из файлов
+  ) {}
 
-  async createMany(dto: CreateBrandsDto[]) {
+  async createFromFile(filePath: string) {
     try {
-      return await this.brandRepository.createMany(dto);
-      // const brands = await this.parse();
-      // return this.prisma.brands.createMany({
-      //   data: brands.map((brand) => ({
-      //     name: brand,
-      //   })),
-      // });
+      const products = await this.readFileService.readData(filePath);
+      const uniqueBrands = this.extractUniqueBrands(products);
+
+      return await this.createManyFromList(uniqueBrands);
     } catch (error) {
-      throw new BadRequestException(error);
+      throw new BadRequestException('Error reading products or creating brands', error);
     }
   }
 
-  // async parse() {
-  //   try {
-  //     const products: Products[] = await this.readFile.readData(
-  //       './data/products.json',
-  //     );
-  //     const brand: string[] = [];
+  async createManyFromList(brands: string[]) {
+    try {
+      const createBrandsDto: CreateBrandsDto[] = brands.map((brand) => ({
+        name: brand,
+      }));
+      
+      return await this.brandRepository.createMany(createBrandsDto);
+    } catch (error) {
+      throw new BadRequestException('Error creating many brands', error);
+    }
+  }
 
-  //     products.forEach((product) => {
-  //       brand.push(product.brand);
-  //     });
-  //     const uniqueBrands = Array.from(new Set(brand)).filter(
-  //       (item) => item !== '',
-  //     );
+  private extractUniqueBrands(products: Products[]): string[] {
+    const brandSet = new Set<string>();
 
-  //     return uniqueBrands;
-  //   } catch (error) {
-  //     console.error('Error inserting products:', error);
-  //   }
-  // }
+    products.forEach((product) => {
+      if (product.brand) {
+        brandSet.add(product.brand);
+      }
+    });
+
+    return Array.from(brandSet).filter(brand => brand !== '');
+  }
 
   async findAll() {
     try {
@@ -48,3 +52,4 @@ export class BrandsCreateService {
     }
   }
 }
+
