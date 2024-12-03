@@ -1,12 +1,11 @@
 import { Module } from '@nestjs/common';
 import { CategoriesService } from './categories.service';
-import { CategoriesCreateController } from './categories.controller';
-import { FileReadModule } from 'src/fs/fs.read/fs.read.module';
+import { ReadFileModule } from 'src/fs-module/fs.read/fs.read.module';
 import { RepositoryModule } from 'src/repositories/repository/repository.module';
 
 @Module({
-  imports: [FileReadModule, RepositoryModule],
+  imports: [ReadFileModule, RepositoryModule],
   providers: [CategoriesService],
-  exports: [],
+  exports: [CategoriesService],
 })
 export class CategoriesModule {}
