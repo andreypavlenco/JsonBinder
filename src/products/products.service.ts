@@ -1,20 +1,21 @@
 import { Injectable } from '@nestjs/common';
-import { PrismaService } from 'prisma/prisma.service';
-import { Products } from '@prisma/client';
 import { ProductRepository } from 'src/repositories/repository/products.repository';
 import { CreateProductsDto } from './dto/create-products-dto';
+import { ReadFileService } from 'src/fs-module/fs.read/fs.read.service';
 
 @Injectable()
-export class ProductsCreateService {
-  constructor(private readonly productsRepository: ProductRepository) {}
+export class ProductsService {
+  constructor(
+    private readonly productsRepository: ProductRepository,
+    private readonly readFileService: ReadFileService,
+  ) {}
 
-  createMany(dto: Products[]): Promise<Products[]> {
+  async createMany(): Promise<{ count: number }> {
     try {
-      return this.productsRepository.createMany(dto);
-      // const products: Products[] = await this.readFile.readData(
-      //   './data/products.json',
-      // );
-      //   console.log(`${result.count} products inserted.`);
+      const products: CreateProductsDto[] = await this.readFileService.readFile(
+        './data/products.json',
+      );
+      return this.productsRepository.createMany(products);
     } catch (error) {
       console.error('Error inserting products:', error);
     }

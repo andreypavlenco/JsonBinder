@@ -2,17 +2,18 @@ import { BadRequestException, Injectable } from '@nestjs/common';
 import { BrandsRepository } from 'src/repositories/repository/brands.repository';
 import { CreateBrandsDto } from './dto/create-brands-dto';
 import { extractUniqueBrands } from './utils/extract-brands';
+import { ReadFileService } from 'src/fs-module/fs.read/fs.read.service';
 
 @Injectable()
-export class BrandsCreateService {
+export class BrandsService {
   constructor(
     private readonly brandRepository: BrandsRepository,
-    private readonly readFileService: FileReadService,
+    private readonly readFileService: ReadFileService,
   ) {}
 
   async createFromFile(filePath: string) {
     try {
-      const products = await this.readFileService.readData(filePath);
+      const products = await this.readFileService.readFile('./data/data.json');
 
       const uniqueBrands = extractUniqueBrands(products);
       return await this.createManyFromList(uniqueBrands);

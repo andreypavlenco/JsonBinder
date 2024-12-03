@@ -1,13 +1,11 @@
 import { PrismaModule } from 'prisma/prisma.module';
-import { BrandsCreateController } from './brands.controller';
-import { BrandsCreateService } from './brands.service';
 import { Module } from '@nestjs/common';
-import { FileReadModule } from 'src/fs/fs.read/fs.read.module';
+import { ReadFileModule } from 'src/fs-module/fs.read/fs.read.module';
+import { BrandsService } from './brands.service';
 
 @Module({
-
-  imports: [FileReadModule],
-  providers: [BrandsCreateService],
-  exports: [BrandsCreateService],
+  imports: [ReadFileModule],
+  providers: [BrandsService],
+  exports: [BrandsService],
 })
-export class BrandsCreateModule {}
+export class BrandsModule {}
