@@ -11,7 +11,7 @@ export class BrandsService {
     private readonly readFileService: ReadFileService,
   ) {}
 
-  async createFromFile(filePath: string) {
+  async createFromFile() {
     try {
       const products = await this.readFileService.readFile('./data/data.json');
 
@@ -30,13 +30,13 @@ export class BrandsService {
       const createBrandsDto: CreateBrandsDto[] = brands.map((brand) => ({
         name: brand,
       }));
-      return await this.saveCategories(createBrandsDto);
+      return await this.saveBrands(createBrandsDto);
     } catch (error) {
       throw new BadRequestException('Error creating many brands', error);
     }
   }
 
-  private async saveCategories(
+  private async saveBrands(
     brands: CreateBrandsDto[],
   ): Promise<{ count: number }> {
     try {

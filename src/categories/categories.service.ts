@@ -12,7 +12,7 @@ export class CategoriesService {
     private readonly fileReadService: ReadFileService,
   ) {}
 
-  async createCategoriesFromFile(filePath: string): Promise<void> {
+  async createCategoriesFromFile(): Promise<void> {
     try {
       const products: Products[] =
         await this.fileReadService.readFile('./data/data.json');
