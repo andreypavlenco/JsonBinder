@@ -12,7 +12,7 @@ export class CategoriesRepository implements ICategoriesRepository {
     return await this.prisma.categories.createMany({
       data: dto.map((category) => ({
         name: category.name,
-        createdAt: new Date(category.createdAt),
+        createdAt: new Date(),
       })),
     });
   }

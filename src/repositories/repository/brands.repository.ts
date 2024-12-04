@@ -12,7 +12,7 @@ export class BrandsRepository implements IBrandsRepository {
     return await this.prisma.brands.createMany({
       data: dto.map((brand) => ({
         name: brand.name,
-        createdAt: new Date(brand.createdAt),
+        createdAt: new Date(),
       })),
     });
   }

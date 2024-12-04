@@ -12,9 +12,7 @@ export class ProductsService {
 
   async createMany(): Promise<{ count: number }> {
     try {
-      const products: CreateProductsDto[] = await this.readFileService.readFile(
-        './data/products.json',
-      );
+      const products: CreateProductsDto[] = await this.readFileService.readFile();
       return this.productsRepository.createMany(products);
     } catch (error) {
       console.error('Error inserting products:', error);
