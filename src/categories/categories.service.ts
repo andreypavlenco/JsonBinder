@@ -3,6 +3,7 @@ import { CategoriesRepository } from 'src/repositories/repository/categories.rep
 import { CreateCategoriesDto } from './dto/create-categories-dto';
 import { extractUniqueCategories } from './utils/extract-categories';
 import { ReadFileService } from 'src/fs-module/fs.read/fs.read.service';
+import { Categories } from '@prisma/client';
 
 @Injectable()
 export class CategoriesService {
@@ -28,7 +29,7 @@ export class CategoriesService {
     categoryNames: string[],
   ): Promise<{ count: number }> {
     const categoriesDto = this.mapToCategoryDtos(categoryNames);
-    const existingCategories = await this.getAllCategories();
+    const existingCategories = await this.findAllCategories();
 
     const newCategories = this.filterUniqueCategories(
       existingCategories,
@@ -71,7 +72,7 @@ export class CategoriesService {
     }
   }
 
-  private async getAllCategories(): Promise<CreateCategoriesDto[]> {
+  async findAllCategories(): Promise<Categories[]> {
     try {
       return await this.categoriesRepository.findAll();
     } catch (error) {

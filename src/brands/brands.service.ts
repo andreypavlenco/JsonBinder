@@ -3,6 +3,7 @@ import { BrandsRepository } from 'src/repositories/repository/brands.repository'
 import { CreateBrandsDto } from './dto/create-brands-dto';
 import { extractUniqueBrands } from './utils/extract-brands';
 import { ReadFileService } from 'src/fs-module/fs.read/fs.read.service';
+import { Brands } from '@prisma/client';
 
 @Injectable()
 export class BrandsService {
@@ -57,7 +58,7 @@ export class BrandsService {
     }
   }
 
-  async findAllBrands(): Promise<CreateBrandsDto[]> {
+  async findAllBrands(): Promise<Brands[]> {
     try {
       return await this.brandsRepository.findAll();
     } catch (error) {
