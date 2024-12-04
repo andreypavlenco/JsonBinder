@@ -4,6 +4,7 @@ import { CategoriesRepository } from 'src/repositories/repository/categories.rep
 import { CreateCategoriesDto } from './dto/create-categories-dto';
 import { extractUniqueCategories } from './utils/extract-categories';
 import { ReadFileService } from 'src/fs-module/fs.read/fs.read.service';
+import { CreateProductsDto } from 'src/products/dto/create-products-dto';
 
 @Injectable()
 export class CategoriesService {
@@ -12,10 +13,10 @@ export class CategoriesService {
     private readonly fileReadService: ReadFileService,
   ) {}
 
-  async createCategoriesFromFile(filePath: string): Promise<void> {
+  async createCategoriesFromFile(): Promise<void> {
     try {
-      const products: Products[] =
-        await this.fileReadService.readFile('./data/data.json');
+      const products: CreateProductsDto[] =
+        await this.fileReadService.readFile();
       const uniqueBrands = extractUniqueCategories(products);
       await this.createManyFromList(uniqueBrands);
     } catch (error) {

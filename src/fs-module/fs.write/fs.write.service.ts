@@ -14,14 +14,14 @@ export class WriteFileService {
   async saveUpdatedProducts(): Promise<void> {
     try {
       const products: CreateProductsDto[] =
-        await this.readFileService.readFile('./data/data.json');
+        await this.readFileService.readFile();
       const updatedProducts =
         await this.updateProductService.updateProductsWithBrandsAndCategories(
           products,
         );
 
       await writeFile(
-        './data/data.json',
+        'src/fs-module/fs.read/data.json',
         JSON.stringify(updatedProducts, null, 2),
       );
     } catch (error) {

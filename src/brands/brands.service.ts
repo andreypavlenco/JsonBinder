@@ -3,6 +3,7 @@ import { BrandsRepository } from 'src/repositories/repository/brands.repository'
 import { CreateBrandsDto } from './dto/create-brands-dto';
 import { extractUniqueBrands } from './utils/extract-brands';
 import { ReadFileService } from 'src/fs-module/fs.read/fs.read.service';
+import { CreateProductsDto } from 'src/products/dto/create-products-dto';
 
 @Injectable()
 export class BrandsService {
@@ -11,11 +12,11 @@ export class BrandsService {
     private readonly readFileService: ReadFileService,
   ) {}
 
-  async createFromFile(filePath: string) {
+  async createFromFile() {
     try {
-      const products = await this.readFileService.readFile('./data/data.json');
-
+      const products: CreateProductsDto[] = await this.readFileService.readFile();
       const uniqueBrands = extractUniqueBrands(products);
+
       return await this.createManyFromList(uniqueBrands);
     } catch (error) {
       throw new BadRequestException(
@@ -28,15 +29,15 @@ export class BrandsService {
   private async createManyFromList(brands: string[]) {
     try {
       const createBrandsDto: CreateBrandsDto[] = brands.map((brand) => ({
-        name: brand,
+        name: brand
       }));
-      return await this.saveCategories(createBrandsDto);
+      return await this.saveBrands(createBrandsDto);
     } catch (error) {
       throw new BadRequestException('Error creating many brands', error);
     }
   }
 
-  private async saveCategories(
+  private async saveBrands(
     brands: CreateBrandsDto[],
   ): Promise<{ count: number }> {
     try {

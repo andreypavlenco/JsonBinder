@@ -19,8 +19,8 @@ export class ProductRepository implements IProductsRepository {
         rating: product.rating,
         category_id: product.categoryId,
         brant_id: product.brandId,
-        createdAt: new Date(product.createdAt),
-        updatedAt: new Date(product.updatedAt),
+        createdAt: new Date(),
+        updatedAt: new Date(),
         brandEntity: {
           connect: {
             id: product.brandId,

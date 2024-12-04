@@ -1,16 +1,20 @@
 import { Injectable } from '@nestjs/common';
-import { readFile } from 'fs/promises';
+import { promises as fs } from 'fs';
+import { join } from 'path';
+import { CreateProductsDto } from 'src/products/dto/create-products-dto';
 
 @Injectable()
 export class ReadFileService {
-  async readFile(dto: string) {
+  async readFile() {
     try {
-      const data = await readFile(dto, 'utf8');
-      const parseData = JSON.parse(data);
-      return parseData;
+      const absolutePath = join(process.cwd(), 'src/fs-module/fs.read/data.json');
+      console.log('Reading file from:', absolutePath);
+      const content = await fs.readFile('src/fs-module/fs.read/data.json', 'utf8');
+      const products: CreateProductsDto[] = JSON.parse(content);
+      return products;
     } catch (err) {
-      console.error('Error:', err);
-      throw err;
+      throw new Error(`Error reading file: ${err.message}`);
     }
   }
 }
+
