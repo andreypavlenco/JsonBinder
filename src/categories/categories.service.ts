@@ -17,8 +17,8 @@ export class CategoriesService {
     try {
       const products: CreateProductsDto[] =
         await this.fileReadService.readFile();
-      const uniqueBrands = extractUniqueCategories(products);
-      await this.createManyFromList(uniqueBrands);
+      const uniqueCategory = extractUniqueCategories(products);
+      await this.createManyFromList(uniqueCategory);
     } catch (error) {
       throw new BadRequestException('Error while creating categories', error);
     }
@@ -26,19 +26,39 @@ export class CategoriesService {
 
   private async createManyFromList(
     categories: string[],
-  ): Promise<{ count: number }> {
+  ): Promise<{ count: number } | true> {
     try {
-      const createCategoriesDto: CreateCategoriesDto[] = categories.map(
+      const uniqueCategory: CreateCategoriesDto[] = categories.map(
         (category) => ({
           name: category,
           createdAt: new Date(),
         }),
       );
 
-      return await this.saveCategories(createCategoriesDto);
+      return await this.checkAndAddUniquecategories(uniqueCategory);
     } catch (error) {
       console.error('Error while parsing categories:', error);
       throw new BadRequestException('Failed to parse categories');
+    }
+  }
+
+  private async checkAndAddUniquecategories(categories: CreateCategoriesDto[]) {
+    try {
+      const existingCategories = await this.findAll();
+
+      const uniqueCategories = categories.filter((category) => {
+        return !existingCategories.some(
+          (existingCategories) => existingCategories.name === category.name,
+        );
+      });
+
+      if (uniqueCategories.length > 0) {
+        return await this.saveCategories(uniqueCategories);
+      } else {
+        return true;
+      }
+    } catch (error) {
+      throw new BadRequestException('Error creating many brands', error);
     }
   }
 
