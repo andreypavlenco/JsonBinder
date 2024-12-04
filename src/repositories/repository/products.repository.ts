@@ -17,20 +17,10 @@ export class ProductRepository implements IProductsRepository {
         price: product.price,
         img: product.img,
         rating: product.rating,
-        category_id: product.categoryId,
-        brant_id: product.brandId,
+        categoryId: product.categoryId,
+        brandId: product.brandId,
         createdAt: new Date(),
         updatedAt: new Date(),
-        brandEntity: {
-          connect: {
-            id: product.brandId,
-          },
-        },
-        categories: {
-          connect: {
-            id: product.categoryId,
-          },
-        },
       })),
     });
   }

@@ -7,9 +7,10 @@ import { CreateProductsDto } from 'src/products/dto/create-products-dto';
 export class ReadFileService {
   async readFile() {
     try {
-      const absolutePath = join(process.cwd(), 'src/fs-module/fs.read/data.json');
-      console.log('Reading file from:', absolutePath);
-      const content = await fs.readFile('src/fs-module/fs.read/data.json', 'utf8');
+      const content = await fs.readFile(
+        'src/fs-module/fs.read/data.json',
+        'utf8',
+      );
       const products: CreateProductsDto[] = JSON.parse(content);
       return products;
     } catch (err) {
@@ -17,4 +18,3 @@ export class ReadFileService {
     }
   }
 }
-
