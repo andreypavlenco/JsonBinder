@@ -16,6 +16,6 @@ export class AppService {
     this.brandsService.createFromFile();
     this.categoriesService.createCategoriesFromFile();
     this.writeFileService.saveUpdatedProducts();
-    return this.productsService.createMany();
+    return this.productsService.processProductsFromFile();
   }
 }
