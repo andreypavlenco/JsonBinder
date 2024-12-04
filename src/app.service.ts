@@ -13,9 +13,9 @@ export class AppService {
     private readonly productsService: ProductsService,
   ) {}
   dataMapper() {
-    this.brandsService.createFromFile();
+    this.brandsService.createBrandsFromFile();
     this.categoriesService.createCategoriesFromFile();
     this.writeFileService.saveUpdatedProducts();
-    return this.productsService.processProductsFromFile();
+    return this.productsService.createProductsFromFile();
   }
 }
