@@ -3,77 +3,65 @@ import { BrandsRepository } from 'src/repositories/repository/brands.repository'
 import { CreateBrandsDto } from './dto/create-brands-dto';
 import { extractUniqueBrands } from './utils/extract-brands';
 import { ReadFileService } from 'src/fs-module/fs.read/fs.read.service';
-import { CreateProductsDto } from 'src/products/dto/create-products-dto';
 
 @Injectable()
 export class BrandsService {
   constructor(
-    private readonly brandRepository: BrandsRepository,
-    private readonly readFileService: ReadFileService,
+    private readonly brandsRepository: BrandsRepository,
+    private readonly fileProcessingService: ReadFileService,
   ) {}
 
-  async createFromFile() {
+  async createBrandsFromFile(): Promise<{ count: number } | true> {
     try {
-      const products: CreateProductsDto[] =
-        await this.readFileService.readFile();
-      const uniqueBrands = extractUniqueBrands(products);
-
-      return await this.createManyFromList(uniqueBrands);
+      const products = await this.fileProcessingService.readFile();
+      const brandNames = extractUniqueBrands(products);
+      return await this.createUniqueBrands(brandNames);
     } catch (error) {
-      throw new BadRequestException(
-        'Error reading products or creating brands',
-        error,
-      );
+      throw new BadRequestException('Error processing brands from file', error);
     }
   }
 
-  private async createManyFromList(brands: string[]) {
-    try {
-      const uniqueBrands: CreateBrandsDto[] = brands.map((brand) => ({
-        name: brand,
-      }));
-      return await this.checkAndAddUniqueBrands(uniqueBrands);
-    } catch (error) {
-      throw new BadRequestException('Error creating many brands', error);
+  private async createUniqueBrands(
+    brandNames: string[],
+  ): Promise<{ count: number } | true> {
+    const createBrandsDto = brandNames.map((name) => ({ name }));
+    const existingBrands = await this.findAllBrands();
+
+    const newBrands = this.filterUniqueBrands(existingBrands, createBrandsDto);
+
+    if (newBrands.length > 0) {
+      return await this.saveBrands(newBrands);
     }
+    return true;
   }
 
-  private async checkAndAddUniqueBrands(brands: CreateBrandsDto[]) {
-    try {
-      const existingBrands = await this.findAll();
-
-      const uniqueBrands = brands.filter((brand) => {
-        return !existingBrands.some(
-          (existingBrand) => existingBrand.name === brand.name,
-        );
-      });
-
-      if (uniqueBrands.length > 0) {
-        await this.saveBrands(uniqueBrands);
-      } else {
-        return true;
-      }
-    } catch (error) {
-      throw new BadRequestException('Error creating many brands', error);
-    }
+  private filterUniqueBrands(
+    existingBrands: CreateBrandsDto[],
+    newBrands: CreateBrandsDto[],
+  ): CreateBrandsDto[] {
+    return newBrands.filter(
+      (newBrand) =>
+        !existingBrands.some(
+          (existingBrand) => existingBrand.name === newBrand.name,
+        ),
+    );
   }
 
   private async saveBrands(
     brands: CreateBrandsDto[],
   ): Promise<{ count: number }> {
     try {
-      return await this.brandRepository.createMany(brands);
+      return await this.brandsRepository.createMany(brands);
     } catch (error) {
-      console.error('Error while saving categories:', error);
-      throw new BadRequestException('Failed to save categories');
+      throw new BadRequestException('Error saving brands', error);
     }
   }
 
-  async findAll() {
+  async findAllBrands(): Promise<CreateBrandsDto[]> {
     try {
-      return await this.brandRepository.findAll();
+      return await this.brandsRepository.findAll();
     } catch (error) {
-      throw new BadRequestException(error);
+      throw new BadRequestException('Error fetching brands', error);
     }
   }
 }
