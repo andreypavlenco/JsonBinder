@@ -29,10 +29,30 @@ export class BrandsService {
 
   private async createManyFromList(brands: string[]) {
     try {
-      const createBrandsDto: CreateBrandsDto[] = brands.map((brand) => ({
+      const uniqueBrands: CreateBrandsDto[] = brands.map((brand) => ({
         name: brand,
       }));
-      return await this.saveBrands(createBrandsDto);
+      return await this.checkAndAddUniqueBrands(uniqueBrands);
+    } catch (error) {
+      throw new BadRequestException('Error creating many brands', error);
+    }
+  }
+
+  private async checkAndAddUniqueBrands(brands: CreateBrandsDto[]) {
+    try {
+      const existingBrands = await this.findAll();
+
+      const uniqueBrands = brands.filter((brand) => {
+        return !existingBrands.some(
+          (existingBrand) => existingBrand.name === brand.name,
+        );
+      });
+
+      if (uniqueBrands.length > 0) {
+        await this.saveBrands(uniqueBrands);
+      } else {
+        return true;
+      }
     } catch (error) {
       throw new BadRequestException('Error creating many brands', error);
     }
