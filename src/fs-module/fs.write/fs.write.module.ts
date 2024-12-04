@@ -8,6 +8,6 @@ import { ReadFileModule } from '../fs.read/fs.read.module';
 @Module({
   imports: [CategoriesModule, BrandsModule, ReadFileModule],
   providers: [WriteFileService, UpdateProductService],
-  exports:[WriteFileService]
+  exports: [WriteFileService],
 })
 export class WriteFileModule {}

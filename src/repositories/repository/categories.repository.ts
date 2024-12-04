@@ -18,6 +18,6 @@ export class CategoriesRepository implements ICategoriesRepository {
   }
 
   async findAll(): Promise<Categories[]> {
-    return this.prisma.brands.findMany();
+    return this.prisma.categories.findMany();
   }
 }
