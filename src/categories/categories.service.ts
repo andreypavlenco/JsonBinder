@@ -1,21 +1,22 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { Products } from '@prisma/client';
-import { FileReadService } from 'src/fs/fs.read/fs.read.service';
 import { CategoriesRepository } from 'src/repositories/repository/categories.repository';
 import { CreateCategoriesDto } from './dto/create-categories-dto';
 import { extractUniqueCategories } from './utils/extract-categories';
+import { ReadFileService } from 'src/fs-module/fs.read/fs.read.service';
+import { CreateProductsDto } from 'src/products/dto/create-products-dto';
 
 @Injectable()
 export class CategoriesService {
   constructor(
     private readonly categoriesRepository: CategoriesRepository,
-    private readonly fileReadService: FileReadService,
+    private readonly fileReadService: ReadFileService,
   ) {}
 
-  async createCategoriesFromFile(filePath: string): Promise<void> {
+  async createCategoriesFromFile(): Promise<void> {
     try {
-      const products: Products[] =
-        await this.fileReadService.readData(filePath);
+      const products: CreateProductsDto[] =
+        await this.fileReadService.readFile();
       const uniqueBrands = extractUniqueCategories(products);
       await this.createManyFromList(uniqueBrands);
     } catch (error) {

@@ -1,6 +1,7 @@
 import { Products } from '@prisma/client';
+import { CreateProductsDto } from 'src/products/dto/create-products-dto';
 
-export function extractUniqueBrands(products: Products[]): string[] {
+export function extractUniqueBrands(products: CreateProductsDto[]): string[] {
   const brandSet = new Set<string>();
 
   products.forEach((product) => {
