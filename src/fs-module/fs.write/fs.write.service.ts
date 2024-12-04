@@ -1,29 +1,27 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
-import { Products } from '@prisma/client';
-import { BrandsCreateService } from 'src/brands-create-data/brands-create.service';
-import { CategoriesCreateService } from 'src/categories-create-data/categories-create.service';
-import { FileReadService } from 'src/fs/fs.read/fs.read.service';
 import { writeFile, mkdir } from 'fs/promises';
+import { UpdateProductService } from './update-products.service';
+import { ReadFileService } from '../fs.read/fs.read.service';
+import { CreateProductsDto } from 'src/products/dto/create-products-dto';
 
 @Injectable()
 export class WriteFileService {
   constructor(
     private readonly updateProductService: UpdateProductService,
-    private readonly readFileService: FileReadService,
+    private readonly readFileService: ReadFileService,
   ) {}
 
   async saveUpdatedProducts(): Promise<void> {
     try {
-      const products: Products[] = await this.readFileService.readData(
-        './data/products.json',
-      );
+      const products: CreateProductsDto[] =
+        await this.readFileService.readFile();
       const updatedProducts =
         await this.updateProductService.updateProductsWithBrandsAndCategories(
           products,
         );
 
       await writeFile(
-        './data/products.json',
+        'src/fs-module/fs.read/data.json',
         JSON.stringify(updatedProducts, null, 2),
       );
     } catch (error) {
