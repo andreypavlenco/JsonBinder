@@ -31,7 +31,6 @@ export class UpdateProductService {
       if (category) {
         updatedProduct.categoryId = category.id;
       }
-
       return updatedProduct;
     });
   }

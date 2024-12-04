@@ -14,7 +14,8 @@ export class BrandsService {
 
   async createFromFile() {
     try {
-      const products: CreateProductsDto[] = await this.readFileService.readFile();
+      const products: CreateProductsDto[] =
+        await this.readFileService.readFile();
       const uniqueBrands = extractUniqueBrands(products);
 
       return await this.createManyFromList(uniqueBrands);
@@ -29,7 +30,7 @@ export class BrandsService {
   private async createManyFromList(brands: string[]) {
     try {
       const createBrandsDto: CreateBrandsDto[] = brands.map((brand) => ({
-        name: brand
+        name: brand,
       }));
       return await this.saveBrands(createBrandsDto);
     } catch (error) {
