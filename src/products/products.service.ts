@@ -11,7 +11,7 @@ export class ProductsService {
     private readonly readFileService: ReadFileService,
   ) {}
 
-  async processProductsFromFile(): Promise<{ count: number } | true> {
+  async createProductsFromFile(): Promise<{ count: number } | true> {
     try {
       const dbProducts = await this.findAll();
       const inputProducts = await this.loadProducts();
