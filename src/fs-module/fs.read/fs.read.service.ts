@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 import { promises as fs } from 'fs';
-import { join } from 'path';
 import { CreateProductsDto } from 'src/products/dto/create-products-dto';
 
 @Injectable()

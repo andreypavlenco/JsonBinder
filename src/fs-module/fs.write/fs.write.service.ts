@@ -21,7 +21,7 @@ export class WriteFileService {
         );
 
       await writeFile(
-        'src/fs-module/fs.read/data.json',
+        'src/fs-module/fs.read/new.json',
         JSON.stringify(updatedProducts, null, 2),
       );
     } catch (error) {
