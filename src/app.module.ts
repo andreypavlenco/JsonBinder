@@ -9,7 +9,7 @@ import { BrandsModule } from './brands/brands.module';
 import { CategoriesModule } from './categories/categories.module';
 import { ReadFileModule } from './fs-module/fs.read/fs.read.module';
 import { WriteFileModule } from './fs-module/fs.write/fs.write.module';
-import { ProductsCreateModule } from './products/products.module';
+import { ProductsModule } from './products/products.module';
 
 @Module({
   imports: [
@@ -20,7 +20,7 @@ import { ProductsCreateModule } from './products/products.module';
     CategoriesModule,
     ReadFileModule,
     WriteFileModule,
-    ProductsCreateModule,
+    ProductsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
