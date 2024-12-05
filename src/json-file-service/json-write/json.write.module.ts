@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
-import { WriteFileService } from './fs.write.service';
-import { UpdateProductService } from './update-products.service';
+import { WriteFileService } from './json.write.service';
+import { UpdateProductService } from './utils/update-json.service';
 import { CategoriesModule } from 'src/categories/categories.module';
 import { BrandsModule } from 'src/brands/brands.module';
-import { ReadFileModule } from '../fs.read/fs.read.module';
+import { ReadFileModule } from '../json-read/json.read.module';
 
 @Module({
   imports: [CategoriesModule, BrandsModule, ReadFileModule],

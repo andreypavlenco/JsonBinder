@@ -1,7 +1,7 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { ProductRepository } from 'src/repositories/repository/products.repository';
 import { CreateProductsDto } from './dto/create-products-dto';
-import { ReadFileService } from 'src/fs-module/fs.read/fs.read.service';
+import { ReadFileService } from 'src/json-file-service/json-read/json.read.service';
 import { Products } from '@prisma/client';
 
 @Injectable()
@@ -11,7 +11,7 @@ export class ProductsService {
     private readonly readFileService: ReadFileService,
   ) {}
 
-  async createProductsFromFile(): Promise<{ count: number } | true> {
+  async createProductsFromFile(): Promise<Products[]> {
     try {
       const dbProducts = await this.findAll();
       const inputProducts = await this.loadProducts();
@@ -32,7 +32,7 @@ export class ProductsService {
   private async filterAndSaveUniqueProducts(
     dbProducts: Products[],
     inputProducts: CreateProductsDto[],
-  ): Promise<{ count: number } | true> {
+  ): Promise<Products[]> {
     const newProducts = inputProducts.filter((product) => {
       return !dbProducts.some((dbProduct) => dbProduct.title === product.title);
     });
@@ -40,14 +40,14 @@ export class ProductsService {
     if (newProducts.length > 0) {
       return await this.saveProductsBatch(newProducts);
     }
-    return true;
+    return;
   }
 
   private async saveProductsBatch(
     products: CreateProductsDto[],
-  ): Promise<{ count: number }> {
+  ): Promise<Products[]> {
     try {
-      return await this.productsRepository.createMany(products);
+      return await this.productsRepository.createManyFromJson(products);
     } catch (error) {
       console.error('Error saving products batch:', error);
       throw new BadRequestException('Error saving products', error);

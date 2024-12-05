@@ -2,19 +2,21 @@ import { BadRequestException, Injectable } from '@nestjs/common';
 import { BrandsRepository } from 'src/repositories/repository/brands.repository';
 import { CreateBrandsDto } from './dto/create-brands-dto';
 import { extractUniqueBrands } from './utils/extract-brands';
-import { ReadFileService } from 'src/fs-module/fs.read/fs.read.service';
+import { ReadFileService } from 'src/json-file-service/json-read/json.read.service';
 import { Brands } from '@prisma/client';
+import { WriteFileService } from 'src/json-file-service/json-write/json.write.service';
 
 @Injectable()
 export class BrandsService {
   constructor(
     private readonly brandsRepository: BrandsRepository,
-    private readonly fileProcessingService: ReadFileService,
+    private readonly readFileService: ReadFileService,
+    private readonly writingFileService: WriteFileService,
   ) {}
 
-  async createBrandsFromFile(): Promise<{ count: number } | true> {
+  async createBrandsFromFile(): Promise<Brands[] | true> {
     try {
-      const products = await this.fileProcessingService.readFile();
+      const products = await this.readFileService.readFile();
       const brandNames = extractUniqueBrands(products);
       return await this.createUniqueBrands(brandNames);
     } catch (error) {
@@ -22,18 +24,17 @@ export class BrandsService {
     }
   }
 
-  private async createUniqueBrands(
-    brandNames: string[],
-  ): Promise<{ count: number } | true> {
+  private async createUniqueBrands(brandNames: string[]): Promise<Brands[]> {
     const createBrandsDto = brandNames.map((name) => ({ name }));
     const existingBrands = await this.findAllBrands();
 
     const newBrands = this.filterUniqueBrands(existingBrands, createBrandsDto);
 
     if (newBrands.length > 0) {
+      // await this.writingFileService.saveBrandsToFile(newBrands)
       return await this.saveBrands(newBrands);
     }
-    return true;
+    return;
   }
 
   private filterUniqueBrands(
@@ -48,11 +49,9 @@ export class BrandsService {
     );
   }
 
-  private async saveBrands(
-    brands: CreateBrandsDto[],
-  ): Promise<{ count: number }> {
+  private async saveBrands(brands: CreateBrandsDto[]): Promise<Brands[]> {
     try {
-      return await this.brandsRepository.createMany(brands);
+      return await this.brandsRepository.createManyFromJson(brands);
     } catch (error) {
       throw new BadRequestException('Error saving brands', error);
     }

@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { ReadFileService } from './fs.read.service';
+import { ReadFileService } from './json.read.service';
 
 @Module({
   providers: [ReadFileService],

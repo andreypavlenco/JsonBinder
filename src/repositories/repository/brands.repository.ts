@@ -8,8 +8,8 @@ import { CreateBrandsDto } from 'src/brands/dto/create-brands-dto';
 export class BrandsRepository implements IBrandsRepository {
   constructor(private readonly prisma: PrismaService) {}
 
-  async createMany(dto: CreateBrandsDto[]): Promise<{ count: number }> {
-    return await this.prisma.brands.createMany({
+  async createManyFromJson(dto: CreateBrandsDto[]): Promise<Brands[]> {
+    return await this.prisma.brands.createManyAndReturn({
       data: dto.map((brand) => ({
         name: brand.name,
         createdAt: new Date(),

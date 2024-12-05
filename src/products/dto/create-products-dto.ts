@@ -1,5 +1,3 @@
-import { CreateBrandsDto } from 'src/brands/dto/create-brands-dto';
-
 export class CreateProductsDto {
   categoryId: string;
   title: string;

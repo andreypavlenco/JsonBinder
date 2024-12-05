@@ -1,9 +1,10 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
-import { writeFile, mkdir } from 'fs/promises';
-import { UpdateProductService } from './update-products.service';
-import { ReadFileService } from '../fs.read/fs.read.service';
+import { UpdateProductService } from './utils/update-json.service';
+import { ReadFileService } from '../json-read/json.read.service';
 import { CreateProductsDto } from 'src/products/dto/create-products-dto';
-import { Brands } from '@prisma/client';
+import { promises as fs } from 'fs-extra';
+import { saveToFile } from './utils/save-to-file';
+import { Brands, Categories } from '@prisma/client';
 
 @Injectable()
 export class WriteFileService {
@@ -21,8 +22,8 @@ export class WriteFileService {
           products,
         );
 
-      await writeFile(
-        'src/fs-module/fs.read/new.json',
+      await fs.writeJson(
+        'unloadding_files/products.json',
         JSON.stringify(updatedProducts, null, 2),
       );
     } catch (error) {
@@ -30,11 +31,19 @@ export class WriteFileService {
     }
   }
 
-  async saveToFile(filePath: string, data: unknown): Promise<void> {
+  async saveBrandsToFile(brands: Brands[]): Promise<void> {
     try {
-      await writeFile(filePath, JSON.stringify(data, null, 2));
+      return await saveToFile('unloadding_files/brands.json', brands);
     } catch (error) {
-      throw new BadRequestException(`Error saving data to ${filePath}`, error);
+      throw new BadRequestException('Error saving file brands', error);
+    }
+  }
+
+  async saveCategoriesToFile(categories: Categories[]): Promise<void> {
+    try {
+      return await saveToFile('unloadding_files/categories.json', categories);
+    } catch (error) {
+      throw new BadRequestException('Error saving file brands', error);
     }
   }
 }
