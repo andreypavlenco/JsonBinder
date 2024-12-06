@@ -1,9 +1,6 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
-import { ReadFileService } from '../json-read/json.read.service';
 import { saveToFile } from './utils/save-to-file';
 import { Brands, Categories, Products } from '@prisma/client';
-import { BrandsService } from 'src/brands/brands.service';
-import { CategoriesService } from 'src/categories/categories.service';
 
 @Injectable()
 export class WriteFileService {
