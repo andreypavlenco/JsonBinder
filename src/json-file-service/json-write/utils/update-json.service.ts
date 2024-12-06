@@ -16,22 +16,18 @@ export class UpdateProductService {
     const brands = await this.brandsService.findAllBrands();
     const categories = await this.categoriesService.findAllCategories();
 
-    return products.map((product) => {
-      const updatedProduct = { ...product };
-
-      const brand = brands.find((brand) => brand.name === product.brand);
-      if (brand) {
-        updatedProduct.brandId = brand.id;
-      }
-
+    const updatedProducts = products.map((product) => {
+      const brand = brands.find((b) => b.name === product.brand);
       const productFirstWord = product.title.split(' ')[0];
       const category = categories.find(
-        (category) => category.name.split(' ')[0] === productFirstWord,
+        (c) => c.name.split(' ')[0] === productFirstWord,
       );
-      if (category) {
-        updatedProduct.categoryId = category.id;
-      }
-      return updatedProduct;
+      return {
+        ...product,
+        brandId: brand.id,
+        categoryId: category.id,
+      };
     });
+    return updatedProducts;
   }
 }

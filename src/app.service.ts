@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { BrandsService } from './brands/brands.service';
 import { CategoriesService } from './categories/categories.service';
-import { WriteFileService } from './fs-module/fs.write/fs.write.service';
+import { WriteFileService } from './json-file-service/json-write/json.write.service';
 import { ProductsService } from './products/products.service';
 
 @Injectable()
