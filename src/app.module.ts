@@ -1,3 +1,4 @@
+import { BrandsImportFromJsonModule } from './brands/brands-import-from-json/brands.import.from.json.module';
 import { RepositoryModule } from './repositories/repository/repository.module';
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
@@ -11,6 +12,7 @@ import { WriteFileModule } from './json-file-service/json-write/json.write.modul
 
 @Module({
   imports: [
+    BrandsImportFromJsonModule,
     RepositoryModule,
     PrismaModule,
     BrandsModule,
