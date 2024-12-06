@@ -9,9 +9,11 @@ import { CategoriesModule } from './categories/categories.module';
 import { ReadFileModule } from './json-file-service/json-read/json.read.module';
 import { ProductsModule } from './products/products.module';
 import { WriteFileModule } from './json-file-service/json-write/json.write.module';
+import { CategoriesImportFromJsonModule } from './categories/categories-import-from-json/categories.import.from.json.module';
 
 @Module({
   imports: [
+    CategoriesImportFromJsonModule,
     BrandsImportFromJsonModule,
     RepositoryModule,
     PrismaModule,
