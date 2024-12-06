@@ -4,12 +4,14 @@ import { CreateCategoriesDto } from './dto/create-categories-dto';
 import { extractUniqueCategories } from './utils/extract-categories';
 import { ReadFileService } from 'src/json-file-service/json-read/json.read.service';
 import { Categories } from '@prisma/client';
+import { WriteFileService } from 'src/json-file-service/json-write/json.write.service';
 
 @Injectable()
 export class CategoriesService {
   constructor(
     private readonly categoriesRepository: CategoriesRepository,
     private readonly fileReadService: ReadFileService,
+    private readonly writingFileService: WriteFileService,
   ) {}
 
   async createCategoriesFromFile(): Promise<Categories[]> {
@@ -62,11 +64,22 @@ export class CategoriesService {
     );
   }
 
+  private async saveCategoriesToJsonFile(categories: Categories[]) {
+    try {
+      return await this.writingFileService.saveCategoriesToFile(categories);
+    } catch (error) {
+      throw new BadRequestException('Error saving brands', error);
+    }
+  }
+
   private async saveCategories(
     categories: CreateCategoriesDto[],
   ): Promise<Categories[]> {
     try {
-      return await this.categoriesRepository.createManyFromJson(categories);
+      const saveCategories =
+        await this.categoriesRepository.createManyFromJson(categories);
+      await this.saveCategoriesToJsonFile(saveCategories);
+      return saveCategories;
     } catch (error) {
       throw new BadRequestException('Failed to save categories', error);
     }

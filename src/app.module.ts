@@ -6,8 +6,8 @@ import { PrismaModule } from 'prisma/prisma.module';
 import { BrandsModule } from './brands/brands.module';
 import { CategoriesModule } from './categories/categories.module';
 import { ReadFileModule } from './json-file-service/json-read/json.read.module';
-import { WriteFileModule } from './json-file-service/json-write/json.write.module';
 import { ProductsModule } from './products/products.module';
+import { WriteFileModule } from './json-file-service/json-write/json.write.module';
 
 @Module({
   imports: [

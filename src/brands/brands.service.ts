@@ -1,4 +1,4 @@
-import { BadRequestException, Injectable } from '@nestjs/common';
+import { BadRequestException, Catch, Injectable } from '@nestjs/common';
 import { BrandsRepository } from 'src/repositories/repository/brands.repository';
 import { CreateBrandsDto } from './dto/create-brands-dto';
 import { extractUniqueBrands } from './utils/extract-brands';
@@ -14,7 +14,7 @@ export class BrandsService {
     private readonly writingFileService: WriteFileService,
   ) {}
 
-  async createBrandsFromFile(): Promise<Brands[] | true> {
+  async createBrandsFromFile(): Promise<Brands[]> {
     try {
       const products = await this.readFileService.readFile();
       const brandNames = extractUniqueBrands(products);
@@ -31,7 +31,6 @@ export class BrandsService {
     const newBrands = this.filterUniqueBrands(existingBrands, createBrandsDto);
 
     if (newBrands.length > 0) {
-      // await this.writingFileService.saveBrandsToFile(newBrands)
       return await this.saveBrands(newBrands);
     }
     return;
@@ -49,9 +48,19 @@ export class BrandsService {
     );
   }
 
+  private async saveBrandsToJsonFile(brands: Brands[]) {
+    try {
+      return await this.writingFileService.saveBrandsToFile(brands);
+    } catch (error) {
+      throw new BadRequestException('Error saving brands', error);
+    }
+  }
+
   private async saveBrands(brands: CreateBrandsDto[]): Promise<Brands[]> {
     try {
-      return await this.brandsRepository.createManyFromJson(brands);
+      const saveBrands = await this.brandsRepository.createManyFromJson(brands);
+      await this.saveBrandsToJsonFile(saveBrands);
+      return saveBrands;
     } catch (error) {
       throw new BadRequestException('Error saving brands', error);
     }
