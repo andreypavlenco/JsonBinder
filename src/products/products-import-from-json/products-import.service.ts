@@ -92,7 +92,7 @@ export class ProductsImportfromJsonService {
     try {
       const saveProducts: Products[] =
         await this.productsService.saveProductsFromJson(products);
-        await this.writeFileService.saveProductsToFile(saveProducts)
+      await this.writeFileService.saveProductsToFile(saveProducts);
       return saveProducts;
     } catch (error) {
       throw new BadRequestException('Error saving brands', error);
