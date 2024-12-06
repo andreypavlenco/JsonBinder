@@ -1,3 +1,4 @@
+import { JsonUploadController } from './json-upload/json-upload.controller';
 import { ProductsImportFromJsonModule } from './products/products-import-from-json/products-import.module';
 import { BrandsImportFromJsonModule } from './brands/brands-import-from-json/brands-import.module';
 import { RepositoryModule } from './repositories/repository/repository.module';
@@ -11,9 +12,11 @@ import { ReadFileModule } from './json-file-service/json-read/json.read.module';
 import { ProductsModule } from './products/products.module';
 import { WriteFileModule } from './json-file-service/json-write/json.write.module';
 import { CategoriesImportFromJsonModule } from './categories/categories-import-from-json/categories-import.module';
+import { JsonUploadModule } from './json-upload/json-upload.module';
 
 @Module({
   imports: [
+    JsonUploadModule,
     ProductsImportFromJsonModule,
     CategoriesImportFromJsonModule,
     BrandsImportFromJsonModule,
