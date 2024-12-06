@@ -1,13 +1,20 @@
+import * as path from 'path';
+import * as fs from 'fs-extra';
 import { BadRequestException } from '@nestjs/common';
-import { promises as fs } from 'fs-extra';
 
 export async function saveToFile(
-  filePath: string,
+  relativePath: string,
   data: unknown,
 ): Promise<void> {
   try {
-    await fs.writeJson(filePath, JSON.stringify(data, null, 2));
+    const absolutePath = path.join(process.cwd(), relativePath);
+    await fs.writeJson(absolutePath, data, { spaces: 2 });
+    console.log(`Data successfully saved to ${absolutePath}`);
   } catch (error) {
-    throw new BadRequestException(`Error saving data to ${filePath}`, error);
+    console.error(`Error saving data to file: ${error.message}`);
+    throw new BadRequestException(
+      `Error saving data to ${relativePath}`,
+      error,
+    );
   }
 }
