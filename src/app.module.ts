@@ -1,4 +1,5 @@
-import { BrandsImportFromJsonModule } from './brands/brands-import-from-json/brands.import.from.json.module';
+import { ProductsImportFromJsonModule } from './products/products-import-from-json/products-import.module';
+import { BrandsImportFromJsonModule } from './brands/brands-import-from-json/brands-import.module';
 import { RepositoryModule } from './repositories/repository/repository.module';
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
@@ -9,10 +10,11 @@ import { CategoriesModule } from './categories/categories.module';
 import { ReadFileModule } from './json-file-service/json-read/json.read.module';
 import { ProductsModule } from './products/products.module';
 import { WriteFileModule } from './json-file-service/json-write/json.write.module';
-import { CategoriesImportFromJsonModule } from './categories/categories-import-from-json/categories.import.from.json.module';
+import { CategoriesImportFromJsonModule } from './categories/categories-import-from-json/categories-import.module';
 
 @Module({
   imports: [
+    ProductsImportFromJsonModule,
     CategoriesImportFromJsonModule,
     BrandsImportFromJsonModule,
     RepositoryModule,
