@@ -10,9 +10,9 @@ export class AppService {
     private readonly categoriesImportFromJson: CategoriesImportFromJsonService,
     private readonly productsImportfromJson: ProductsImportfromJsonService,
   ) {}
-  dataMapper() {
-    this.brandsImportFromJson.createBrandsFromFile();
-    this.categoriesImportFromJson.createCategoriesFromFile();
-    this.productsImportfromJson.createProductsFromFile();
+ async dataMapper() {
+   await this.brandsImportFromJson.createBrandsFromFile();
+   await this.categoriesImportFromJson.createCategoriesFromFile();
+   await  this.productsImportfromJson.createProductsFromFile();
   }
 }
