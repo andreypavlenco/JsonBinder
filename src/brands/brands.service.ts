@@ -20,7 +20,7 @@ export class BrandsService {
     try {
       return await this.brandsRepository.findAll();
     } catch (error) {
-      throw new BadRequestException('Error fetching brands', error);
+      throw new BadRequestException('  Error fetching brands', error);
     }
   }
 }

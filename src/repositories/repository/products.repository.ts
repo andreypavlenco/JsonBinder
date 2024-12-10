@@ -12,6 +12,7 @@ export class ProductRepository implements IProductsRepository {
     return await this.prisma.products.createManyAndReturn({
       data: dto.map((product) => ({
         title: product.title,
+        characteristics: product.characteristics,
         description: product.description,
         brand: product.brand,
         price: product.price,
@@ -24,7 +25,8 @@ export class ProductRepository implements IProductsRepository {
       })),
     });
   }
-
+  
+  
   async findAll(): Promise<Products[]> {
     return this.prisma.products.findMany();
   }
