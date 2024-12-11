@@ -1,4 +1,4 @@
-import { RedisModule } from './cache-redis/redis.module';
+import { RedisModule } from './redis/redis.module';
 import { ProductsImportFromJsonModule } from './products/products-import-from-json/products-import.module';
 import { BrandsImportFromJsonModule } from './brands/brands-import-from-json/brands-import.module';
 import { RepositoryModule } from './repositories/repository/repository.module';

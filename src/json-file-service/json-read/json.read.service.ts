@@ -1,7 +1,7 @@
 import * as path from 'path';
 import { createReadStream } from 'fs';
 import { Injectable, BadRequestException } from '@nestjs/common';
-import { RedisService } from 'src/cache-redis/redis.service';
+import { RedisService } from 'src/redis/redis.service';
 import { CreateProductsDto } from 'src/products/dto/create-products-dto';
 
 @Injectable()

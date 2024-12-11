@@ -6,8 +6,7 @@ export class RedisService {
   constructor(private readonly redisRepository: RedisRepository) {}
 
   async setReadFileJson(key: string, jsonData: string) {
-    const data = JSON.stringify(jsonData);
-    return await this.redisRepository.set(key, data);
+    return await this.redisRepository.set(key, jsonData);
   }
 
   async getFileJson(key: string) {
