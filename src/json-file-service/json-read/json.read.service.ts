@@ -2,48 +2,49 @@ import * as path from 'path';
 import { createReadStream } from 'fs';
 import { Injectable, BadRequestException } from '@nestjs/common';
 import { RedisService } from 'src/cache-redis/redis.service';
+import { CreateProductsDto } from 'src/products/dto/create-products-dto';
 
 @Injectable()
 export class ReadFileService {
+  private readonly cacheKey = 'file:data';
+
   constructor(private readonly redisService: RedisService) {}
 
-  private async setCacheRedis(key: string, value): Promise<string | null> {
+  private async cacheData(
+    key: string,
+    value: CreateProductsDto[],
+  ): Promise<void> {
     try {
-      return await this.redisService.setReadFileJson(key, value);
+      await this.redisService.setReadFileJson(key, JSON.stringify(value));
     } catch (error) {
       console.error(`Failed to set cache for key ${key}:`, error);
-      return null;
     }
   }
 
-  private async getCacheRedis(key: string): Promise<string | null> {
+  private async retrieveFromCache(
+    key: string,
+  ): Promise<CreateProductsDto[] | null> {
     try {
-      return await this.redisService.getFileJson(key);
+      const cachedData = await this.redisService.getFileJson(key);
+      return cachedData ? JSON.parse(cachedData) : null;
     } catch (error) {
-      console.error(`Failed to get cache for key ${key}:`, error);
       return null;
     }
   }
 
-  private async heckCacheForJson(): Promise<string | null> {
-    const cacheKey = 'file:data';
-
-    const cachedData = await this.getCacheRedis(cacheKey);
+  async readFile(): Promise<CreateProductsDto[]> {
+    const cachedData = await this.retrieveFromCache(this.cacheKey);
 
     if (cachedData) {
-      return JSON.parse(cachedData);
-    } else return null;
+      return cachedData;
+    }
+    return this.readFileFromDisk();
   }
 
-  async readJson(): Promise<any> {
-    const cacheData = await this.heckCacheForJson();
-
-    if (cacheData !== null) {
-      return cacheData;
-    }
+  private async readFileFromDisk(): Promise<CreateProductsDto[]> {
+    const absolutePath = path.join(process.cwd(), 'loading_files/data.json');
 
     return new Promise((resolve, reject) => {
-      const absolutePath = path.join(process.cwd(), 'loading_files/data.json');
       const chunks: Buffer[] = [];
       const stream = createReadStream(absolutePath, { encoding: 'utf8' });
 
@@ -51,11 +52,11 @@ export class ReadFileService {
         chunks.push(Buffer.from(chunk));
       });
 
-      stream.on('end', () => {
+      stream.on('end', async () => {
         try {
           const fileContent = Buffer.concat(chunks).toString();
-          const jsonData = JSON.parse(fileContent);
-          this.setCacheRedis('file:data', jsonData);
+          const jsonData: CreateProductsDto[] = JSON.parse(fileContent);
+          await this.cacheData(this.cacheKey, jsonData);
           resolve(jsonData);
         } catch (error) {
           reject(new BadRequestException('Invalid JSON format', error));
