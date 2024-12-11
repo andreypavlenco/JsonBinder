@@ -25,8 +25,7 @@ export class ProductRepository implements IProductsRepository {
       })),
     });
   }
-  
-  
+
   async findAll(): Promise<Products[]> {
     return this.prisma.products.findMany();
   }

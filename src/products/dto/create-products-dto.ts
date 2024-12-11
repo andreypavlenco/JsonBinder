@@ -9,5 +9,5 @@ export class CreateProductsDto {
   rating: number;
   createdAt: Date;
   updatedAt: Date;
-  characteristics: string[]
+  characteristics: string[];
 }

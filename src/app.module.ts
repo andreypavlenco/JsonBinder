@@ -1,4 +1,4 @@
-import { JsonUploadController } from './json-upload/json-upload.controller';
+import { RedisModule } from './cache-redis/redis.module';
 import { ProductsImportFromJsonModule } from './products/products-import-from-json/products-import.module';
 import { BrandsImportFromJsonModule } from './brands/brands-import-from-json/brands-import.module';
 import { RepositoryModule } from './repositories/repository/repository.module';
@@ -16,6 +16,7 @@ import { JsonUploadModule } from './json-upload/json-upload.module';
 
 @Module({
   imports: [
+    RedisModule,
     JsonUploadModule,
     ProductsImportFromJsonModule,
     CategoriesImportFromJsonModule,
