@@ -1,4 +1,3 @@
-import { Products } from '@prisma/client';
 import { CreateProductsDto } from 'src/products/dto/create-products-dto';
 
 export function extractUniqueCategories(

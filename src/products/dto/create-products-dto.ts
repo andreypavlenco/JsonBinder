@@ -1,5 +1,3 @@
-import { CreateBrandsDto } from 'src/brands/dto/create-brands-dto';
-
 export class CreateProductsDto {
   categoryId: string;
   title: string;
@@ -7,8 +5,9 @@ export class CreateProductsDto {
   img: string[];
   brand: string;
   brandId: string;
-  description: string;
+  description: string[];
   rating: number;
   createdAt: Date;
   updatedAt: Date;
+  characteristics: string[];
 }

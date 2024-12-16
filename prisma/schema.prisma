@@ -32,7 +32,8 @@ model Products {
   price       Decimal   @db.Decimal(10, 2)
   img         String[]  @db.Text
   brand       String    @db.VarChar(100)
-  description Json?
+  description String[]
+  characteristics Json?
   rating      Decimal   @default(0.00) @db.Decimal(3, 2)
   createdAt   DateTime  @default(now()) @map("created_at")
   updatedAt   DateTime  @default(now()) @map("updated_at")
