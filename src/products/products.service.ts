@@ -25,4 +25,31 @@ export class ProductsService {
       throw new BadRequestException('Error fetching products', error);
     }
   }
+
+  async findOneProducts(id: string): Promise<Products> {
+    try {
+      return await this.productsRepository.findOne(id);
+    } catch (error) {
+      throw new BadRequestException('Error fetching products', error);
+    }
+  }
+
+  async deleteOneProducts(id: string): Promise<Products> {
+    try {
+      return await this.productsRepository.delete(id);
+    } catch (error) {
+      throw new BadRequestException('Error fetching products', error);
+    }
+  }
+
+  async updateOneProducts(
+    id: string,
+    dto: CreateProductsDto,
+  ): Promise<Products> {
+    try {
+      return await this.productsRepository.update(id, dto);
+    } catch (error) {
+      throw new BadRequestException('Error fetching products', error);
+    }
+  }
 }
