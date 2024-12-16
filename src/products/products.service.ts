@@ -1,60 +1,24 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { ProductRepository } from 'src/repositories/repository/products.repository';
 import { CreateProductsDto } from './dto/create-products-dto';
-import { ReadFileService } from 'src/fs-module/fs.read/fs.read.service';
 import { Products } from '@prisma/client';
 
 @Injectable()
 export class ProductsService {
-  constructor(
-    private readonly productsRepository: ProductRepository,
-    private readonly readFileService: ReadFileService,
-  ) {}
+  constructor(private readonly productsRepository: ProductRepository) {}
 
-  async processProductsFromFile(): Promise<{ count: number } | true> {
-    try {
-      const dbProducts = await this.findAll();
-      const inputProducts = await this.loadProducts();
-      return await this.filterAndSaveUniqueProducts(dbProducts, inputProducts);
-    } catch (error) {
-      throw new BadRequestException('Error processing products', error);
-    }
-  }
-
-  private async loadProducts(): Promise<CreateProductsDto[]> {
-    try {
-      return await this.readFileService.readFile();
-    } catch (error) {
-      throw new BadRequestException('Error reading products from file', error);
-    }
-  }
-
-  private async filterAndSaveUniqueProducts(
-    dbProducts: Products[],
-    inputProducts: CreateProductsDto[],
-  ): Promise<{ count: number } | true> {
-    const newProducts = inputProducts.filter((product) => {
-      return !dbProducts.some((dbProduct) => dbProduct.title === product.title);
-    });
-
-    if (newProducts.length > 0) {
-      return await this.saveProductsBatch(newProducts);
-    }
-    return true;
-  }
-
-  private async saveProductsBatch(
+  async saveProductsFromJson(
     products: CreateProductsDto[],
-  ): Promise<{ count: number }> {
+  ): Promise<Products[]> {
     try {
-      return await this.productsRepository.createMany(products);
+      return await this.productsRepository.createManyFromJson(products);
     } catch (error) {
       console.error('Error saving products batch:', error);
       throw new BadRequestException('Error saving products', error);
     }
   }
 
-  async findAll(): Promise<Products[]> {
+  async findAllProducts(): Promise<Products[]> {
     try {
       return await this.productsRepository.findAll();
     } catch (error) {

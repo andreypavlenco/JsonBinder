@@ -8,10 +8,11 @@ import { CreateProductsDto } from 'src/products/dto/create-products-dto';
 export class ProductRepository implements IProductsRepository {
   constructor(private readonly prisma: PrismaService) {}
 
-  async createMany(dto: CreateProductsDto[]): Promise<{ count: number }> {
-    return await this.prisma.products.createMany({
+  async createManyFromJson(dto: CreateProductsDto[]): Promise<Products[]> {
+    return await this.prisma.products.createManyAndReturn({
       data: dto.map((product) => ({
         title: product.title,
+        characteristics: product.characteristics,
         description: product.description,
         brand: product.brand,
         price: product.price,
