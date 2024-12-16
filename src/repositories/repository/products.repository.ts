@@ -27,6 +27,33 @@ export class ProductRepository implements IProductsRepository {
   }
 
   async findAll(): Promise<Products[]> {
-    return this.prisma.products.findMany();
+    return await this.prisma.products.findMany();
+  }
+
+  async findOne(idProducts: string): Promise<Products> {
+    return await this.prisma.products.findUnique({
+      where: {
+        id: idProducts,
+      },
+    });
+  }
+
+  async delete(idProducts: string): Promise<Products> {
+    return await this.prisma.products.delete({
+      where: {
+        id: idProducts,
+      },
+    });
+  }
+
+  async update(idProducts: string, dto: CreateProductsDto): Promise<Products> {
+    return await this.prisma.products.update({
+      where: {
+        id: idProducts,
+      },
+      data: {
+        ...dto,
+      },
+    });
   }
 }
