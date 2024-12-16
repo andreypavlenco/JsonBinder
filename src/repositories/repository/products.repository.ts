@@ -3,6 +3,7 @@ import { Products } from '@prisma/client';
 import { PrismaService } from 'prisma/prisma.service';
 import { IProductsRepository } from '../interfaces/products-repository.interface';
 import { CreateProductsDto } from 'src/products/dto/create-products-dto';
+import { UpdateProductsDto } from 'src/products/dto/update-products-dto';
 
 @Injectable()
 export class ProductRepository implements IProductsRepository {
@@ -46,7 +47,7 @@ export class ProductRepository implements IProductsRepository {
     });
   }
 
-  async update(idProducts: string, dto: CreateProductsDto): Promise<Products> {
+  async update(idProducts: string, dto: UpdateProductsDto): Promise<Products> {
     return await this.prisma.products.update({
       where: {
         id: idProducts,
