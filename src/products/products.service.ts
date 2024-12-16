@@ -35,7 +35,7 @@ export class ProductsService {
     }
   }
 
-  async delete(id: string): Promise<Products> {
+  async delete(id: string): Promise<{ title: string }> {
     try {
       return await this.productsRepository.delete(id);
     } catch (error) {

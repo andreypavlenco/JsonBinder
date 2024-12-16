@@ -39,10 +39,13 @@ export class ProductRepository implements IProductsRepository {
     });
   }
 
-  async delete(idProducts: string): Promise<Products> {
+  async delete(idProducts: string): Promise<{ title: string }> {
     return await this.prisma.products.delete({
       where: {
         id: idProducts,
+      },
+      select: {
+        title: true,
       },
     });
   }
