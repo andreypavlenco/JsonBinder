@@ -4,6 +4,7 @@ import { CreateCategoriesDto } from './dto/create-categories-dto';
 import { Categories } from '@prisma/client';
 import { UpdateCategoriesDto } from './dto/update-categories-dto';
 import { ErrorHandlerService } from 'src/common/error-handler/error-handler.service';
+import { ERROR_MESSAGES } from 'src/common/ constants/error-messages';
 
 @Injectable()
 export class CategoriesService {
@@ -20,7 +21,7 @@ export class CategoriesService {
     } catch (error) {
       this.errorHandler.handleInternalServerError(
         error,
-        'Failed to save categories.',
+        ERROR_MESSAGES.SAVE_CATEGORIES,
       );
     }
   }
@@ -31,7 +32,7 @@ export class CategoriesService {
     } catch (error) {
       this.errorHandler.handleInternalServerError(
         error,
-        'Failed to fetch categories.',
+        ERROR_MESSAGES.RETRIEVE_CATEGORIES,
       );
     }
   }
@@ -46,7 +47,7 @@ export class CategoriesService {
     } catch (error) {
       this.errorHandler.handleInternalServerError(
         error,
-        'Failed to fetch categories by ID.',
+        ERROR_MESSAGES.RETRIEVE_CATEGORY,
       );
     }
   }
@@ -59,7 +60,7 @@ export class CategoriesService {
       }
       return deletedCategory;
     } catch (error) {
-      this.errorHandler.handleBadRequest(error, 'Failed to delete categories.');
+      this.errorHandler.handleBadRequest(error, ERROR_MESSAGES.DELETE_CATEGORY);
     }
   }
 
@@ -71,7 +72,7 @@ export class CategoriesService {
       }
       return updatedCategory;
     } catch (error) {
-      this.errorHandler.handleBadRequest(error, 'Failed to update products.');
+      this.errorHandler.handleBadRequest(error, ERROR_MESSAGES.UPDATE_CATEGORY);
     }
   }
 }
