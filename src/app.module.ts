@@ -13,6 +13,8 @@ import { WriteFileModule } from './json-file-service/json-write/json.write.modul
 import { CategoriesImportFromJsonModule } from './categories/categories-import-from-json/categories-import.module';
 import { JsonUploadModule } from './json-upload/json-upload.module';
 import { ImportFromJsonModule } from './import-from-json/import-from-json.module';
+import { APP_FILTER } from '@nestjs/core';
+import { HttpExceptionFilter } from './filters/http-exception.filter';
 
 @Module({
   imports: [
@@ -30,6 +32,12 @@ import { ImportFromJsonModule } from './import-from-json/import-from-json.module
     ReadFileModule,
     WriteFileModule,
     ProductsModule,
+  ],
+  providers: [
+    {
+      provide: APP_FILTER,
+      useClass: HttpExceptionFilter,
+    },
   ],
 })
 export class AppModule {}
