@@ -26,7 +26,7 @@ export class ProductsService {
     try {
       return await this.productsRepository.findAll();
     } catch (error) {
-      this.errorHandler.handle(error, 'Failed to fetch category by ID.');
+      this.errorHandler.handle(error, 'Failed to fetch products.');
     }
   }
 
