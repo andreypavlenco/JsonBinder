@@ -4,6 +4,7 @@ import { CreateProductsDto } from './dto/create-products-dto';
 import { Products } from '@prisma/client';
 import { UpdateProductsDto } from './dto/update-products-dto';
 import { ErrorHandlerService } from 'src/common/error-handler/error-handler.service';
+import { ERROR_MESSAGES } from 'src/common/ constants/error-messages';
 
 @Injectable()
 export class ProductsService {
@@ -20,7 +21,7 @@ export class ProductsService {
     } catch (error) {
       this.errorHandler.handleInternalServerError(
         error,
-        'Failed to save products.',
+        ERROR_MESSAGES.SAVE_PRODUCTS,
       );
     }
   }
@@ -31,7 +32,7 @@ export class ProductsService {
     } catch (error) {
       this.errorHandler.handleInternalServerError(
         error,
-        'Failed to fetch products.',
+        ERROR_MESSAGES.SAVE_PRODUCTS,
       );
     }
   }
@@ -46,7 +47,7 @@ export class ProductsService {
     } catch (error) {
       this.errorHandler.handleInternalServerError(
         error,
-        'Failed to fetch products by ID.',
+        ERROR_MESSAGES.RETRIEVE_PRODUCT,
       );
     }
   }
@@ -59,7 +60,7 @@ export class ProductsService {
       }
       return result;
     } catch (error) {
-      this.errorHandler.handleBadRequest(error, 'Failed to delete products.');
+      this.errorHandler.handleBadRequest(error, ERROR_MESSAGES.DELETE_PRODUCT);
     }
   }
 
@@ -71,7 +72,7 @@ export class ProductsService {
       }
       return updatedProduct;
     } catch (error) {
-      this.errorHandler.handleBadRequest(error, 'Failed to update products.');
+      this.errorHandler.handleBadRequest(error, ERROR_MESSAGES.UPDATE_PRODUCT);
     }
   }
 }
