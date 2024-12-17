@@ -1,79 +1,51 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { BrandsRepository } from 'src/repositories/repository/brands.repository';
 import { CreateBrandsDto } from './dto/create-brands-dto';
-import { extractUniqueBrands } from './utils/extract-brands';
-import { ReadFileService } from 'src/fs-module/fs.read/fs.read.service';
-import { CreateProductsDto } from 'src/products/dto/create-products-dto';
+import { Brands } from '@prisma/client';
+import { UpdateBrandsDto } from './dto/update-brands-dto';
 
 @Injectable()
 export class BrandsService {
-  constructor(
-    private readonly brandRepository: BrandsRepository,
-    private readonly readFileService: ReadFileService,
-  ) {}
+  constructor(private readonly brandsRepository: BrandsRepository) {}
 
-  async createFromFile() {
+  async saveBrandsFromJson(brands: CreateBrandsDto[]): Promise<Brands[]> {
     try {
-      const products: CreateProductsDto[] =
-        await this.readFileService.readFile();
-      const uniqueBrands = extractUniqueBrands(products);
-
-      return await this.createManyFromList(uniqueBrands);
+      const saveBrands = await this.brandsRepository.createManyFromJson(brands);
+      return saveBrands;
     } catch (error) {
-      throw new BadRequestException(
-        'Error reading products or creating brands',
-        error,
-      );
+      throw new BadRequestException('Error saving brands', error);
     }
   }
 
-  private async createManyFromList(brands: string[]) {
+  async findAll(): Promise<Brands[]> {
     try {
-      const uniqueBrands: CreateBrandsDto[] = brands.map((brand) => ({
-        name: brand,
-      }));
-      return await this.checkAndAddUniqueBrands(uniqueBrands);
+      return await this.brandsRepository.findAll();
     } catch (error) {
-      throw new BadRequestException('Error creating many brands', error);
+      throw new BadRequestException('  Error fetching brands', error);
     }
   }
 
-  private async checkAndAddUniqueBrands(brands: CreateBrandsDto[]) {
+  async findId(id: string): Promise<Brands> {
     try {
-      const existingBrands = await this.findAll();
-
-      const uniqueBrands = brands.filter((brand) => {
-        return !existingBrands.some(
-          (existingBrand) => existingBrand.name === brand.name,
-        );
-      });
-
-      if (uniqueBrands.length > 0) {
-        await this.saveBrands(uniqueBrands);
-      } else {
-        return true;
-      }
+      return await this.brandsRepository.findOne(id);
     } catch (error) {
-      throw new BadRequestException('Error creating many brands', error);
+      throw new BadRequestException('Error fetching products', error);
     }
   }
 
-  private async saveBrands(
-    brands: CreateBrandsDto[],
-  ): Promise<{ count: number }> {
+  async delete(id: string): Promise<{ name: string }> {
     try {
-      return await this.brandRepository.createMany(brands);
+      return await this.brandsRepository.delete(id);
     } catch (error) {
-      console.error('Error while saving categories:', error);
-      throw new BadRequestException('Failed to save categories');
+      throw new BadRequestException('Error fetching products', error);
     }
   }
 
-  async findAll() {
+  async update(id: string, dto: UpdateBrandsDto): Promise<Brands> {
     try {
-      return await this.brandRepository.findAll();
+      return await this.brandsRepository.update(id, dto);
     } catch (error) {
-      throw new BadRequestException(error);
+      throw new BadRequestException('Error fetching products', error);
     }
   }
 }

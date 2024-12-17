@@ -8,8 +8,8 @@ import { CreateCategoriesDto } from 'src/categories/dto/create-categories-dto';
 export class CategoriesRepository implements ICategoriesRepository {
   constructor(private readonly prisma: PrismaService) {}
 
-  async createMany(dto: CreateCategoriesDto[]): Promise<{ count: number }> {
-    return await this.prisma.categories.createMany({
+  async createManyFromJson(dto: CreateCategoriesDto[]): Promise<Categories[]> {
+    return await this.prisma.categories.createManyAndReturn({
       data: dto.map((category) => ({
         name: category.name,
         createdAt: new Date(),
