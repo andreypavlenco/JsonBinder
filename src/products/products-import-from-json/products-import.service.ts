@@ -52,8 +52,8 @@ export class ProductsImportfromJsonService {
   private async saveProductsWithBrandsAndCategoriesJson(
     products: CreateProductsDto[],
   ): Promise<Products[]> {
-    const brands = await this.brandsService.findAllBrands();
-    const categories = await this.categoriesService.findAllCategories();
+    const brands = await this.brandsService.findAll();
+    const categories = await this.categoriesService.findAll();
 
     const productsWithIds = products.map((product) => {
       if (!product.brand) {
