@@ -3,7 +3,7 @@ import { CategoriesRepository } from 'src/repositories/repository/categories.rep
 import { CreateCategoriesDto } from './dto/create-categories-dto';
 import { Categories } from '@prisma/client';
 import { UpdateCategoriesDto } from './dto/update-categories-dto';
-import { ErrorHandlerService } from 'src/error-handler/error-handler.service';
+import { ErrorHandlerService } from 'src/common/error-handler/error-handler.service';
 
 @Injectable()
 export class CategoriesService {

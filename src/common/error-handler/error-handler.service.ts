@@ -1,6 +1,6 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
-import { InternalServerErrorException } from 'src/errors/internal-server-error-exception';
-import { NotFoundException } from 'src/errors/not-found-exception';
+import { InternalServerErrorException } from 'src/common/errors/internal-server-error-exception';
+import { NotFoundException } from 'src/common/errors/not-found-exception';
 
 @Injectable()
 export class ErrorHandlerService {

@@ -1,14 +1,10 @@
-import {
-  BadRequestException,
-  Injectable,
-  InternalServerErrorException,
-} from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { BrandsRepository } from 'src/repositories/repository/brands.repository';
 import { CreateBrandsDto } from './dto/create-brands-dto';
 import { Brands } from '@prisma/client';
 import { UpdateBrandsDto } from './dto/update-brands-dto';
-import { NotFoundException } from 'src/errors/not-found-exception';
-import { ErrorHandlerService } from 'src/error-handler/error-handler.service';
+import { NotFoundException } from 'src/common/errors/not-found-exception';
+import { ErrorHandlerService } from 'src/common/error-handler/error-handler.service';
 
 @Injectable()
 export class BrandsService {

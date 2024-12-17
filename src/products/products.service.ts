@@ -3,7 +3,7 @@ import { ProductRepository } from 'src/repositories/repository/products.reposito
 import { CreateProductsDto } from './dto/create-products-dto';
 import { Products } from '@prisma/client';
 import { UpdateProductsDto } from './dto/update-products-dto';
-import { ErrorHandlerService } from 'src/error-handler/error-handler.service';
+import { ErrorHandlerService } from 'src/common/error-handler/error-handler.service';
 
 @Injectable()
 export class ProductsService {
