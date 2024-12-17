@@ -1,3 +1,5 @@
+import { ErrorhendlerModule } from './error-handler/error-hendler.module';
+import { ErrorHandlerService } from './error-handler/error-handler.service';
 import { CacheModule } from './cache/cache.module';
 import { RedisModule } from './redis/redis.module';
 import { ProductsImportFromJsonModule } from './products/products-import-from-json/products-import.module';
@@ -18,6 +20,7 @@ import { HttpExceptionFilter } from './filters/http-exception.filter';
 
 @Module({
   imports: [
+    ErrorhendlerModule,
     ImportFromJsonModule,
     CacheModule,
     RedisModule,
@@ -34,6 +37,7 @@ import { HttpExceptionFilter } from './filters/http-exception.filter';
     ProductsModule,
   ],
   providers: [
+    ErrorHandlerService,
     {
       provide: APP_FILTER,
       useClass: HttpExceptionFilter,
