@@ -13,8 +13,8 @@ export class UpdateProductService {
   async updateProductsWithBrandsAndCategories(
     products: CreateProductsDto[],
   ): Promise<CreateProductsDto[]> {
-    const brands = await this.brandsService.findAllBrands();
-    const categories = await this.categoriesService.findAllCategories();
+    const brands = await this.brandsService.findAll();
+    const categories = await this.categoriesService.findAll();
 
     const updatedProducts = products.map((product) => {
       const brand = brands.find((b) => b.name === product.brand);

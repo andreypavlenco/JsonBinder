@@ -3,7 +3,8 @@ import { CategoriesRepository } from 'src/repositories/repository/categories.rep
 import { CreateCategoriesDto } from './dto/create-categories-dto';
 import { Categories } from '@prisma/client';
 import { UpdateCategoriesDto } from './dto/update-categories-dto';
-import { ErrorHandlerService } from 'src/error-handler/error-handler.service';
+import { ErrorHandlerService } from 'src/common/error-handler/error-handler.service';
+import { ERROR_MESSAGES } from 'src/common/ constants/error-messages';
 
 @Injectable()
 export class CategoriesService {
@@ -18,7 +19,10 @@ export class CategoriesService {
     try {
       return await this.categoriesRepository.createManyFromJson(categories);
     } catch (error) {
-      this.errorHandler.handle(error, 'Failed to save categories.');
+      this.errorHandler.handleInternalServerError(
+        error,
+        ERROR_MESSAGES.SAVE_CATEGORIES,
+      );
     }
   }
 
@@ -26,7 +30,10 @@ export class CategoriesService {
     try {
       return await this.categoriesRepository.findAll();
     } catch (error) {
-      this.errorHandler.handle(error, 'Failed to fetch categories.');
+      this.errorHandler.handleInternalServerError(
+        error,
+        ERROR_MESSAGES.RETRIEVE_CATEGORIES,
+      );
     }
   }
 
@@ -38,7 +45,10 @@ export class CategoriesService {
       }
       return category;
     } catch (error) {
-      this.errorHandler.handle(error, 'Failed to fetch categories by ID.');
+      this.errorHandler.handleInternalServerError(
+        error,
+        ERROR_MESSAGES.RETRIEVE_CATEGORY,
+      );
     }
   }
 
@@ -50,7 +60,7 @@ export class CategoriesService {
       }
       return deletedCategory;
     } catch (error) {
-      this.errorHandler.handle(error, 'Failed to delete categories.');
+      this.errorHandler.handleBadRequest(error, ERROR_MESSAGES.DELETE_CATEGORY);
     }
   }
 
@@ -62,7 +72,7 @@ export class CategoriesService {
       }
       return updatedCategory;
     } catch (error) {
-      this.errorHandler.handle(error, 'Failed to update products.');
+      this.errorHandler.handleBadRequest(error, ERROR_MESSAGES.UPDATE_CATEGORY);
     }
   }
 }

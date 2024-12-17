@@ -14,8 +14,8 @@ import { CategoriesImportFromJsonModule } from './categories/categories-import-f
 import { JsonUploadModule } from './json-upload/json-upload.module';
 import { ImportFromJsonModule } from './import-from-json/import-from-json.module';
 import { APP_FILTER } from '@nestjs/core';
-import { HttpExceptionFilter } from './filters/http-exception.filter';
-import { ErrorHandlerModule } from './error-handler/error-handler.module';
+import { HttpExceptionFilter } from './common/filters/http-exception.filter';
+import { ErrorHandlerModule } from './common/error-handler/error-handler.module';
 
 @Module({
   imports: [
