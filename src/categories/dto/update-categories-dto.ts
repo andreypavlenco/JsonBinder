@@ -1,4 +1,3 @@
 export class UpdateCategoriesDto {
-    name: string;
-  }
-  
+  name: string;
+}
