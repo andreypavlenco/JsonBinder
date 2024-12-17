@@ -3,20 +3,22 @@ import { CategoriesRepository } from 'src/repositories/repository/categories.rep
 import { CreateCategoriesDto } from './dto/create-categories-dto';
 import { Categories } from '@prisma/client';
 import { UpdateCategoriesDto } from './dto/update-categories-dto';
+import { ErrorHandlerService } from 'src/error-handler/error-handler.service';
 
 @Injectable()
 export class CategoriesService {
-  constructor(private readonly categoriesRepository: CategoriesRepository) {}
+  constructor(
+    private readonly categoriesRepository: CategoriesRepository,
+    private readonly errorHandler: ErrorHandlerService,
+  ) {}
 
   async saveCategoriesFromJson(
     categories: CreateCategoriesDto[],
   ): Promise<Categories[]> {
     try {
-      const saveCategories =
-        await this.categoriesRepository.createManyFromJson(categories);
-      return saveCategories;
+      return await this.categoriesRepository.createManyFromJson(categories);
     } catch (error) {
-      throw new BadRequestException('Failed to save categories', error);
+      this.errorHandler.handle(error, 'Failed to save categories.');
     }
   }
 
@@ -24,31 +26,43 @@ export class CategoriesService {
     try {
       return await this.categoriesRepository.findAll();
     } catch (error) {
-      throw new BadRequestException('Failed to fetch categories', error);
+      this.errorHandler.handle(error, 'Failed to fetch categories.');
     }
   }
 
   async findId(id: string): Promise<Categories> {
     try {
-      return await this.categoriesRepository.findOne(id);
+      const category = await this.categoriesRepository.findOne(id);
+      if (!category) {
+        this.errorHandler.handleNotFound('Category', `with ID ${id}`);
+      }
+      return category;
     } catch (error) {
-      throw new BadRequestException('Error fetching products', error);
+      this.errorHandler.handle(error, 'Failed to fetch categories by ID.');
     }
   }
 
   async delete(id: string): Promise<{ name: string }> {
     try {
-      return await this.categoriesRepository.delete(id);
+      const deletedCategory = await this.categoriesRepository.delete(id);
+      if (!deletedCategory) {
+        this.errorHandler.handleNotFound('Category', `with ID ${id}`);
+      }
+      return deletedCategory;
     } catch (error) {
-      throw new BadRequestException('Error fetching products', error);
+      this.errorHandler.handle(error, 'Failed to delete categories.');
     }
   }
 
   async update(id: string, dto: UpdateCategoriesDto): Promise<Categories> {
     try {
-      return await this.categoriesRepository.update(id, dto);
+      const updatedCategory = await this.categoriesRepository.update(id, dto);
+      if (!updatedCategory) {
+        this.errorHandler.handleNotFound('Category', `with ID ${id}`);
+      }
+      return updatedCategory;
     } catch (error) {
-      throw new BadRequestException('Error fetching products', error);
+      this.errorHandler.handle(error, 'Failed to update products.');
     }
   }
 }

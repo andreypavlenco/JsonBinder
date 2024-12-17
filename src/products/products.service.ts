@@ -1,12 +1,16 @@
-import { BadRequestException, Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { ProductRepository } from 'src/repositories/repository/products.repository';
 import { CreateProductsDto } from './dto/create-products-dto';
 import { Products } from '@prisma/client';
 import { UpdateProductsDto } from './dto/update-products-dto';
+import { ErrorHandlerService } from 'src/error-handler/error-handler.service';
 
 @Injectable()
 export class ProductsService {
-  constructor(private readonly productsRepository: ProductRepository) {}
+  constructor(
+    private readonly productsRepository: ProductRepository,
+    private readonly errorHandler: ErrorHandlerService,
+  ) {}
 
   async saveProductsFromJson(
     products: CreateProductsDto[],
@@ -14,8 +18,7 @@ export class ProductsService {
     try {
       return await this.productsRepository.createManyFromJson(products);
     } catch (error) {
-      console.error('Error saving products batch:', error);
-      throw new BadRequestException('Error saving products', error);
+      this.errorHandler.handle(error, 'Failed to save products.');
     }
   }
 
@@ -23,31 +26,43 @@ export class ProductsService {
     try {
       return await this.productsRepository.findAll();
     } catch (error) {
-      throw new BadRequestException('Error fetching products', error);
+      this.errorHandler.handle(error, 'Failed to fetch products.');
     }
   }
 
   async findId(id: string): Promise<Products> {
     try {
-      return await this.productsRepository.findOne(id);
+      const product = await this.productsRepository.findOne(id);
+      if (!product) {
+        this.errorHandler.handleNotFound('Product', `with ID ${id}`);
+      }
+      return product;
     } catch (error) {
-      throw new BadRequestException('Error fetching products', error);
+      this.errorHandler.handle(error, 'Failed to fetch products by ID.');
     }
   }
 
   async delete(id: string): Promise<{ title: string }> {
     try {
-      return await this.productsRepository.delete(id);
+      const result = await this.productsRepository.delete(id);
+      if (!result) {
+        this.errorHandler.handleNotFound('Product', `with ID ${id}`);
+      }
+      return result;
     } catch (error) {
-      throw new BadRequestException('Error fetching products', error);
+      this.errorHandler.handle(error, 'Failed to delete products.');
     }
   }
 
   async update(id: string, dto: UpdateProductsDto): Promise<Products> {
     try {
-      return await this.productsRepository.update(id, dto);
+      const updatedProduct = await this.productsRepository.update(id, dto);
+      if (!updatedProduct) {
+        this.errorHandler.handleNotFound('Product', `with ID ${id}`);
+      }
+      return updatedProduct;
     } catch (error) {
-      throw new BadRequestException('Error fetching products', error);
+      this.errorHandler.handle(error, 'Failed to update products.');
     }
   }
 }
