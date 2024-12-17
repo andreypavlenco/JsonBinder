@@ -19,7 +19,7 @@ export class CacheService {
       const cachedData = await this.redisService.getFileJson(key);
       return cachedData ? JSON.parse(cachedData) : null;
     } catch (error) {
-      return null;
+      return error;
     }
   }
 }

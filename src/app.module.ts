@@ -4,8 +4,6 @@ import { ProductsImportFromJsonModule } from './products/products-import-from-js
 import { BrandsImportFromJsonModule } from './brands/brands-import-from-json/brands-import.module';
 import { RepositoryModule } from './repositories/repository/repository.module';
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { PrismaModule } from 'prisma/prisma.module';
 import { BrandsModule } from './brands/brands.module';
 import { CategoriesModule } from './categories/categories.module';
@@ -14,9 +12,11 @@ import { ProductsModule } from './products/products.module';
 import { WriteFileModule } from './json-file-service/json-write/json.write.module';
 import { CategoriesImportFromJsonModule } from './categories/categories-import-from-json/categories-import.module';
 import { JsonUploadModule } from './json-upload/json-upload.module';
+import { ImportFromJsonModule } from './import-from-json/import-from-json.module';
 
 @Module({
   imports: [
+    ImportFromJsonModule,
     CacheModule,
     RedisModule,
     JsonUploadModule,
@@ -31,7 +31,5 @@ import { JsonUploadModule } from './json-upload/json-upload.module';
     WriteFileModule,
     ProductsModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule {}
