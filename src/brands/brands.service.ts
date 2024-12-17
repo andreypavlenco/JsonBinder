@@ -21,7 +21,8 @@ export class BrandsService {
     try {
       return await this.brandsRepository.createManyFromJson(brands);
     } catch (error) {
-      throw new InternalServerErrorException(
+      this.errorHandler.handleInternalServerError(
+        error,
         'Failed to save brands. Please try again later.',
       );
     }
@@ -31,7 +32,8 @@ export class BrandsService {
     try {
       return await this.brandsRepository.findAll();
     } catch (error) {
-      throw new InternalServerErrorException(
+      this.errorHandler.handleInternalServerError(
+        error,
         'Failed to retrieve brands. Please try again later.',
       );
     }
@@ -39,25 +41,40 @@ export class BrandsService {
 
   async findId(id: string): Promise<Brands> {
     try {
-      return await this.brandsRepository.findOne(id);
+      const brand = await this.brandsRepository.findOne(id);
+      if (!brand) {
+        this.errorHandler.handleNotFound('Brand', `with ID ${id}`);
+      }
+      return brand;
     } catch (error) {
-      throw new NotFoundException('Error fetching products');
+      this.errorHandler.handleInternalServerError(
+        error,
+        'Failed to retrieve the brand. Please try again later.',
+      );
     }
   }
 
   async delete(id: string): Promise<{ name: string }> {
     try {
-      return await this.brandsRepository.delete(id);
+      const result = await this.brandsRepository.delete(id);
+      if (!result) {
+        this.errorHandler.handleNotFound('Brand', `with ID ${id}`);
+      }
+      return result;
     } catch (error) {
-      throw new BadRequestException('Error fetching products', error);
+      this.errorHandler.handleBadRequest(error, 'Failed to delete the brand.');
     }
   }
 
   async update(id: string, dto: UpdateBrandsDto): Promise<Brands> {
     try {
-      return await this.brandsRepository.update(id, dto);
+      const updatedBrand = await this.brandsRepository.update(id, dto);
+      if (!updatedBrand) {
+        this.errorHandler.handleNotFound('Brand', `with ID ${id}`);
+      }
+      return updatedBrand;
     } catch (error) {
-      throw new BadRequestException('Error fetching products', error);
+      this.errorHandler.handleBadRequest(error, 'Failed to update the brand.');
     }
   }
 }
