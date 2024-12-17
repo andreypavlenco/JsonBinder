@@ -12,8 +12,9 @@ import { ErrorHandlerService } from 'src/error-handler/error-handler.service';
 
 @Injectable()
 export class BrandsService {
-  constructor(private readonly brandsRepository: BrandsRepository,
-     private readonly errorHandler: ErrorHandlerService,
+  constructor(
+    private readonly brandsRepository: BrandsRepository,
+    private readonly errorHandler: ErrorHandlerService,
   ) {}
 
   async saveBrandsFromJson(brands: CreateBrandsDto[]): Promise<Brands[]> {

@@ -18,7 +18,10 @@ export class ProductsService {
     try {
       return await this.productsRepository.createManyFromJson(products);
     } catch (error) {
-      this.errorHandler.handle(error, 'Failed to save products.');
+      this.errorHandler.handleInternalServerError(
+        error,
+        'Failed to save products.',
+      );
     }
   }
 
@@ -26,7 +29,10 @@ export class ProductsService {
     try {
       return await this.productsRepository.findAll();
     } catch (error) {
-      this.errorHandler.handle(error, 'Failed to fetch products.');
+      this.errorHandler.handleInternalServerError(
+        error,
+        'Failed to fetch products.',
+      );
     }
   }
 
@@ -38,7 +44,10 @@ export class ProductsService {
       }
       return product;
     } catch (error) {
-      this.errorHandler.handle(error, 'Failed to fetch products by ID.');
+      this.errorHandler.handleInternalServerError(
+        error,
+        'Failed to fetch products by ID.',
+      );
     }
   }
 
@@ -50,7 +59,7 @@ export class ProductsService {
       }
       return result;
     } catch (error) {
-      this.errorHandler.handle(error, 'Failed to delete products.');
+      this.errorHandler.handleBadRequest(error, 'Failed to delete products.');
     }
   }
 
@@ -62,7 +71,7 @@ export class ProductsService {
       }
       return updatedProduct;
     } catch (error) {
-      this.errorHandler.handle(error, 'Failed to update products.');
+      this.errorHandler.handleBadRequest(error, 'Failed to update products.');
     }
   }
 }

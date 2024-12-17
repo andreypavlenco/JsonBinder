@@ -18,7 +18,10 @@ export class CategoriesService {
     try {
       return await this.categoriesRepository.createManyFromJson(categories);
     } catch (error) {
-      this.errorHandler.handle(error, 'Failed to save categories.');
+      this.errorHandler.handleInternalServerError(
+        error,
+        'Failed to save categories.',
+      );
     }
   }
 
@@ -26,7 +29,10 @@ export class CategoriesService {
     try {
       return await this.categoriesRepository.findAll();
     } catch (error) {
-      this.errorHandler.handle(error, 'Failed to fetch categories.');
+      this.errorHandler.handleInternalServerError(
+        error,
+        'Failed to fetch categories.',
+      );
     }
   }
 
@@ -38,7 +44,10 @@ export class CategoriesService {
       }
       return category;
     } catch (error) {
-      this.errorHandler.handle(error, 'Failed to fetch categories by ID.');
+      this.errorHandler.handleInternalServerError(
+        error,
+        'Failed to fetch categories by ID.',
+      );
     }
   }
 
@@ -50,7 +59,7 @@ export class CategoriesService {
       }
       return deletedCategory;
     } catch (error) {
-      this.errorHandler.handle(error, 'Failed to delete categories.');
+      this.errorHandler.handleBadRequest(error, 'Failed to delete categories.');
     }
   }
 
@@ -62,7 +71,7 @@ export class CategoriesService {
       }
       return updatedCategory;
     } catch (error) {
-      this.errorHandler.handle(error, 'Failed to update products.');
+      this.errorHandler.handleBadRequest(error, 'Failed to update products.');
     }
   }
 }
