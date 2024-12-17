@@ -23,7 +23,7 @@ export class ImportFromJsonService {
     await this.productsImportfromJson.createProductsFromFile();
   }
 
-  async dataMapper() {
+  async jsonBinder() {
     await this.importBrands();
     await this.importCategories();
     await this.importProducts();

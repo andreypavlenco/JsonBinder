@@ -4,8 +4,6 @@ import { ProductsImportFromJsonModule } from './products/products-import-from-js
 import { BrandsImportFromJsonModule } from './brands/brands-import-from-json/brands-import.module';
 import { RepositoryModule } from './repositories/repository/repository.module';
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { PrismaModule } from 'prisma/prisma.module';
 import { BrandsModule } from './brands/brands.module';
 import { CategoriesModule } from './categories/categories.module';
@@ -33,7 +31,5 @@ import { ImportFromJsonModule } from './import-from-json/import-from-json.module
     WriteFileModule,
     ProductsModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule {}
