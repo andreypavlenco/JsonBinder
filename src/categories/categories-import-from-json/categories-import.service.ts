@@ -31,7 +31,7 @@ export class CategoriesImportFromJsonService {
     categoryNames: string[],
   ): Promise<Categories[]> {
     const categoriesDto = this.mapToCategoryDtos(categoryNames);
-    const existingCategories = await this.categoriesService.findAllCategories();
+    const existingCategories = await this.categoriesService.findAll();
 
     const newCategories = this.filterUniqueCategories(
       existingCategories,
