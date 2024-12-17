@@ -1,12 +1,10 @@
-import {
-  Injectable,
-  NotFoundException,
-  InternalServerErrorException,
-} from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { ProductRepository } from 'src/repositories/repository/products.repository';
 import { CreateProductsDto } from './dto/create-products-dto';
 import { Products } from '@prisma/client';
 import { UpdateProductsDto } from './dto/update-products-dto';
+import { InternalServerErrorException } from 'src/errors/internal-server-error-exception';
+import { NotFoundException } from 'src/errors/not-found-exception';
 
 @Injectable()
 export class ProductsService {
