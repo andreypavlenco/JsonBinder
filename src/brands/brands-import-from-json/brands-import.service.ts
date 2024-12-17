@@ -26,7 +26,7 @@ export class BrandsImportFormJsonService {
 
   private async createUniqueBrands(brandNames: string[]): Promise<Brands[]> {
     const createBrandsDto = brandNames.map((name) => ({ name }));
-    const existingBrands = await this.brandsServie.findAllBrands();
+    const existingBrands = await this.brandsServie.findAll();
 
     const newBrands = this.filterUniqueBrands(existingBrands, createBrandsDto);
 

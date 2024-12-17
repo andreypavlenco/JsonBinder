@@ -14,9 +14,11 @@ import { ProductsModule } from './products/products.module';
 import { WriteFileModule } from './json-file-service/json-write/json.write.module';
 import { CategoriesImportFromJsonModule } from './categories/categories-import-from-json/categories-import.module';
 import { JsonUploadModule } from './json-upload/json-upload.module';
+import { ImportFromJsonModule } from './import-from-json/import-from-json.module';
 
 @Module({
   imports: [
+    ImportFromJsonModule,
     CacheModule,
     RedisModule,
     JsonUploadModule,
