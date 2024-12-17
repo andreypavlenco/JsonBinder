@@ -1,5 +1,3 @@
-import { ErrorhendlerModule } from './error-handler/error-hendler.module';
-import { ErrorHandlerService } from './error-handler/error-handler.service';
 import { CacheModule } from './cache/cache.module';
 import { RedisModule } from './redis/redis.module';
 import { ProductsImportFromJsonModule } from './products/products-import-from-json/products-import.module';
@@ -17,10 +15,11 @@ import { JsonUploadModule } from './json-upload/json-upload.module';
 import { ImportFromJsonModule } from './import-from-json/import-from-json.module';
 import { APP_FILTER } from '@nestjs/core';
 import { HttpExceptionFilter } from './filters/http-exception.filter';
+import { ErrorHandlerModule } from './error-handler/error-handler.module';
 
 @Module({
   imports: [
-    ErrorhendlerModule,
+    ErrorHandlerModule,
     ImportFromJsonModule,
     CacheModule,
     RedisModule,
@@ -37,7 +36,6 @@ import { HttpExceptionFilter } from './filters/http-exception.filter';
     ProductsModule,
   ],
   providers: [
-    ErrorHandlerService,
     {
       provide: APP_FILTER,
       useClass: HttpExceptionFilter,

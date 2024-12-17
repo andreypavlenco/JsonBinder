@@ -4,7 +4,7 @@ import { NotFoundException } from 'src/errors/not-found-exception';
 
 @Injectable()
 export class ErrorHandlerService {
-  handle(error: any, message: string): never {
+  handle(error: Error, message: string): never {
     throw error instanceof Error
       ? error
       : new InternalServerErrorException(message);

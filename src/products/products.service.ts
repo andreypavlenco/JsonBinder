@@ -3,12 +3,14 @@ import { ProductRepository } from 'src/repositories/repository/products.reposito
 import { CreateProductsDto } from './dto/create-products-dto';
 import { Products } from '@prisma/client';
 import { UpdateProductsDto } from './dto/update-products-dto';
-import { InternalServerErrorException } from 'src/errors/internal-server-error-exception';
-import { NotFoundException } from 'src/errors/not-found-exception';
+import { ErrorHandlerService } from 'src/error-handler/error-handler.service';
 
 @Injectable()
 export class ProductsService {
-  constructor(private readonly productsRepository: ProductRepository) {}
+  constructor(
+    private readonly productsRepository: ProductRepository,
+    private readonly errorHandler: ErrorHandlerService,
+  ) {}
 
   async saveProductsFromJson(
     products: CreateProductsDto[],
@@ -16,9 +18,7 @@ export class ProductsService {
     try {
       return await this.productsRepository.createManyFromJson(products);
     } catch (error) {
-      throw new InternalServerErrorException(
-        'Failed to save products. Please try again later.',
-      );
+      this.errorHandler.handle(error, 'Failed to save products.');
     }
   }
 
@@ -26,9 +26,7 @@ export class ProductsService {
     try {
       return await this.productsRepository.findAll();
     } catch (error) {
-      throw new InternalServerErrorException(
-        'Failed to retrieve products. Please try again later.',
-      );
+      this.errorHandler.handle(error, 'Failed to fetch category by ID.');
     }
   }
 
@@ -36,15 +34,11 @@ export class ProductsService {
     try {
       const product = await this.productsRepository.findOne(id);
       if (!product) {
-        throw new NotFoundException(`Product with ID ${id} not found.`);
+        this.errorHandler.handleNotFound('Product', `with ID ${id}`);
       }
       return product;
     } catch (error) {
-      throw error instanceof NotFoundException
-        ? error
-        : new InternalServerErrorException(
-            'Failed to retrieve the product. Please try again later.',
-          );
+      this.errorHandler.handle(error, 'Failed to fetch products by ID.');
     }
   }
 
@@ -52,13 +46,11 @@ export class ProductsService {
     try {
       const result = await this.productsRepository.delete(id);
       if (!result) {
-        throw new NotFoundException(`Product with ID ${id} not found.`);
+        this.errorHandler.handleNotFound('Product', `with ID ${id}`);
       }
       return result;
     } catch (error) {
-      throw new InternalServerErrorException(
-        'Failed to delete the product. Please try again later.',
-      );
+      this.errorHandler.handle(error, 'Failed to delete products.');
     }
   }
 
@@ -66,16 +58,11 @@ export class ProductsService {
     try {
       const updatedProduct = await this.productsRepository.update(id, dto);
       if (!updatedProduct) {
-        throw new NotFoundException(`Product with ID ${id} not found.`);
+        this.errorHandler.handleNotFound('Product', `with ID ${id}`);
       }
       return updatedProduct;
     } catch (error) {
-      console.error(`Error updating product with ID ${id}:`, error.message);
-      throw error instanceof NotFoundException
-        ? error
-        : new InternalServerErrorException(
-            'Failed to update the product. Please try again later.',
-          );
+      this.errorHandler.handle(error, 'Failed to update products.');
     }
   }
 }
