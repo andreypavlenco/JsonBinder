@@ -8,10 +8,13 @@ import { CreateBrandsDto } from './dto/create-brands-dto';
 import { Brands } from '@prisma/client';
 import { UpdateBrandsDto } from './dto/update-brands-dto';
 import { NotFoundException } from 'src/errors/not-found-exception';
+import { ErrorHandlerService } from 'src/error-handler/error-handler.service';
 
 @Injectable()
 export class BrandsService {
-  constructor(private readonly brandsRepository: BrandsRepository) {}
+  constructor(private readonly brandsRepository: BrandsRepository,
+     private readonly errorHandler: ErrorHandlerService,
+  ) {}
 
   async saveBrandsFromJson(brands: CreateBrandsDto[]): Promise<Brands[]> {
     try {
