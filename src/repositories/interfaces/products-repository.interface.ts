@@ -7,4 +7,6 @@ export interface IProductsRepository {
   findOne(id: string): Promise<Products>;
   delete(id: string): Promise<{ title: string }>;
   update(id: string, dto: CreateProductsDto): Promise<Products>;
+  // priseRangeMax(): Promise<Products[]>;
+  // priseRangeMin(): Promise<Products[]>;
 }
