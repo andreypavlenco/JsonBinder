@@ -19,7 +19,7 @@ export class ProductsImportfromJsonService {
 
   async createProductsFromFile(): Promise<Products[]> {
     try {
-      const dbProducts = await this.productsService.findAllProducts();
+      const dbProducts = await this.productsService.findAll();
       const inputProducts = await this.loadProducts();
       return await this.filterAndSaveUniqueProducts(dbProducts, inputProducts);
     } catch (error) {

@@ -1,3 +1,4 @@
+import { CacheModule } from './cache/cache.module';
 import { RedisModule } from './redis/redis.module';
 import { ProductsImportFromJsonModule } from './products/products-import-from-json/products-import.module';
 import { BrandsImportFromJsonModule } from './brands/brands-import-from-json/brands-import.module';
@@ -16,6 +17,7 @@ import { JsonUploadModule } from './json-upload/json-upload.module';
 
 @Module({
   imports: [
+    CacheModule,
     RedisModule,
     JsonUploadModule,
     ProductsImportFromJsonModule,

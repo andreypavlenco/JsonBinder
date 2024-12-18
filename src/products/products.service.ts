@@ -2,6 +2,7 @@ import { BadRequestException, Injectable } from '@nestjs/common';
 import { ProductRepository } from 'src/repositories/repository/products.repository';
 import { CreateProductsDto } from './dto/create-products-dto';
 import { Products } from '@prisma/client';
+import { UpdateProductsDto } from './dto/update-products-dto';
 
 @Injectable()
 export class ProductsService {
@@ -18,9 +19,33 @@ export class ProductsService {
     }
   }
 
-  async findAllProducts(): Promise<Products[]> {
+  async findAll(): Promise<Products[]> {
     try {
       return await this.productsRepository.findAll();
+    } catch (error) {
+      throw new BadRequestException('Error fetching products', error);
+    }
+  }
+
+  async findId(id: string): Promise<Products> {
+    try {
+      return await this.productsRepository.findOne(id);
+    } catch (error) {
+      throw new BadRequestException('Error fetching products', error);
+    }
+  }
+
+  async delete(id: string): Promise<{ title: string }> {
+    try {
+      return await this.productsRepository.delete(id);
+    } catch (error) {
+      throw new BadRequestException('Error fetching products', error);
+    }
+  }
+
+  async update(id: string, dto: UpdateProductsDto): Promise<Products> {
+    try {
+      return await this.productsRepository.update(id, dto);
     } catch (error) {
       throw new BadRequestException('Error fetching products', error);
     }
