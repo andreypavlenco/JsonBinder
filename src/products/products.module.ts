@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
-import { ReadFileModule } from 'src/fs-module/fs.read/fs.read.module';
 import { ProductsController } from './products.controller';
 import { RepositoryModule } from 'src/repositories/repository/repository.module';
 import { ProductsService } from './products.service';
+import { ErrorHandlerModule } from 'src/common/error-handler/error-handler.module';
 
 @Module({
-  imports: [ReadFileModule, RepositoryModule],
+  imports: [RepositoryModule, ErrorHandlerModule],
   controllers: [ProductsController],
   providers: [ProductsService],
   exports: [ProductsService],

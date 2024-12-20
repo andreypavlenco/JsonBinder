@@ -1,10 +1,12 @@
 import { Module } from '@nestjs/common';
 import { CategoriesService } from './categories.service';
-import { ReadFileModule } from 'src/fs-module/fs.read/fs.read.module';
 import { RepositoryModule } from 'src/repositories/repository/repository.module';
+import { CategoriesController } from './categories.controller';
+import { ErrorHandlerModule } from 'src/common/error-handler/error-handler.module';
 
 @Module({
-  imports: [ReadFileModule, RepositoryModule],
+  imports: [RepositoryModule, ErrorHandlerModule],
+  controllers: [CategoriesController],
   providers: [CategoriesService],
   exports: [CategoriesService],
 })

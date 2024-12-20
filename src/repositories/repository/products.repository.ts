@@ -3,15 +3,17 @@ import { Products } from '@prisma/client';
 import { PrismaService } from 'prisma/prisma.service';
 import { IProductsRepository } from '../interfaces/products-repository.interface';
 import { CreateProductsDto } from 'src/products/dto/create-products-dto';
+import { UpdateProductsDto } from 'src/products/dto/update-products-dto';
 
 @Injectable()
 export class ProductRepository implements IProductsRepository {
   constructor(private readonly prisma: PrismaService) {}
 
-  async createMany(dto: CreateProductsDto[]): Promise<{ count: number }> {
-    return await this.prisma.products.createMany({
+  async createManyFromJson(dto: CreateProductsDto[]): Promise<Products[]> {
+    return await this.prisma.products.createManyAndReturn({
       data: dto.map((product) => ({
         title: product.title,
+        characteristics: product.characteristics,
         description: product.description,
         brand: product.brand,
         price: product.price,
@@ -26,6 +28,36 @@ export class ProductRepository implements IProductsRepository {
   }
 
   async findAll(): Promise<Products[]> {
-    return this.prisma.products.findMany();
+    return await this.prisma.products.findMany();
+  }
+
+  async findOne(idProducts: string): Promise<Products> {
+    return await this.prisma.products.findUnique({
+      where: {
+        id: idProducts,
+      },
+    });
+  }
+
+  async delete(idProducts: string): Promise<{ title: string }> {
+    return await this.prisma.products.delete({
+      where: {
+        id: idProducts,
+      },
+      select: {
+        title: true,
+      },
+    });
+  }
+
+  async update(idProducts: string, dto: UpdateProductsDto): Promise<Products> {
+    return await this.prisma.products.update({
+      where: {
+        id: idProducts,
+      },
+      data: {
+        ...dto,
+      },
+    });
   }
 }

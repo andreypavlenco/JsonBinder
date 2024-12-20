@@ -1,56 +1,28 @@
-import { BadRequestException, Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { ProductRepository } from 'src/repositories/repository/products.repository';
 import { CreateProductsDto } from './dto/create-products-dto';
-import { ReadFileService } from 'src/fs-module/fs.read/fs.read.service';
 import { Products } from '@prisma/client';
+import { UpdateProductsDto } from './dto/update-products-dto';
+import { ErrorHandlerService } from 'src/common/error-handler/error-handler.service';
+import { ERROR_MESSAGES } from 'src/common/ constants/error-messages';
 
 @Injectable()
 export class ProductsService {
   constructor(
     private readonly productsRepository: ProductRepository,
-    private readonly readFileService: ReadFileService,
+    private readonly errorHandler: ErrorHandlerService,
   ) {}
 
-  async createProductsFromFile(): Promise<{ count: number } | true> {
-    try {
-      const dbProducts = await this.findAll();
-      const inputProducts = await this.loadProducts();
-      return await this.filterAndSaveUniqueProducts(dbProducts, inputProducts);
-    } catch (error) {
-      throw new BadRequestException('Error processing products', error);
-    }
-  }
-
-  private async loadProducts(): Promise<CreateProductsDto[]> {
-    try {
-      return await this.readFileService.readFile();
-    } catch (error) {
-      throw new BadRequestException('Error reading products from file', error);
-    }
-  }
-
-  private async filterAndSaveUniqueProducts(
-    dbProducts: Products[],
-    inputProducts: CreateProductsDto[],
-  ): Promise<{ count: number } | true> {
-    const newProducts = inputProducts.filter((product) => {
-      return !dbProducts.some((dbProduct) => dbProduct.title === product.title);
-    });
-
-    if (newProducts.length > 0) {
-      return await this.saveProductsBatch(newProducts);
-    }
-    return true;
-  }
-
-  private async saveProductsBatch(
+  async saveProductsFromJson(
     products: CreateProductsDto[],
-  ): Promise<{ count: number }> {
+  ): Promise<Products[]> {
     try {
-      return await this.productsRepository.createMany(products);
+      return await this.productsRepository.createManyFromJson(products);
     } catch (error) {
-      console.error('Error saving products batch:', error);
-      throw new BadRequestException('Error saving products', error);
+      this.errorHandler.handleInternalServerError(
+        error,
+        ERROR_MESSAGES.SAVE_PRODUCTS,
+      );
     }
   }
 
@@ -58,7 +30,49 @@ export class ProductsService {
     try {
       return await this.productsRepository.findAll();
     } catch (error) {
-      throw new BadRequestException('Error fetching products', error);
+      this.errorHandler.handleInternalServerError(
+        error,
+        ERROR_MESSAGES.SAVE_PRODUCTS,
+      );
+    }
+  }
+
+  async findId(id: string): Promise<Products> {
+    try {
+      const product = await this.productsRepository.findOne(id);
+      if (!product) {
+        this.errorHandler.handleNotFound('Product', `with ID ${id}`);
+      }
+      return product;
+    } catch (error) {
+      this.errorHandler.handleInternalServerError(
+        error,
+        ERROR_MESSAGES.RETRIEVE_PRODUCT,
+      );
+    }
+  }
+
+  async delete(id: string): Promise<{ title: string }> {
+    try {
+      const result = await this.productsRepository.delete(id);
+      if (!result) {
+        this.errorHandler.handleNotFound('Product', `with ID ${id}`);
+      }
+      return result;
+    } catch (error) {
+      this.errorHandler.handleBadRequest(error, ERROR_MESSAGES.DELETE_PRODUCT);
+    }
+  }
+
+  async update(id: string, dto: UpdateProductsDto): Promise<Products> {
+    try {
+      const updatedProduct = await this.productsRepository.update(id, dto);
+      if (!updatedProduct) {
+        this.errorHandler.handleNotFound('Product', `with ID ${id}`);
+      }
+      return updatedProduct;
+    } catch (error) {
+      this.errorHandler.handleBadRequest(error, ERROR_MESSAGES.UPDATE_PRODUCT);
     }
   }
 }

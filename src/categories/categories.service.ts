@@ -1,82 +1,78 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { CategoriesRepository } from 'src/repositories/repository/categories.repository';
 import { CreateCategoriesDto } from './dto/create-categories-dto';
-import { extractUniqueCategories } from './utils/extract-categories';
-import { ReadFileService } from 'src/fs-module/fs.read/fs.read.service';
 import { Categories } from '@prisma/client';
+import { UpdateCategoriesDto } from './dto/update-categories-dto';
+import { ErrorHandlerService } from 'src/common/error-handler/error-handler.service';
+import { ERROR_MESSAGES } from 'src/common/ constants/error-messages';
 
 @Injectable()
 export class CategoriesService {
   constructor(
     private readonly categoriesRepository: CategoriesRepository,
-    private readonly fileReadService: ReadFileService,
+    private readonly errorHandler: ErrorHandlerService,
   ) {}
 
-  async createCategoriesFromFile(): Promise<{ count: number }> {
+  async saveCategoriesFromJson(
+    categories: CreateCategoriesDto[],
+  ): Promise<Categories[]> {
     try {
-      const products = await this.fileReadService.readFile();
-      const categoryNames = extractUniqueCategories(products);
-      return await this.addUniqueCategories(categoryNames);
+      return await this.categoriesRepository.createManyFromJson(categories);
     } catch (error) {
-      throw new BadRequestException(
-        'Failed to create categories from file',
+      this.errorHandler.handleInternalServerError(
         error,
+        ERROR_MESSAGES.SAVE_CATEGORIES,
       );
     }
   }
 
-  private async addUniqueCategories(
-    categoryNames: string[],
-  ): Promise<{ count: number }> {
-    const categoriesDto = this.mapToCategoryDtos(categoryNames);
-    const existingCategories = await this.findAllCategories();
-
-    const newCategories = this.filterUniqueCategories(
-      existingCategories,
-      categoriesDto,
-    );
-
-    if (newCategories.length > 0) {
-      return await this.saveCategories(newCategories);
-    } else {
-      return { count: 0 };
-    }
-  }
-
-  private mapToCategoryDtos(categoryNames: string[]): CreateCategoriesDto[] {
-    return categoryNames.map((name) => ({
-      name,
-      createdAt: new Date(),
-    }));
-  }
-
-  private filterUniqueCategories(
-    existingCategories: CreateCategoriesDto[],
-    newCategories: CreateCategoriesDto[],
-  ): CreateCategoriesDto[] {
-    return newCategories.filter(
-      (newCategory) =>
-        !existingCategories.some(
-          (existingCategory) => existingCategory.name === newCategory.name,
-        ),
-    );
-  }
-
-  private async saveCategories(
-    categories: CreateCategoriesDto[],
-  ): Promise<{ count: number }> {
-    try {
-      return await this.categoriesRepository.createMany(categories);
-    } catch (error) {
-      throw new BadRequestException('Failed to save categories', error);
-    }
-  }
-
-  async findAllCategories(): Promise<Categories[]> {
+  async findAll(): Promise<Categories[]> {
     try {
       return await this.categoriesRepository.findAll();
     } catch (error) {
-      throw new BadRequestException('Failed to fetch categories', error);
+      this.errorHandler.handleInternalServerError(
+        error,
+        ERROR_MESSAGES.RETRIEVE_CATEGORIES,
+      );
+    }
+  }
+
+  async findId(id: string): Promise<Categories> {
+    try {
+      const category = await this.categoriesRepository.findOne(id);
+      if (!category) {
+        this.errorHandler.handleNotFound('Category', `with ID ${id}`);
+      }
+      return category;
+    } catch (error) {
+      this.errorHandler.handleInternalServerError(
+        error,
+        ERROR_MESSAGES.RETRIEVE_CATEGORY,
+      );
+    }
+  }
+
+  async delete(id: string): Promise<{ name: string }> {
+    try {
+      const deletedCategory = await this.categoriesRepository.delete(id);
+      if (!deletedCategory) {
+        this.errorHandler.handleNotFound('Category', `with ID ${id}`);
+      }
+      return deletedCategory;
+    } catch (error) {
+      this.errorHandler.handleBadRequest(error, ERROR_MESSAGES.DELETE_CATEGORY);
+    }
+  }
+
+  async update(id: string, dto: UpdateCategoriesDto): Promise<Categories> {
+    try {
+      const updatedCategory = await this.categoriesRepository.update(id, dto);
+      if (!updatedCategory) {
+        this.errorHandler.handleNotFound('Category', `with ID ${id}`);
+      }
+      return updatedCategory;
+    } catch (error) {
+      this.errorHandler.handleBadRequest(error, ERROR_MESSAGES.UPDATE_CATEGORY);
     }
   }
 }
