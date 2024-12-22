@@ -1,0 +1,78 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+}
+
+
+model Categories {
+  id         String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name       String    @db.VarChar(100)
+  createdAt  DateTime  @default(now()) @map("created_at")
+  products   Products[]
+}
+
+model Brands {
+  id         String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name       String    @db.VarChar(100)
+  createdAt  DateTime  @default(now()) @map("created_at")
+  products   Products[]
+}
+
+
+model Products {
+  id          String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  brandId     String?   @map("brand_id") @db.Uuid
+  categoryId  String?   @map("category_id") @db.Uuid
+  title       String    @db.VarChar(100)
+  price       Decimal   @db.Decimal(10, 2)
+  img         String[]  @db.Text
+  brand       String    @db.VarChar(100)
+  description String[]
+  characteristics Json?
+  rating      Decimal   @default(0.00) @db.Decimal(3, 2)
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @default(now()) @map("updated_at")
+  category    Categories? @relation(fields: [categoryId], references: [id])
+  brandEntity Brands?    @relation(fields: [brandId], references: [id], onDelete: SetNull)
+  orders      Orders[]
+  reviews     Reviews[]
+}
+
+model Users {
+  id         String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  username   String    @unique @db.VarChar(50)
+  email      String    @unique @db.VarChar(100)
+  password   String    @db.VarChar(255)
+  createdAt  DateTime  @default(now()) @map("created_at")
+  updatedAt  DateTime  @default(now()) @map("updated_at")
+  orders     Orders[]
+  reviews    Reviews[]
+}
+
+model Orders {
+  id         String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  productId  String    @map("product_id") @db.Uuid
+  userId     String    @map("user_id") @db.Uuid
+  quantity   Int
+  totalPrice Decimal   @db.Decimal(10, 2) @map("total_price")
+  orderDate  DateTime  @default(now()) @map("order_date")
+  product    Products   @relation(fields: [productId], references: [id], onDelete: Cascade)
+  user       Users      @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Reviews {
+  id         String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  productId  String    @map("product_id") @db.Uuid
+  userId     String    @map("user_id") @db.Uuid
+  rating     Int       @default(1) @map("rating") 
+  reviewText String?   @db.Text @map("review_text")
+  createdAt  DateTime  @default(now()) @map("created_at")
+  updatedAt  DateTime  @default(now()) @map("updated_at")
+  product    Products   @relation(fields: [productId], references: [id], onDelete: Cascade)
+  user       Users      @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
