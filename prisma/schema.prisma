@@ -63,6 +63,8 @@ model Orders {
   orderDate  DateTime  @default(now()) @map("order_date")
   product    Products   @relation(fields: [productId], references: [id], onDelete: Cascade)
   user       Users      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([productId, userId])
 }
 
 model Reviews {
@@ -75,4 +77,6 @@ model Reviews {
   updatedAt  DateTime  @default(now()) @map("updated_at")
   product    Products   @relation(fields: [productId], references: [id], onDelete: Cascade)
   user       Users      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([productId, userId])
 }
