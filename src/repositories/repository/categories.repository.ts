@@ -1,4 +1,4 @@
-import { Inject, Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { Categories } from '@prisma/client';
 import { PrismaService } from 'prisma/prisma.service';
 import { CreateCategoriesDto } from 'src/categories/dto/create-categories-dto';

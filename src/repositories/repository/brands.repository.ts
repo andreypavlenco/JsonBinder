@@ -1,4 +1,4 @@
-import { Inject, Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { Brands } from '@prisma/client';
 import { PrismaService } from 'prisma/prisma.service';
 import { CreateBrandsDto } from 'src/brands/dto/create-brands-dto';
