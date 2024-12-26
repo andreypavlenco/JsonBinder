@@ -7,25 +7,21 @@ export class ImportFromJsonController {
 
   @Post('brands')
   async importBrands() {
-    await this.importFromJsonservice.importBrands();
-    return { message: 'Brands imported successfully' };
+    return await this.importFromJsonservice.importBrands();
   }
 
   @Post('categories')
   async importCategories() {
-    await this.importFromJsonservice.importCategories();
-    return { message: 'Categories imported successfully' };
+    return await this.importFromJsonservice.importCategories();
   }
 
   @Post('products')
   async importProducts() {
-    await this.importFromJsonservice.importProducts();
-    return { message: 'Products imported successfully' };
+    return this.importFromJsonservice.importProducts();
   }
 
   @Post('all')
   async importAll() {
-    await this.importFromJsonservice.jsonBinder();
-    return { message: 'All data imported successfully' };
+    return this.importFromJsonservice.jsonBinder();
   }
 }

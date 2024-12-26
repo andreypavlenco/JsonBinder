@@ -6,7 +6,7 @@ import { Brands, Categories, Products } from '@prisma/client';
 export class WriteFileService {
   constructor() {}
 
-  async saveProductsToFile(products: Products[]): Promise<void> {
+  async saveProductsToFile(products: Products[]) {
     try {
       return await saveToFile('unloading_files/products.json', products);
     } catch (error) {
@@ -14,7 +14,7 @@ export class WriteFileService {
     }
   }
 
-  async saveBrandsToFile(brands: Brands[]): Promise<void> {
+  async saveBrandsToFile(brands: Brands[]) {
     try {
       return await saveToFile('unloading_files/brands.json', brands);
     } catch (error) {
@@ -22,7 +22,7 @@ export class WriteFileService {
     }
   }
 
-  async saveCategoriesToFile(categories: Categories[]): Promise<void> {
+  async saveCategoriesToFile(categories: Categories[]) {
     try {
       return await saveToFile('unloading_files/categories.json', categories);
     } catch (error) {

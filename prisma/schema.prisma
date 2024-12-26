@@ -11,14 +11,14 @@ datasource db {
 
 model Categories {
   id         String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  name       String    @db.VarChar(100)
+  title      String    @db.VarChar(100)
   createdAt  DateTime  @default(now()) @map("created_at")
   products   Products[]
 }
 
 model Brands {
   id         String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  name       String    @db.VarChar(100)
+  title      String    @db.VarChar(100)
   createdAt  DateTime  @default(now()) @map("created_at")
   products   Products[]
 }

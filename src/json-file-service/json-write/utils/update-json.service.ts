@@ -17,10 +17,10 @@ export class UpdateProductService {
     const categories = await this.categoriesService.findAll();
 
     const updatedProducts = products.map((product) => {
-      const brand = brands.find((b) => b.name === product.brand);
+      const brand = brands.find((b) => b.title === product.brand);
       const productFirstWord = product.title.split(' ')[0];
       const category = categories.find(
-        (c) => c.name.split(' ')[0] === productFirstWord,
+        (c) => c.title.split(' ')[0] === productFirstWord,
       );
       return {
         ...product,

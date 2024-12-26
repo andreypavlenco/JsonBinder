@@ -1,18 +1,18 @@
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { Brands } from '@prisma/client';
 import { PrismaService } from 'prisma/prisma.service';
-import { IBrandsRepository } from '../interfaces/brands-repository.interface';
 import { CreateBrandsDto } from 'src/brands/dto/create-brands-dto';
 import { UpdateBrandsDto } from 'src/brands/dto/update-brands-dto';
+import { IRepository } from '../interfaces/repository.interface';
 
 @Injectable()
-export class BrandsRepository implements IBrandsRepository {
+export class BrandsRepository implements IRepository<Brands, CreateBrandsDto> {
   constructor(private readonly prisma: PrismaService) {}
 
   async createManyFromJson(dto: CreateBrandsDto[]): Promise<Brands[]> {
     return await this.prisma.brands.createManyAndReturn({
       data: dto.map((brand) => ({
-        name: brand.name,
+        title: brand.title,
         createdAt: new Date(),
       })),
     });
@@ -22,29 +22,26 @@ export class BrandsRepository implements IBrandsRepository {
     return this.prisma.brands.findMany();
   }
 
-  async findOne(idBrands: string): Promise<Brands> {
+  async findById(id: string): Promise<Brands> {
     return await this.prisma.brands.findUnique({
       where: {
-        id: idBrands,
+        id,
       },
     });
   }
 
-  async delete(idBrands: string): Promise<{ name: string }> {
+  async delete(id: string): Promise<{ title: string }> {
     return await this.prisma.brands.delete({
       where: {
-        id: idBrands,
-      },
-      select: {
-        name: true,
+        id,
       },
     });
   }
 
-  async update(idBrands: string, dto: UpdateBrandsDto): Promise<Brands> {
+  async update(id: string, dto: UpdateBrandsDto): Promise<Brands> {
     return await this.prisma.brands.update({
       where: {
-        id: idBrands,
+        id,
       },
       data: {
         ...dto,
