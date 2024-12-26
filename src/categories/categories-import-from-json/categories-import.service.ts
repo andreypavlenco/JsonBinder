@@ -20,7 +20,9 @@ export class CategoriesImportFromJsonService {
       const categoryNames = extractUniqueCategories(products);
       return await this.addUniqueCategories(categoryNames);
     } catch (error) {
-      throw new BadRequestException('Failed to create categories from file');
+      throw new BadRequestException(
+        `Failed to create categories from file ${error.message}`,
+      );
     }
   }
 
@@ -65,7 +67,7 @@ export class CategoriesImportFromJsonService {
     try {
       return await this.writingFileService.saveCategoriesToFile(categories);
     } catch (error) {
-      throw new BadRequestException('Error saving brands');
+      throw new BadRequestException(`Error saving brands ${error.message}`);
     }
   }
 
@@ -78,7 +80,9 @@ export class CategoriesImportFromJsonService {
       await this.saveCategoriesToJsonFile(saveCategories);
       return saveCategories;
     } catch (error) {
-      throw new BadRequestException('Failed to save categories');
+      throw new BadRequestException(
+        `Failed to save categories ${error.message}`,
+      );
     }
   }
 }
