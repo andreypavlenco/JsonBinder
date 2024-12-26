@@ -1,4 +1,4 @@
 export class CreateCategoriesDto {
-  name: string;
+  title: string;
   createdAt?: Date;
 }
