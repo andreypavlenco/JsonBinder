@@ -1,10 +1,10 @@
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { ProductRepository } from 'src/repositories/repository/products.repository';
 import { CreateProductsDto } from './dto/create-products-dto';
 import { Products } from '@prisma/client';
 import { UpdateProductsDto } from './dto/update-products-dto';
-import { ErrorHandlerService } from 'src/common/error-handler/error-handler.service';
-import { ERROR_MESSAGES } from 'src/common/ constants/error-messages';
+import { ErrorHandlerService } from 'src/shared/error-handler/error-handler.service';
+import { ERROR_MESSAGES } from 'src/shared/ constants/error-messages';
 
 @Injectable()
 export class ProductsService {
@@ -39,7 +39,7 @@ export class ProductsService {
 
   async findId(id: string): Promise<Products> {
     try {
-      const product = await this.productsRepository.findOne(id);
+      const product = await this.productsRepository.findById(id);
       if (!product) {
         this.errorHandler.handleNotFound('Product', `with ID ${id}`);
       }
