@@ -6,7 +6,11 @@ import { CategoriesImportFromJsonModule } from 'src/categories/categories-import
 import { ProductsImportFromJsonModule } from 'src/products/products-import-from-json/products-import.module';
 
 @Module({
-  imports: [BrandsImportFromJsonModule, CategoriesImportFromJsonModule, ProductsImportFromJsonModule],
+  imports: [
+    BrandsImportFromJsonModule,
+    CategoriesImportFromJsonModule,
+    ProductsImportFromJsonModule,
+  ],
   controllers: [ImportFromJsonController],
   providers: [ImportFromJsonService],
 })
