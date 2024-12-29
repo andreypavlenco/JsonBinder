@@ -3,7 +3,8 @@ import { ProductRepository } from 'src/repositories/repository/products.reposito
 import { CreateProductsDto } from './dto/create-products-dto';
 import { Products } from '@prisma/client';
 import { UpdateProductsDto } from './dto/update-products-dto';
-import { ErrorHandlerService } from 'src/error-handler/error-handler.service';
+import { ErrorHandlerService } from 'src/shared/error-handler/error-handler.service';
+import { ERROR_MESSAGES } from 'src/shared/ constants/error-messages';
 
 @Injectable()
 export class ProductsService {
@@ -18,7 +19,10 @@ export class ProductsService {
     try {
       return await this.productsRepository.createManyFromJson(products);
     } catch (error) {
-      this.errorHandler.handle(error, 'Failed to save products.');
+      this.errorHandler.handleInternalServerError(
+        error,
+        ERROR_MESSAGES.SAVE_PRODUCTS,
+      );
     }
   }
 
@@ -26,19 +30,25 @@ export class ProductsService {
     try {
       return await this.productsRepository.findAll();
     } catch (error) {
-      this.errorHandler.handle(error, 'Failed to fetch products.');
+      this.errorHandler.handleInternalServerError(
+        error,
+        ERROR_MESSAGES.SAVE_PRODUCTS,
+      );
     }
   }
 
   async findId(id: string): Promise<Products> {
     try {
-      const product = await this.productsRepository.findOne(id);
+      const product = await this.productsRepository.findById(id);
       if (!product) {
         this.errorHandler.handleNotFound('Product', `with ID ${id}`);
       }
       return product;
     } catch (error) {
-      this.errorHandler.handle(error, 'Failed to fetch products by ID.');
+      this.errorHandler.handleInternalServerError(
+        error,
+        ERROR_MESSAGES.RETRIEVE_PRODUCT,
+      );
     }
   }
 
@@ -50,7 +60,7 @@ export class ProductsService {
       }
       return result;
     } catch (error) {
-      this.errorHandler.handle(error, 'Failed to delete products.');
+      this.errorHandler.handleBadRequest(error, ERROR_MESSAGES.DELETE_PRODUCT);
     }
   }
 
@@ -62,7 +72,7 @@ export class ProductsService {
       }
       return updatedProduct;
     } catch (error) {
-      this.errorHandler.handle(error, 'Failed to update products.');
+      this.errorHandler.handleBadRequest(error, ERROR_MESSAGES.UPDATE_PRODUCT);
     }
   }
 }

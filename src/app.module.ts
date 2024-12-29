@@ -2,7 +2,6 @@ import { CacheModule } from './cache/cache.module';
 import { RedisModule } from './redis/redis.module';
 import { ProductsImportFromJsonModule } from './products/products-import-from-json/products-import.module';
 import { BrandsImportFromJsonModule } from './brands/brands-import-from-json/brands-import.module';
-import { RepositoryModule } from './repositories/repository/repository.module';
 import { Module } from '@nestjs/common';
 import { PrismaModule } from 'prisma/prisma.module';
 import { BrandsModule } from './brands/brands.module';
@@ -14,11 +13,13 @@ import { CategoriesImportFromJsonModule } from './categories/categories-import-f
 import { JsonUploadModule } from './json-upload/json-upload.module';
 import { ImportFromJsonModule } from './import-from-json/import-from-json.module';
 import { APP_FILTER } from '@nestjs/core';
-import { HttpExceptionFilter } from './filters/http-exception.filter';
-import { ErrorHandlerModule } from './error-handler/error-handler.module';
+import { HttpExceptionFilter } from './shared/filters/http-exception.filter';
+import { ErrorHandlerModule } from './shared/error-handler/error-handler.module';
+import { RepositoryModule } from './repositories/repository/repository.module';
 
 @Module({
   imports: [
+    RepositoryModule,
     ErrorHandlerModule,
     ImportFromJsonModule,
     CacheModule,
@@ -27,7 +28,6 @@ import { ErrorHandlerModule } from './error-handler/error-handler.module';
     ProductsImportFromJsonModule,
     CategoriesImportFromJsonModule,
     BrandsImportFromJsonModule,
-    RepositoryModule,
     PrismaModule,
     BrandsModule,
     CategoriesModule,

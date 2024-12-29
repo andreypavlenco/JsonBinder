@@ -25,7 +25,7 @@ export class BrandsImportFormJsonService {
   }
 
   private async createUniqueBrands(brandNames: string[]): Promise<Brands[]> {
-    const createBrandsDto = brandNames.map((name) => ({ name }));
+    const createBrandsDto = brandNames.map((title) => ({ title }));
     const existingBrands = await this.brandsServie.findAll();
 
     const newBrands = this.filterUniqueBrands(existingBrands, createBrandsDto);
@@ -43,7 +43,7 @@ export class BrandsImportFormJsonService {
     return newBrands.filter(
       (newBrand) =>
         !existingBrands.some(
-          (existingBrand) => existingBrand.name === newBrand.name,
+          (existingBrand) => existingBrand.title === newBrand.title,
         ),
     );
   }

@@ -1,7 +1,7 @@
 -- CreateTable
 CREATE TABLE "Categories" (
     "id" UUID NOT NULL DEFAULT gen_random_uuid(),
-    "name" VARCHAR(100) NOT NULL,
+    "title" VARCHAR(100) NOT NULL,
     "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "Categories_pkey" PRIMARY KEY ("id")
@@ -10,7 +10,7 @@ CREATE TABLE "Categories" (
 -- CreateTable
 CREATE TABLE "Brands" (
     "id" UUID NOT NULL DEFAULT gen_random_uuid(),
-    "name" VARCHAR(100) NOT NULL,
+    "title" VARCHAR(100) NOT NULL,
     "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "Brands_pkey" PRIMARY KEY ("id")
@@ -76,6 +76,12 @@ CREATE UNIQUE INDEX "Users_username_key" ON "Users"("username");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Users_email_key" ON "Users"("email");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Orders_product_id_user_id_key" ON "Orders"("product_id", "user_id");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Reviews_product_id_user_id_key" ON "Reviews"("product_id", "user_id");
 
 -- AddForeignKey
 ALTER TABLE "Products" ADD CONSTRAINT "Products_category_id_fkey" FOREIGN KEY ("category_id") REFERENCES "Categories"("id") ON DELETE SET NULL ON UPDATE CASCADE;
