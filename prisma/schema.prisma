@@ -11,14 +11,14 @@ datasource db {
 
 model Categories {
   id         String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  name       String    @db.VarChar(100)
+  title      String    @db.VarChar(100)
   createdAt  DateTime  @default(now()) @map("created_at")
   products   Products[]
 }
 
 model Brands {
   id         String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  name       String    @db.VarChar(100)
+  title      String    @db.VarChar(100)
   createdAt  DateTime  @default(now()) @map("created_at")
   products   Products[]
 }
@@ -32,7 +32,8 @@ model Products {
   price       Decimal   @db.Decimal(10, 2)
   img         String[]  @db.Text
   brand       String    @db.VarChar(100)
-  description Json?
+  description String[]
+  characteristics Json?
   rating      Decimal   @default(0.00) @db.Decimal(3, 2)
   createdAt   DateTime  @default(now()) @map("created_at")
   updatedAt   DateTime  @default(now()) @map("updated_at")
@@ -62,6 +63,8 @@ model Orders {
   orderDate  DateTime  @default(now()) @map("order_date")
   product    Products   @relation(fields: [productId], references: [id], onDelete: Cascade)
   user       Users      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([productId, userId])
 }
 
 model Reviews {
@@ -74,4 +77,6 @@ model Reviews {
   updatedAt  DateTime  @default(now()) @map("updated_at")
   product    Products   @relation(fields: [productId], references: [id], onDelete: Cascade)
   user       Users      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([productId, userId])
 }
