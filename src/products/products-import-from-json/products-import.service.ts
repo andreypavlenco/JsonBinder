@@ -61,14 +61,14 @@ export class ProductsImportfromJsonService {
           `Brand is missing for product: ${product.title}`,
         );
       }
-      const brand = brands.find((b) => b.name === product.brand);
+      const brand = brands.find((b) => b.title === product.brand);
       if (!brand) {
         throw new BadRequestException(`Brand not found for ${product.brand}`);
       }
 
       const productFirstWord = product.title.split(' ')[0];
       const category = categories.find(
-        (c) => c.name.split(' ')[0] === productFirstWord,
+        (c) => c.title.split(' ')[0] === productFirstWord,
       );
       if (!category) {
         throw new BadRequestException(

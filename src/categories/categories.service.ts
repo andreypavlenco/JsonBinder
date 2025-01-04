@@ -1,10 +1,10 @@
-import { BadRequestException, Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { CategoriesRepository } from 'src/repositories/repository/categories.repository';
 import { CreateCategoriesDto } from './dto/create-categories-dto';
 import { Categories } from '@prisma/client';
 import { UpdateCategoriesDto } from './dto/update-categories-dto';
-import { ErrorHandlerService } from 'src/common/error-handler/error-handler.service';
-import { ERROR_MESSAGES } from 'src/common/ constants/error-messages';
+import { ErrorHandlerService } from 'src/shared/error-handler/error-handler.service';
+import { ERROR_MESSAGES } from 'src/shared/ constants/error-messages';
 
 @Injectable()
 export class CategoriesService {
@@ -39,7 +39,7 @@ export class CategoriesService {
 
   async findId(id: string): Promise<Categories> {
     try {
-      const category = await this.categoriesRepository.findOne(id);
+      const category = await this.categoriesRepository.findById(id);
       if (!category) {
         this.errorHandler.handleNotFound('Category', `with ID ${id}`);
       }
@@ -52,7 +52,7 @@ export class CategoriesService {
     }
   }
 
-  async delete(id: string): Promise<{ name: string }> {
+  async delete(id: string): Promise<{ title: string }> {
     try {
       const deletedCategory = await this.categoriesRepository.delete(id);
       if (!deletedCategory) {

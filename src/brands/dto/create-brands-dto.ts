@@ -1,4 +1,4 @@
 export class CreateBrandsDto {
-  name: string;
+  title: string;
   createdAt?: Date;
 }

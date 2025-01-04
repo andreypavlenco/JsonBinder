@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { ProductsController } from './products.controller';
-import { RepositoryModule } from 'src/repositories/repository/repository.module';
 import { ProductsService } from './products.service';
-import { ErrorHandlerModule } from 'src/common/error-handler/error-handler.module';
+import { ErrorHandlerModule } from 'src/shared/error-handler/error-handler.module';
+import { RepositoryModule } from 'src/repositories/repository/repository.module';
 
 @Module({
   imports: [RepositoryModule, ErrorHandlerModule],
