@@ -12,15 +12,15 @@ export class ImportFromJsonService {
   ) {}
 
   importBrands() {
-    this.brandsImportFromJson.importUniqueBrands();
+   return this.brandsImportFromJson.importUniqueBrands();
   }
 
   importCategories() {
-    this.categoriesImportFromJson.importUniqueCategories();
+   return this.categoriesImportFromJson.importUniqueCategories();
   }
 
   importProducts() {
-    this.productsImportfromJson.importUniqueProducts();
+   return this.productsImportfromJson.importUniqueProducts();
   }
 
   async importFullJson() {
