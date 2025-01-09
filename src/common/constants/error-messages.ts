@@ -4,7 +4,7 @@ export const ERROR_MESSAGES = {
   RETRIEVE_PRODUCT: 'Failed to retrieve the product. Please try again later.',
   DELETE_PRODUCT: 'Failed to delete the product. Please try again later.',
   UPDATE_PRODUCT: 'Failed to update the product. Please try again later.',
-  PRODUCT_NOT_FOUND: 'Product not found with ID',
+  PRODUCT_NOT_FOUND: 'Product not found',
   NO_NEW_PRODUCTS: 'No new products to import.',
   UPDATE_PRODUCTS: 'Failed to update products. Please try again later.',
 
