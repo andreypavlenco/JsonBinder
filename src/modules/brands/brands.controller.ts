@@ -1,6 +1,7 @@
 import { Body, Controller, Delete, Get, Param, Patch } from '@nestjs/common';
 import { BrandsService } from './brands.service';
 import { UpdateBrandsDto } from './dto/update-brands-dto';
+import { IdParamDto } from 'src/common/dto/id-param.dto';
 
 @Controller('brands')
 export class BrandsController {
@@ -12,17 +13,17 @@ export class BrandsController {
   }
 
   @Delete(':id')
-  delete(@Param('id') id: string) {
-    return this.brandsService.delete(id);
+  delete(@Param() params: IdParamDto) {
+    return this.brandsService.delete(params.id);
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() dto: UpdateBrandsDto) {
-    return this.brandsService.update(id, dto);
+  update(@Param() params: IdParamDto, @Body() dto: UpdateBrandsDto) {
+    return this.brandsService.update(params.id, dto);
   }
 
   @Get(':id')
-  findId(@Param('id') id: string) {
-    return this.brandsService.findId(id);
+  findId(@Param() params: IdParamDto) {
+    return this.brandsService.findId(params.id);
   }
 }
