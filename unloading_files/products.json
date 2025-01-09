@@ -1,8 +1,8 @@
 [
   {
-    "id": "d8fa28a7-4a01-48d5-96e3-27e49aa9fdd4",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "a383149d-244d-46a2-a519-c26dc908677d",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор інверторний KONNER&SOHNEN KSB 22i S",
     "price": "22999",
     "img": [
@@ -128,13 +128,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.358Z",
-    "updatedAt": "2024-12-23T00:12:54.358Z"
+    "createdAt": "2025-01-09T22:31:53.315Z",
+    "updatedAt": "2025-01-09T22:31:53.315Z"
   },
   {
-    "id": "077b6f04-fcd4-40f7-91eb-72c76b14e941",
-    "brandId": "9968107c-2da6-429c-a0ef-74f70b5b57ab",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "da71a27f-fea8-4d88-8c9b-6c7e6ad2982d",
+    "brandId": "dc0aa1e8-0e6b-460a-93da-3df40117e0f6",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий WERK WPG3800",
     "price": "9599",
     "img": [
@@ -264,13 +264,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.358Z",
-    "updatedAt": "2024-12-23T00:12:54.358Z"
+    "createdAt": "2025-01-09T22:31:53.315Z",
+    "updatedAt": "2025-01-09T22:31:53.315Z"
   },
   {
-    "id": "23889a20-3cec-4b3f-9fdb-551f1652559c",
-    "brandId": "7af06022-cd99-4de8-9dc1-83d5dd440435",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "05726e67-ae12-42ad-b898-403b251d032d",
+    "brandId": "cdc118e6-73fc-4c06-ab55-5d3c8a3b0b63",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор інверторний бензиновий FORTE FG2000i 1.8 кВт (101961)",
     "price": "20999",
     "img": [
@@ -404,13 +404,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.358Z",
-    "updatedAt": "2024-12-23T00:12:54.358Z"
+    "createdAt": "2025-01-09T22:31:53.315Z",
+    "updatedAt": "2025-01-09T22:31:53.315Z"
   },
   {
-    "id": "9c0fcd0b-c2e3-4d3f-a2b1-1125c3607408",
-    "brandId": "8236f9d7-9d8e-4d1f-810f-8584a4d79587",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "4f552e70-5b91-4fd8-a60b-5910ef596694",
+    "brandId": "673a7dc8-00f8-40af-9efa-994cac2014cb",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий ITC POWER GG3300F",
     "price": "13499",
     "img": [
@@ -544,13 +544,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.358Z",
-    "updatedAt": "2024-12-23T00:12:54.358Z"
+    "createdAt": "2025-01-09T22:31:53.315Z",
+    "updatedAt": "2025-01-09T22:31:53.315Z"
   },
   {
-    "id": "34ede121-f761-4522-aa13-5259e79a8deb",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "d300d3c2-f0b0-43f6-9509-98a0424846ea",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор інверторний бензиновий KONNER&SOHNEN KSB 21i",
     "price": "17999",
     "img": [
@@ -680,13 +680,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.358Z",
-    "updatedAt": "2024-12-23T00:12:54.358Z"
+    "createdAt": "2025-01-09T22:31:53.315Z",
+    "updatedAt": "2025-01-09T22:31:53.315Z"
   },
   {
-    "id": "3f7eaf69-942c-4118-bb6c-b425059c511a",
-    "brandId": "0ba99dfd-d1b2-4390-b41f-aee8d7c154f2",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "d1110f71-81be-4f0b-b8cc-29ab19ffb315",
+    "brandId": "45090a65-f4aa-446e-b026-aa2da9edc178",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий SIGMA 3.5/4.0кВт (5710431)",
     "price": "18034",
     "img": [
@@ -808,13 +808,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.358Z",
-    "updatedAt": "2024-12-23T00:12:54.358Z"
+    "createdAt": "2025-01-09T22:31:53.315Z",
+    "updatedAt": "2025-01-09T22:31:53.315Z"
   },
   {
-    "id": "ba38830e-bee4-4e70-ba79-d83ea5aab0b1",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "bfdfeb03-4416-44ca-bb69-d0aacd357fed",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор KONNER&SOHNEN KS 9000E G",
     "price": "45999",
     "img": [
@@ -944,13 +944,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.358Z",
-    "updatedAt": "2024-12-23T00:12:54.358Z"
+    "createdAt": "2025-01-09T22:31:53.315Z",
+    "updatedAt": "2025-01-09T22:31:53.315Z"
   },
   {
-    "id": "2dc90998-6195-478c-a7b5-a110f06120d7",
-    "brandId": "998ceba1-5306-4da0-92d0-e8837cbe8749",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "e6152aef-79b7-4328-8ecc-48a3a27d27c4",
+    "brandId": "3ff1f63a-f0c2-43f7-9fa3-b081bcc5ce54",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор дизельний ENERSOL SKDS-7EBA",
     "price": "62999",
     "img": [
@@ -1080,13 +1080,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.358Z",
-    "updatedAt": "2024-12-23T00:12:54.358Z"
+    "createdAt": "2025-01-09T22:31:53.315Z",
+    "updatedAt": "2025-01-09T22:31:53.315Z"
   },
   {
-    "id": "54f81472-950b-463a-a9a2-b7ec837ca2f3",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "1c418c17-b9e6-4d7f-bb34-46e84dd36a9c",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий KONNER&SOHNEN KS10000E-3",
     "price": "50599",
     "img": [
@@ -1228,13 +1228,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.358Z",
-    "updatedAt": "2024-12-23T00:12:54.358Z"
+    "createdAt": "2025-01-09T22:31:53.315Z",
+    "updatedAt": "2025-01-09T22:31:53.315Z"
   },
   {
-    "id": "68ebba0c-d810-4e4b-b418-666e4d37fb54",
-    "brandId": "afee7d13-60a0-4d66-857d-2cd3219cd445",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "b2ae9673-e004-45ce-a4e4-023cddfb7cc3",
+    "brandId": "5824234d-9305-4f1a-b89e-6ccae7737232",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий IXES IX-BGS-7100",
     "price": "51491",
     "img": [
@@ -1348,13 +1348,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.358Z",
-    "updatedAt": "2024-12-23T00:12:54.358Z"
+    "createdAt": "2025-01-09T22:31:53.315Z",
+    "updatedAt": "2025-01-09T22:31:53.315Z"
   },
   {
-    "id": "5e8debbd-9d71-4ed4-a213-e99cb732a7d7",
-    "brandId": "e7c8b7bd-37a4-4918-9214-c0a0c93dcf6e",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "e305ba72-8e1e-4d19-b699-cd2ae546b283",
+    "brandId": "166b0c99-6ecc-42b8-bcc9-a3372b0156aa",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий KARCHER PGG 3/1 230В (1.042-207.0)",
     "price": "19999",
     "img": [
@@ -1484,13 +1484,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.358Z",
-    "updatedAt": "2024-12-23T00:12:54.358Z"
+    "createdAt": "2025-01-09T22:31:53.315Z",
+    "updatedAt": "2025-01-09T22:31:53.315Z"
   },
   {
-    "id": "39b93fb8-1ca2-48fb-8bfd-735d754fb95d",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "59b0bc76-76dd-4a23-9124-e0fd840e3fda",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор KONNER&SOHNEN KS 2900",
     "price": "13999",
     "img": [
@@ -1624,13 +1624,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.358Z",
-    "updatedAt": "2024-12-23T00:12:54.358Z"
+    "createdAt": "2025-01-09T22:31:53.315Z",
+    "updatedAt": "2025-01-09T22:31:53.315Z"
   },
   {
-    "id": "4f7c8755-fbb0-4012-8430-ecb8f076334e",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "ef89f336-28c2-4fde-9353-7ffdd2061a30",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор KONNER&SOHNEN KS 2100IGS",
     "price": "34499",
     "img": [
@@ -1764,13 +1764,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.358Z",
-    "updatedAt": "2024-12-23T00:12:54.358Z"
+    "createdAt": "2025-01-09T22:31:53.315Z",
+    "updatedAt": "2025-01-09T22:31:53.315Z"
   },
   {
-    "id": "70c9c94e-cbf4-4d5f-abfd-3c3de3f81cec",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "8e3b44fa-fd2b-4f87-874b-b82c6c6dd127",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор KONNER&SOHNEN KS 7000E G",
     "price": "41999",
     "img": [
@@ -1904,13 +1904,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.358Z",
-    "updatedAt": "2024-12-23T00:12:54.358Z"
+    "createdAt": "2025-01-09T22:31:53.315Z",
+    "updatedAt": "2025-01-09T22:31:53.315Z"
   },
   {
-    "id": "fb35da55-e7b0-4d0a-a8d5-dde7645ce0c0",
-    "brandId": "312c6f0a-7d95-4a69-b464-d33ad7e69fe2",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "21dec03a-321b-4c78-a97a-976144aed0ce",
+    "brandId": "425fb498-6af3-4916-bf4f-7032ddb2abbb",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий NEO TOOLS (04-731)",
     "price": "30999",
     "img": [
@@ -2036,13 +2036,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.358Z",
-    "updatedAt": "2024-12-23T00:12:54.358Z"
+    "createdAt": "2025-01-09T22:31:53.315Z",
+    "updatedAt": "2025-01-09T22:31:53.315Z"
   },
   {
-    "id": "5a58b467-1ba4-4bb4-b50b-06c5316ec359",
-    "brandId": "e7c8b7bd-37a4-4918-9214-c0a0c93dcf6e",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "089e8f3c-73c3-49e3-b943-b54e976418c3",
+    "brandId": "166b0c99-6ecc-42b8-bcc9-a3372b0156aa",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий KARCHER PGG 8/3 (1.042-209.0)",
     "price": "44999",
     "img": [
@@ -2172,13 +2172,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.358Z",
-    "updatedAt": "2024-12-23T00:12:54.358Z"
+    "createdAt": "2025-01-09T22:31:53.315Z",
+    "updatedAt": "2025-01-09T22:31:53.315Z"
   },
   {
-    "id": "d99f6909-f0f5-4b4d-8fbe-c5fcf8ff7110",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "fe87d786-6a2d-48c1-8fc4-6d0c8a7ca908",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор KONNER&SOHNEN KS 2900G",
     "price": "16699",
     "img": [
@@ -2308,13 +2308,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.315Z",
+    "updatedAt": "2025-01-09T22:31:53.315Z"
   },
   {
-    "id": "a4ef226b-e464-4d08-b034-c04614d0bfe0",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "c4c2c03f-28d8-4e5a-9461-905a841e760c",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор KONNER&SOHNEN KS 7000E",
     "price": "37999",
     "img": [
@@ -2440,13 +2440,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.315Z",
+    "updatedAt": "2025-01-09T22:31:53.315Z"
   },
   {
-    "id": "e6e19100-ab2b-436e-9acf-924fb4cd92fe",
-    "brandId": "8236f9d7-9d8e-4d1f-810f-8584a4d79587",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "02cdce5f-c1b3-40c1-b675-f468f169af57",
+    "brandId": "673a7dc8-00f8-40af-9efa-994cac2014cb",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор інверторний бензиновий ITC POWER GG40Xi",
     "price": "25999",
     "img": [
@@ -2576,13 +2576,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "354d22a8-d202-4691-a12b-814c4012eb23",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "0bcc9ad9-85bd-4d34-82ca-8230bff25bee",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий KONNER&SOHNEN KS10000E-3ATS",
     "price": "54999",
     "img": [
@@ -2724,13 +2724,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "0d77a302-ea23-4bd8-9102-0192176534e2",
-    "brandId": "56322e86-64a6-4a0a-bdb8-2eb8214b1fe6",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "e3de52d6-3c6f-4f36-959a-7ae6773bf93f",
+    "brandId": "7f4f2752-9de8-45fe-a0a4-3bedc0f0dbb4",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор EF POWER V2500 (2.2 кВт)",
     "price": "10800",
     "img": [
@@ -2856,13 +2856,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "6ab44b7b-fd90-4243-bf86-980a7d05f06d",
-    "brandId": "0ba99dfd-d1b2-4390-b41f-aee8d7c154f2",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "de9ce394-f0f9-47f2-99ab-0e99daba7a7e",
+    "brandId": "45090a65-f4aa-446e-b026-aa2da9edc178",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор інверторний SIGMA 3.0/3.5кВт (5710731)",
     "price": "19735",
     "img": [
@@ -2988,13 +2988,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "d14c4608-1f87-4e64-8e5e-1a5e28c09779",
-    "brandId": "7af06022-cd99-4de8-9dc1-83d5dd440435",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "06648e2b-49e5-4be9-b864-26efd0efedb1",
+    "brandId": "cdc118e6-73fc-4c06-ab55-5d3c8a3b0b63",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор FORTE FG8000E (44892)",
     "price": "31865",
     "img": [
@@ -3124,13 +3124,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "d8038aec-b7b3-4a44-bcc1-e4d7746fbd5f",
-    "brandId": "3197fa59-61fb-4359-afc2-45fd40f83980",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "7690df70-6816-4973-93e6-f96a05e4d900",
+    "brandId": "99ceb935-bfb0-4d0c-9e9c-9593188b953f",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор AL-KO 6500 - C (130932)",
     "price": "28999",
     "img": [
@@ -3236,13 +3236,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "796b300f-03c7-4631-9cf9-b3b9051b82e8",
-    "brandId": "7af06022-cd99-4de8-9dc1-83d5dd440435",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "f1c80ddd-7059-47d4-8f85-e50eb906d3d1",
+    "brandId": "cdc118e6-73fc-4c06-ab55-5d3c8a3b0b63",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий FORTE FG6500 (43688)",
     "price": "23179",
     "img": [
@@ -3372,13 +3372,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "95355247-2848-4c6d-84db-da5bf6a8b6d7",
-    "brandId": "fa372b26-761e-4312-a371-3e8efc8b8095",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "db63708a-c850-4132-8f78-ed2c04066a6c",
+    "brandId": "69feb171-b528-4676-a183-0040eab850c1",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий GRAD 3.0/3.3 кВт (5710935)",
     "price": "13818",
     "img": [
@@ -3500,13 +3500,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "fdd0b9d6-8a35-44a1-8e4a-4d24391f56f3",
-    "brandId": "7af06022-cd99-4de8-9dc1-83d5dd440435",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "a11ed8d9-13eb-4fd7-aae7-a81cf8f2a75d",
+    "brandId": "cdc118e6-73fc-4c06-ab55-5d3c8a3b0b63",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий FORTE FG3500 (44067)",
     "price": "9999",
     "img": [
@@ -3636,13 +3636,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "8b908a0b-d971-48e6-b149-04148945c5ba",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "36d7f94a-7abd-475f-ab06-404656e2e205",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор Konner&Sohnen KS 4000iE S ATS",
     "price": "52079",
     "img": [
@@ -3780,13 +3780,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "e99ec520-ae70-4f47-a592-66c35d12ed5e",
-    "brandId": "ce37865f-f03f-46d9-a897-ac7a6400b3d5",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "632733c3-5883-44aa-87cb-45db7032b34a",
+    "brandId": "62e75769-6613-4de8-be54-5b569af2c1d3",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор дизельний DEPCO DG10000SE-SILENT 8 кВт (50006)",
     "price": "117600",
     "img": [
@@ -3912,13 +3912,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "891544ad-d218-4af7-88ea-f366eeb4559f",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "200b9477-fa4f-4b27-902c-e8e8ea98016b",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий KONNER&SOHNEN KS 10000E 1/3 (KS10000E-1/3)",
     "price": "53599",
     "img": [
@@ -4052,13 +4052,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "2977465a-1282-440d-8fb8-113a7a4800e4",
-    "brandId": "7af06022-cd99-4de8-9dc1-83d5dd440435",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "358276fd-4e01-43bd-a44b-5c9e1b5e9706",
+    "brandId": "cdc118e6-73fc-4c06-ab55-5d3c8a3b0b63",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор інверторний FORTE FG4500iE (130544)",
     "price": "34349",
     "img": [
@@ -4200,13 +4200,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "354774d1-2ddd-4e9e-9cff-b281ad9534e1",
-    "brandId": "0ba99dfd-d1b2-4390-b41f-aee8d7c154f2",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "ba48bd68-6090-4450-abca-81676fe0ea70",
+    "brandId": "45090a65-f4aa-446e-b026-aa2da9edc178",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий SIGMA 8.5/9.0кВт (5710571)",
     "price": "48892",
     "img": [
@@ -4304,13 +4304,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "d21ed204-58e3-4a51-b247-3ee4dd00b498",
-    "brandId": "de687a2a-8bd2-49f3-84cf-3824276f27c4",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "c33c2e22-73b5-41d3-b964-785e0afef898",
+    "brandId": "bdb49d6b-34bc-452e-b400-33328c12278a",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий IRON ANGEL EG 7500 ME (2001258)",
     "price": "29725",
     "img": [
@@ -4436,13 +4436,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "a9dba874-f437-43b6-ab74-44000cb35140",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "91a23bb6-dfe7-4e01-8e54-ba48ec0fceee",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий інверторний KONNER&SOHNEN KSB 12i S",
     "price": "18899",
     "img": [
@@ -4576,13 +4576,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "bbe8f04f-2748-44d0-af65-44235e73e235",
-    "brandId": "8c41f8e7-fed6-46b7-b1d4-bee7326efc1c",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "53b98719-2ada-46c5-9412-54bb9bbe2d9d",
+    "brandId": "6f4f2e36-bead-4a7f-9048-819943ff9863",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор двопаливний ECOFLOW Dual Fuel Smart Generator (ZDG200-EU)",
     "price": "29999",
     "img": [
@@ -4708,13 +4708,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "8e652bd9-fcf6-4abc-b61e-67e7e9c1cc42",
-    "brandId": "8236f9d7-9d8e-4d1f-810f-8584a4d79587",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "8b98ccfb-3478-4784-84d5-51c2c307f7e3",
+    "brandId": "673a7dc8-00f8-40af-9efa-994cac2014cb",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор інверторний бензиновий ITC POWER GG30Xi",
     "price": "21199",
     "img": [
@@ -4840,13 +4840,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "169b5772-f0e6-480b-8645-38ef398d0cfb",
-    "brandId": "9968107c-2da6-429c-a0ef-74f70b5b57ab",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "479c55f2-ee71-4762-86e5-5fe2382e3cf0",
+    "brandId": "dc0aa1e8-0e6b-460a-93da-3df40117e0f6",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий WERK WPG3600 (63224)",
     "price": "7675",
     "img": [
@@ -4980,13 +4980,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "0967f42b-624e-4e83-a8d8-6c12d5c1ad38",
-    "brandId": "ce37865f-f03f-46d9-a897-ac7a6400b3d5",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "9cc3db78-1b62-471e-b11a-6bfddf01a12b",
+    "brandId": "62e75769-6613-4de8-be54-5b569af2c1d3",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор DEPCO GS-5500CLE 5 кВт (50003)",
     "price": "35100",
     "img": [
@@ -5112,13 +5112,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "12e00818-3724-4e3f-9bd2-455a3a3f5a3c",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "b1e9904b-eb97-4c82-9ec3-60e7d02185cf",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор KONNER&SOHNEN KS 4000iE S",
     "price": "48509",
     "img": [
@@ -5252,13 +5252,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "5281daeb-cfcc-4bf1-bee6-654bb91c5145",
-    "brandId": "8236f9d7-9d8e-4d1f-810f-8584a4d79587",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "05c2a628-f92a-4854-9682-1e81d6d26e37",
+    "brandId": "673a7dc8-00f8-40af-9efa-994cac2014cb",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий ITC POWER GG9000FE 7000/7500 W",
     "price": "34499",
     "img": [
@@ -5384,13 +5384,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "79b5b691-9115-4218-aaea-6a08f84d0c3c",
-    "brandId": "7af06022-cd99-4de8-9dc1-83d5dd440435",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "cfb50e91-9367-4f94-8c82-67e4b56fb6b8",
+    "brandId": "cdc118e6-73fc-4c06-ab55-5d3c8a3b0b63",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий FORTE FG3500E (44888)",
     "price": "12319",
     "img": [
@@ -5520,13 +5520,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "ffe4cef4-8ef7-46bd-bda6-297306898290",
-    "brandId": "7af06022-cd99-4de8-9dc1-83d5dd440435",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "ff05c9fe-b2fd-4b63-a388-b8016a4caa1f",
+    "brandId": "cdc118e6-73fc-4c06-ab55-5d3c8a3b0b63",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий FORTE FG3800 (43689)",
     "price": "10999",
     "img": [
@@ -5656,13 +5656,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "676b1e43-12c1-45eb-aa44-562443283a22",
-    "brandId": "4d1c71df-40d2-4bcf-8968-5148b5b77c58",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "f2e2e78c-522b-4fa4-b99e-169fbee9595b",
+    "brandId": "70cf0af8-a085-40e0-90f8-30b93805d49a",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий EINHELL TC-PG 10/E5, 230В 0.68/0.8кВт, AVR (4152535)",
     "price": "5524",
     "img": [
@@ -5776,13 +5776,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "7fbfae7b-0648-494d-ab39-23a1cca389a2",
-    "brandId": "7af06022-cd99-4de8-9dc1-83d5dd440435",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "349069c3-c12b-4685-b482-356174cc021c",
+    "brandId": "cdc118e6-73fc-4c06-ab55-5d3c8a3b0b63",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий FORTE FG9000E (59706)",
     "price": "42199",
     "img": [
@@ -5909,13 +5909,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "e4630d1a-65cf-4fb3-83a0-b3ac681d9ebc",
-    "brandId": "8ff4d22d-e0bb-4217-a4fe-4573fbe3755d",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "0f977d81-d612-417b-afe9-401d81a5c023",
+    "brandId": "0a869ba8-b26d-45d3-aaa7-43f1f55dd9a6",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий NEO TOOLS (04-730)",
     "price": "17999",
     "img": [
@@ -6046,13 +6046,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "61eaee6c-7e14-4654-9e6a-67b69c3cf0ea",
-    "brandId": "998ceba1-5306-4da0-92d0-e8837cbe8749",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "25771507-6e6a-4bc0-94bb-b6aa5dabeef0",
+    "brandId": "3ff1f63a-f0c2-43f7-9fa3-b081bcc5ce54",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий ENERSOL EPG-2800S",
     "price": "10999",
     "img": [
@@ -6163,13 +6163,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "52b89857-dcb0-410b-9bcb-a90befe7ea4a",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "83e5e2d8-d83e-4836-9972-ac1e81bfa5ab",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий KONNER&SOHNEN KSB 6500C (4260405362424)",
     "price": "28999",
     "img": [
@@ -6292,13 +6292,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "0ca4c41e-d839-48e9-83da-3003998478b5",
-    "brandId": "56322e86-64a6-4a0a-bdb8-2eb8214b1fe6",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "6fd1b23a-5410-4f75-84a9-ad6a70b72e30",
+    "brandId": "7f4f2752-9de8-45fe-a0a4-3bedc0f0dbb4",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор EF POWER V7500Е (6.5 кВт)",
     "price": "30700",
     "img": [
@@ -6421,13 +6421,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "127c0c3d-925d-49c7-b2a4-eb19f4cf25eb",
-    "brandId": "e7c8b7bd-37a4-4918-9214-c0a0c93dcf6e",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "d2248ada-c5dc-439c-be5d-81ec815e8b35",
+    "brandId": "166b0c99-6ecc-42b8-bcc9-a3372b0156aa",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий KARCHER PGG 6/1 (1.042-208.0)",
     "price": "32999",
     "img": [
@@ -6538,13 +6538,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "95201c1f-bf79-4edd-a7fb-029dcbc17b04",
-    "brandId": "3197fa59-61fb-4359-afc2-45fd40f83980",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "5fbddf99-c88d-4144-ae83-e1772b55fcb5",
+    "brandId": "99ceb935-bfb0-4d0c-9e9c-9593188b953f",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор AL-KO 2500 - C (130930)",
     "price": "11554",
     "img": [
@@ -6655,13 +6655,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "6fa51783-50aa-4a16-b30a-600d83633764",
-    "brandId": "306598fd-a1a4-4b91-a4af-dd3232307319",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "0ea1e71d-ebf9-4679-91ea-ab769ec6dd3f",
+    "brandId": "226ec8f5-b46d-4150-aaf0-35a7aa1ca341",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий A.M.C JX-6500",
     "price": "5999",
     "img": [
@@ -6768,13 +6768,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "729a486a-3e6f-4ed0-9217-17c5e67d583c",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "33ad424f-18eb-43f0-8523-171e776b89f8",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор KONNER&SOHNEN KS 3000G",
     "price": "20999",
     "img": [
@@ -6901,13 +6901,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "742f4778-2a04-4b54-9043-9fb637e1f643",
-    "brandId": "998ceba1-5306-4da0-92d0-e8837cbe8749",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "3da77dcc-e979-4741-8d7d-5aca96b55a65",
+    "brandId": "3ff1f63a-f0c2-43f7-9fa3-b081bcc5ce54",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий ENERSOL EPG-7500TEA",
     "price": "41999",
     "img": [
@@ -7034,13 +7034,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "c0c5f022-b41f-4055-b5b2-a1d8b4289e2b",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "aa9b005b-ef4a-480e-84be-2c80b4adeb4d",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор KONNER&SOHNEN KSB 30i S",
     "price": "30399",
     "img": [
@@ -7171,13 +7171,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "56b3952a-1978-474c-8d97-6c9e1bf6df85",
-    "brandId": "56322e86-64a6-4a0a-bdb8-2eb8214b1fe6",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "dc7c282f-c481-45fe-8d74-8470a743bfb4",
+    "brandId": "7f4f2752-9de8-45fe-a0a4-3bedc0f0dbb4",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор EF POWER V3600 (3.0 кВт)",
     "price": "13200",
     "img": [
@@ -7300,13 +7300,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "64f32279-23aa-44bc-9923-f183c9d840e1",
-    "brandId": "7af06022-cd99-4de8-9dc1-83d5dd440435",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "b06da33e-2216-4d7a-9aeb-6e570b642467",
+    "brandId": "cdc118e6-73fc-4c06-ab55-5d3c8a3b0b63",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор інверторний FORTE FG3500i (138125)",
     "price": "29335",
     "img": [
@@ -7441,13 +7441,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "cd4265c7-f5b6-422c-9c4c-9ca17e76f72d",
-    "brandId": "0ba99dfd-d1b2-4390-b41f-aee8d7c154f2",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "b06a3a2a-06d5-42da-80af-cf15703429e3",
+    "brandId": "45090a65-f4aa-446e-b026-aa2da9edc178",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор інверторний бензиновий SIGMA 4.0/4.5 кВт 7 л (5710841)",
     "price": "20173",
     "img": [
@@ -7578,13 +7578,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "0aea5b2d-142e-4e89-8478-0335f584b5fe",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "9768befc-1581-4827-989e-84df7b1a1b43",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор KONNER&SOHNEN KS 9300DE-1/3 ATSR",
     "price": "90109",
     "img": [
@@ -7711,13 +7711,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "ed635772-89cb-4f6a-a73d-1b2bf2898d97",
-    "brandId": "7243080d-8c60-4acb-adf2-c43d5926de76",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "0695b5cf-193c-4c99-b074-a2b08bdd30aa",
+    "brandId": "172f3a3a-1b29-40b8-83c4-91c1f1834601",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор інверторний бензиновий UNIPOWER H2250IS 2 кВт (30001)",
     "price": "18500",
     "img": [
@@ -7848,13 +7848,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "08aa9fda-3324-48e5-8792-1c6908922b92",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "1820866c-3fd8-4222-9fa1-cc5e3f48aedd",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор інверторний KONNER&SOHNEN KS 2000iG S",
     "price": "32399",
     "img": [
@@ -7977,13 +7977,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "2a96b9ea-25d2-4ae3-9921-defa97ce3aa7",
-    "brandId": "0ba99dfd-d1b2-4390-b41f-aee8d7c154f2",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "9683cae6-6898-4ccd-98b3-f3b430be9f90",
+    "brandId": "45090a65-f4aa-446e-b026-aa2da9edc178",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор інверторний SIGMA 2.2/2.5кВт (5710721)",
     "price": "18858",
     "img": [
@@ -8106,13 +8106,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "671e6291-b0e7-4e2e-b9d8-c6a4be5ab90c",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "91c1dc9b-ef8d-479c-a89a-09435f154c44",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор KONNER&SOHNEN KS 5000E G",
     "price": "38399",
     "img": [
@@ -8239,13 +8239,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "5664106b-bd3e-4fbb-9c6e-e76699df3b3c",
-    "brandId": "7af06022-cd99-4de8-9dc1-83d5dd440435",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "6b84b49d-c61c-4834-929e-9687673aaabd",
+    "brandId": "cdc118e6-73fc-4c06-ab55-5d3c8a3b0b63",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор дизельний FORTE Fgd8000E (63491)",
     "price": "55699",
     "img": [
@@ -8364,13 +8364,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "2753b210-68ae-44d7-9c35-977b5fe09196",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "9db0e7d6-0861-412f-a9ef-2dc8dd95c953",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор дизельний KONNER&SOHNEN KS 9100HDE-1/3 ATSR (EURO V)",
     "price": "65999",
     "img": [
@@ -8509,13 +8509,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "b1a86730-745d-4c47-8bb5-6ee3cb29b678",
-    "brandId": "0ba99dfd-d1b2-4390-b41f-aee8d7c154f2",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "00e975e5-7821-45e9-8e6f-5beb78006eb9",
+    "brandId": "45090a65-f4aa-446e-b026-aa2da9edc178",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор SIGMA 5.5/6.0кВт (5710691)",
     "price": "54498",
     "img": [
@@ -8642,13 +8642,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "019a0ac2-248b-494a-93bc-7c6b0527c70f",
-    "brandId": "7af06022-cd99-4de8-9dc1-83d5dd440435",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "d342e09c-c0d3-4f06-93e1-88935d1ce7e6",
+    "brandId": "cdc118e6-73fc-4c06-ab55-5d3c8a3b0b63",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор дизельний FORTE FGD10000E 7кВт (130608)",
     "price": "77999",
     "img": [
@@ -8779,13 +8779,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "40b7b265-e068-4165-a1a0-279d19cd88b7",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "b2c672da-01ba-4463-b003-d56677e40292",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий KONNER&SOHNEN KS 6000iE S",
     "price": "57799",
     "img": [
@@ -8908,13 +8908,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "8d4ce987-732d-4b38-b6ae-0c927bd726f1",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "5a1bd632-3c7d-45dd-9284-2033d2d5c548",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор інверторний KONNER&SOHNEN KS 5500iEG S",
     "price": "66999",
     "img": [
@@ -9041,13 +9041,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "eaeb39b8-950c-4d37-b02f-8ff81e5bc658",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "795cd339-63cc-4ad1-8daa-b29f7a32a764",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор KONNER&SOHNEN KS8100IEG",
     "price": "66999",
     "img": [
@@ -9178,13 +9178,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "e6ef6499-1cb4-42ee-9109-7e9c52d5894f",
-    "brandId": "7af06022-cd99-4de8-9dc1-83d5dd440435",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "ad0a5e40-1145-41e3-970c-277cd010dbea",
+    "brandId": "cdc118e6-73fc-4c06-ab55-5d3c8a3b0b63",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор інверторний FORTE FG2100i (138122)",
     "price": "18579",
     "img": [
@@ -9319,13 +9319,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "1e759728-b7c5-4858-94bc-15f165c6f433",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "d01d3f08-3d03-46b9-a160-689d7fce4752",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор KONNER&SOHNEN 12-1E 1/3 ATSR АВР (KS12-1E1/3ATSR)",
     "price": "90998",
     "img": [
@@ -9456,13 +9456,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "de2244f6-c141-42c9-8a91-6340686b76d9",
-    "brandId": "4d1c71df-40d2-4bcf-8968-5148b5b77c58",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "2190aa2d-0c18-452a-8293-f10f213654a7",
+    "brandId": "70cf0af8-a085-40e0-90f8-30b93805d49a",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий EINHELL TC-PG 55/E5",
     "price": "26999",
     "img": [
@@ -9585,13 +9585,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "03f4026e-2c4a-4c1f-bf33-87e85658bd6b",
-    "brandId": "998ceba1-5306-4da0-92d0-e8837cbe8749",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "2500a42a-995b-4514-832b-24546a086a02",
+    "brandId": "3ff1f63a-f0c2-43f7-9fa3-b081bcc5ce54",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий EnerSol EPG-5500SE",
     "price": "29999",
     "img": [
@@ -9718,13 +9718,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "f25b7ac3-e835-476b-98dd-baff2b26a377",
-    "brandId": "de687a2a-8bd2-49f3-84cf-3824276f27c4",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "24082e0a-9f3d-4619-9049-cb0d177d30f0",
+    "brandId": "bdb49d6b-34bc-452e-b400-33328c12278a",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор IRON ANGEL EG 5500 ME (2001257)",
     "price": "25657",
     "img": [
@@ -9859,13 +9859,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "6ae073b7-8dfa-4f73-bf33-cad62ef30bbd",
-    "brandId": "4c7df435-ff54-41e0-a2b3-ddd361234af8",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "a36a87ad-7a43-42fb-8beb-6c193c4262e8",
+    "brandId": "f201a3a8-1735-4893-8047-2e7aebfad6f9",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий POWER VALUE ZH3500YD 2,8 кВт",
     "price": "13599",
     "img": [
@@ -9944,13 +9944,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "23b4523d-f8b6-455f-b45e-2a112056c1c0",
-    "brandId": "7243080d-8c60-4acb-adf2-c43d5926de76",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "4e25b72f-cfec-48c8-ba16-cf8ba7cf1582",
+    "brandId": "172f3a3a-1b29-40b8-83c4-91c1f1834601",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор UNIPOWER H4500IE (4.0 кВт)",
     "price": "36900",
     "img": [
@@ -10073,13 +10073,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "4b45a261-bbd2-4663-a1b3-4489206a2c08",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "7dcd2ef7-d803-40e2-8038-8f92b8bd7832",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор KONNER&SOHNEN KS 3000E",
     "price": "21999",
     "img": [
@@ -10206,13 +10206,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "3d41d537-5291-485a-a053-81cad34bbd83",
-    "brandId": "7af06022-cd99-4de8-9dc1-83d5dd440435",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "df9064a5-9ffe-4454-b3c3-68ae0ca9732c",
+    "brandId": "cdc118e6-73fc-4c06-ab55-5d3c8a3b0b63",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор дизельний FORTE FGD4000 3кВт (130539)",
     "price": "23399",
     "img": [
@@ -10339,13 +10339,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "eb3a881a-d07d-4431-ac3f-31d9fd6a679f",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "afa4c7b5-d370-431b-b501-efd87531de37",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий KONNER&SOHNEN KSB 2200A",
     "price": "9799",
     "img": [
@@ -10476,13 +10476,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "3dca2bc3-9d94-4f73-ba54-7d45c3380741",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "6d32c16d-2375-4b1c-9a9a-b0bc81eed713",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий KONNER&SOHNEN KS3000",
     "price": "16799",
     "img": [
@@ -10617,13 +10617,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "2b4215a4-7e16-4335-b537-fce7cc901e5b",
-    "brandId": "7243080d-8c60-4acb-adf2-c43d5926de76",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "daa85abe-3506-42e1-8d28-7f68378901fb",
+    "brandId": "172f3a3a-1b29-40b8-83c4-91c1f1834601",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор інверторний бензиновий UNIPOWER H3150IS 3 кВт (30002)",
     "price": "22800",
     "img": [
@@ -10754,13 +10754,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "fdbf61be-987a-4ccc-adbc-1475191807f0",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "5dba70da-bfb0-4e01-b8f1-c3e70748ebff",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор KONNER&SOHNEN Basic KSB 2800A",
     "price": "9699",
     "img": [
@@ -10891,13 +10891,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "4149e3df-3358-402d-900e-b75f4e6c4bbe",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "6e6217d9-e6f7-439a-925c-7037fcc06633",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор KONNER&SOHNEN KS 4100iEG",
     "price": "42699",
     "img": [
@@ -11032,13 +11032,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "bb9793e0-1cfc-4385-94f9-76fee6434485",
-    "brandId": "56322e86-64a6-4a0a-bdb8-2eb8214b1fe6",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "2d30227d-f1fc-4b4f-a890-6000de75370c",
+    "brandId": "7f4f2752-9de8-45fe-a0a4-3bedc0f0dbb4",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор EF POWER V10800Е (8.5 кВт)",
     "price": "48300",
     "img": [
@@ -11161,13 +11161,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "56b2afd5-12be-4e4c-92aa-fdcf5a2d8799",
-    "brandId": "3fd7d36b-d80b-4b55-b7ab-b8ba8dafbb84",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "3351d650-15e7-46e7-97d8-853d4abc2c55",
+    "brandId": "6d09581f-7668-4117-9c2d-1756444a69df",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий KOMPAK K8000",
     "price": "33499",
     "img": [
@@ -11294,13 +11294,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "42c8c13d-2cdd-4bb2-bf2c-a8060d489424",
-    "brandId": "56322e86-64a6-4a0a-bdb8-2eb8214b1fe6",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "abb05ccb-b7aa-4bc1-a07b-81b1ecc6ac45",
+    "brandId": "7f4f2752-9de8-45fe-a0a4-3bedc0f0dbb4",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор EF POWER V3000 (2.8 кВт)",
     "price": "11200",
     "img": [
@@ -11423,13 +11423,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "6ed0b2d1-5acd-464b-b0c8-3e3bce0783ea",
-    "brandId": "4c7df435-ff54-41e0-a2b3-ddd361234af8",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "12727a96-ae2c-4f0b-a7cf-ded15727f3d5",
+    "brandId": "f201a3a8-1735-4893-8047-2e7aebfad6f9",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий POWER VALUE ZH2800YD 2,5 кВт",
     "price": "11699",
     "img": [
@@ -11536,13 +11536,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "ad293f9e-8275-4058-9556-132ba4dc717e",
-    "brandId": "56322e86-64a6-4a0a-bdb8-2eb8214b1fe6",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "daf7ba4b-d9a1-4c35-a685-0e96df52dc65",
+    "brandId": "7f4f2752-9de8-45fe-a0a4-3bedc0f0dbb4",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор EF POWER V9500Е (7.5 кВт)",
     "price": "38500",
     "img": [
@@ -11665,13 +11665,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "12f9f495-3a6c-4b84-b43a-01126f1af7ba",
-    "brandId": "998ceba1-5306-4da0-92d0-e8837cbe8749",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "9094aaa4-4562-425a-9401-0bb2ac14b4fc",
+    "brandId": "3ff1f63a-f0c2-43f7-9fa3-b081bcc5ce54",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий EnerSol EPG-5500S",
     "price": "27999",
     "img": [
@@ -11802,13 +11802,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "c6d7c99b-4076-4205-b12c-29d8e02ceda9",
-    "brandId": "7af06022-cd99-4de8-9dc1-83d5dd440435",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "ecf141b7-9da2-4336-8674-2667160de846",
+    "brandId": "cdc118e6-73fc-4c06-ab55-5d3c8a3b0b63",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор дизельний FORTE FGD 6500E (43690)",
     "price": "36999",
     "img": [
@@ -11935,13 +11935,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "c472cc03-0390-4bc2-a825-32cefa1c4e5c",
-    "brandId": "7af06022-cd99-4de8-9dc1-83d5dd440435",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "31290796-db18-4c42-84c4-73d1031d0ae2",
+    "brandId": "cdc118e6-73fc-4c06-ab55-5d3c8a3b0b63",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор дизельний Forte FGD6500E3 (30750)",
     "price": "41219",
     "img": [
@@ -12060,13 +12060,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "68298854-d567-4ef0-8612-3e7c27ca8d4c",
-    "brandId": "7af06022-cd99-4de8-9dc1-83d5dd440435",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "2f7c60e9-5024-4fd4-a116-925617f7fb4c",
+    "brandId": "cdc118e6-73fc-4c06-ab55-5d3c8a3b0b63",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий FORTE FG6500E (44907)",
     "price": "25749",
     "img": [
@@ -12193,13 +12193,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "70f74e0c-c5c4-4826-af18-c4b20383fac1",
-    "brandId": "0ba99dfd-d1b2-4390-b41f-aee8d7c154f2",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "102fde65-563c-41c8-bb06-7c0c807b4ba8",
+    "brandId": "45090a65-f4aa-446e-b026-aa2da9edc178",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий SIGMA 220-380В 7.5/8.0кВт (5710501)",
     "price": "45805",
     "img": [
@@ -12318,13 +12318,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "608ccb48-530b-4ce0-aae6-7b2a3680aea1",
-    "brandId": "998ceba1-5306-4da0-92d0-e8837cbe8749",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "c6031d37-5131-418a-bdf8-6ade94ccee4b",
+    "brandId": "3ff1f63a-f0c2-43f7-9fa3-b081bcc5ce54",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий ENERSOL EPG-5500SEA",
     "price": "31999",
     "img": [
@@ -12451,13 +12451,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "d5029f26-a2c5-4941-a7a3-60446528d93b",
-    "brandId": "7af06022-cd99-4de8-9dc1-83d5dd440435",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "3d42fdd9-c755-4a7f-9803-6a996f2fb577",
+    "brandId": "cdc118e6-73fc-4c06-ab55-5d3c8a3b0b63",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий FORTE FG3800 (43689)",
     "price": "10999",
     "img": [
@@ -12584,13 +12584,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "cbfa715c-b84d-4c08-b8fb-a01f5bd0f966",
-    "brandId": "ce37865f-f03f-46d9-a897-ac7a6400b3d5",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "269fd365-6672-48cb-9da9-79fef1bfd093",
+    "brandId": "62e75769-6613-4de8-be54-5b569af2c1d3",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий DEPCO GS-2500CL 2 кВт (50001)",
     "price": "12500",
     "img": [
@@ -12709,13 +12709,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "7119b4aa-5a8e-45ff-bd74-1320b9d865c1",
-    "brandId": "b657c91a-6167-4a69-a594-60c4885ffb97",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "2ab3f7ac-5794-489d-bc64-a790ef417b22",
+    "brandId": "4c51a949-5008-4976-9c63-cec4fc7ecf53",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий GRAPHITE 2.0/2.2кВт",
     "price": "12999",
     "img": [
@@ -12818,13 +12818,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "db906d86-1260-434a-b8b2-67c77d343289",
-    "brandId": "7af06022-cd99-4de8-9dc1-83d5dd440435",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "0e15049c-3518-46f8-ac4f-2e9d2e8ccdce",
+    "brandId": "cdc118e6-73fc-4c06-ab55-5d3c8a3b0b63",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий FORTE FG3500E (44888)",
     "price": "12319",
     "img": [
@@ -12951,13 +12951,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "bbccf373-5315-450b-8cb2-de2bee85e8da",
-    "brandId": "4d1c71df-40d2-4bcf-8968-5148b5b77c58",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "5ec7d9d7-6e12-4495-978c-710de5b45d13",
+    "brandId": "70cf0af8-a085-40e0-90f8-30b93805d49a",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий EINHELL TC-IG 2000 (4152590)",
     "price": "23299",
     "img": [
@@ -13092,13 +13092,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "12a6ee35-5d75-4708-ba51-22dae8c8b816",
-    "brandId": "938c6c10-3a11-44cd-b1a4-b35debf54240",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "4fabebb7-3a21-4e56-965a-efff52898ff3",
+    "brandId": "66bab55c-3aca-411e-a750-d764b923ad10",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор TEKHMANN TGG-0.8 RS AL (852659)",
     "price": "5500",
     "img": [
@@ -13213,13 +13213,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "f495741a-b143-4fcf-86a1-fabff397a79e",
-    "brandId": "ce37865f-f03f-46d9-a897-ac7a6400b3d5",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "9387bc4a-8eaf-43b5-9677-b0924a0ffe0a",
+    "brandId": "62e75769-6613-4de8-be54-5b569af2c1d3",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор DEPCO GS-3500CL 2.8 кВт (50002)",
     "price": "13100",
     "img": [
@@ -13342,13 +13342,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "41808aaf-23f9-48c0-999b-685bff53870a",
-    "brandId": "4d1c71df-40d2-4bcf-8968-5148b5b77c58",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "6ca3fcfd-683a-4577-ad71-53d63eebc045",
+    "brandId": "70cf0af8-a085-40e0-90f8-30b93805d49a",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий EINHELL TC-IG 1100 (4152580)",
     "price": "13998",
     "img": [
@@ -13463,13 +13463,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "a1855e04-7fb0-4517-81c1-f4e313135e06",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "2b469434-84df-4c12-98a1-89841c0be9af",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор KONNER&SOHNEN KS 6000iE ATS (KS6000IESATS)",
     "price": "64399",
     "img": [
@@ -13596,13 +13596,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "4718acb6-309e-43e4-92a0-f5e33c7ed9ad",
-    "brandId": "8236f9d7-9d8e-4d1f-810f-8584a4d79587",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "2dad7a81-4aae-4bff-b54b-44820afe8727",
+    "brandId": "673a7dc8-00f8-40af-9efa-994cac2014cb",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий ITC POWER GG15000LEK-T",
     "price": "143999",
     "img": [
@@ -13717,13 +13717,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "6fce12c9-ae1f-44b1-8136-1fe1d2ea39b0",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "1cd4b2e7-47a3-4c9d-b850-c1fc9b0f793b",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор KONNER&SOHNEN KS 2000i S",
     "price": "27299",
     "img": [
@@ -13854,13 +13854,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "98f148f5-a996-4d85-8345-c61bdec0d049",
-    "brandId": "56322e86-64a6-4a0a-bdb8-2eb8214b1fe6",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "67d1ee0d-b5bb-4abb-8b36-10939a6733d3",
+    "brandId": "7f4f2752-9de8-45fe-a0a4-3bedc0f0dbb4",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор EF POWER V6500Е (5.5 кВт)",
     "price": "28600",
     "img": [
@@ -13983,13 +13983,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "f50e470f-e5a8-46a7-866b-25d5c242ed4c",
-    "brandId": "3197fa59-61fb-4359-afc2-45fd40f83980",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "3c57f22f-45fc-4d8f-b93f-8fb4d05ddb8a",
+    "brandId": "99ceb935-bfb0-4d0c-9e9c-9593188b953f",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор AL-KO 3500 - C (130931)",
     "price": "14908",
     "img": [
@@ -14092,13 +14092,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "db208b56-fdad-4184-8e04-baade173ecf6",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "fdfb97be-f736-4176-89fa-d54310602ff3",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор KONNER&SOHNEN KS 7000E ATS",
     "price": "43999",
     "img": [
@@ -14217,13 +14217,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "86515748-30af-4721-80bc-aae5e5d3a618",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "4a060fe4-6495-4968-b42c-01e08a682968",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор KONNER&SOHNEN KS 10000E G",
     "price": "49999",
     "img": [
@@ -14350,13 +14350,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "c5618704-c113-4765-a375-9f1784298432",
-    "brandId": "7af06022-cd99-4de8-9dc1-83d5dd440435",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "6ba42b83-f65b-4d95-a285-9c234f7a28dc",
+    "brandId": "cdc118e6-73fc-4c06-ab55-5d3c8a3b0b63",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор інверторний FORTE FG2500i (138124)",
     "price": "21999",
     "img": [
@@ -14491,13 +14491,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "0d69fb1c-a707-4295-8f9f-98d95faf8bc0",
-    "brandId": "0ba99dfd-d1b2-4390-b41f-aee8d7c154f2",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "2ae065b1-7747-4a20-925a-80c3820e464c",
+    "brandId": "45090a65-f4aa-446e-b026-aa2da9edc178",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий SIGMA 7.5/8.0 кВт (571078)1",
     "price": "47403",
     "img": [
@@ -14608,13 +14608,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "ff4df8f5-b87f-4d6f-9ea5-e0dedd77e7bd",
-    "brandId": "4d1c71df-40d2-4bcf-8968-5148b5b77c58",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "e204c009-6dc7-4445-aba1-f14a4ff6969b",
+    "brandId": "70cf0af8-a085-40e0-90f8-30b93805d49a",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий EINHELL TC-PG 35/E5 230В 2.6/3.1кВт (4152551)",
     "price": "12999",
     "img": [
@@ -14733,13 +14733,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "7286f70d-9983-4fd4-87af-47ef13c85320",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "03b08b0d-0a26-4f7f-b1ee-776108d31b38",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор інверторний KONNER&SOHNEN KS 4000iEG S",
     "price": "52299",
     "img": [
@@ -14866,13 +14866,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "784bfdc3-9332-44af-9417-41c101017a8f",
-    "brandId": "0ba99dfd-d1b2-4390-b41f-aee8d7c154f2",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "fa962a5c-9433-4eea-8345-1e7c8df3fc87",
+    "brandId": "45090a65-f4aa-446e-b026-aa2da9edc178",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор SIGMA 5.5-6.0кВт (5710761)",
     "price": "29091",
     "img": [
@@ -14995,13 +14995,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "f60a3507-921a-4de8-b1e1-8e063a3763f0",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "6c95bb01-a083-4cf8-91e3-512e8cfbd0d9",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор KONNER&SOHNEN 15-1E 1/3 ATSR АВР (KS15-1E1/3ATSR)",
     "price": "155999",
     "img": [
@@ -15132,13 +15132,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "ed97e06a-d98e-4139-a00f-5079015875d3",
-    "brandId": "fa372b26-761e-4312-a371-3e8efc8b8095",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "8dbf0d7d-710b-4540-982d-cc142313fcd4",
+    "brandId": "69feb171-b528-4676-a183-0040eab850c1",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий GRAD 7.0/7.5 кВт (5710985)",
     "price": "32224",
     "img": [
@@ -15273,13 +15273,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "aad1822f-cc6c-4f09-830c-7e21488c0cde",
-    "brandId": "4d1c71df-40d2-4bcf-8968-5148b5b77c58",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "7b90ba69-e491-4bda-b3ed-c44dcdc3ae0e",
+    "brandId": "70cf0af8-a085-40e0-90f8-30b93805d49a",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий EINHELL TC-PG 10/E5, 230В 0.68/0.8кВт, AVR (4152535)",
     "price": "5524",
     "img": [
@@ -15390,13 +15390,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "df8bcc3c-42ba-416c-9d28-4e9dee29d621",
-    "brandId": "7af06022-cd99-4de8-9dc1-83d5dd440435",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "b4c9a092-1a12-403d-82f3-9b16aef5859f",
+    "brandId": "cdc118e6-73fc-4c06-ab55-5d3c8a3b0b63",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий FORTE FG10000E (124467)",
     "price": "47009",
     "img": [
@@ -15519,13 +15519,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "3076f4d3-6a75-48a5-b484-1025493bbd5d",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "b0aedbc7-ff45-4920-835e-f3fccc40288e",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор KONNER&SOHNEN KS 2100IS",
     "price": "30599",
     "img": [
@@ -15656,13 +15656,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "4c873fef-ee50-4b68-bfd6-1505f0a28716",
-    "brandId": "998ceba1-5306-4da0-92d0-e8837cbe8749",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "695e5ecc-6eb6-4b7b-b741-807ccc1036cc",
+    "brandId": "3ff1f63a-f0c2-43f7-9fa3-b081bcc5ce54",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий ENERSOL EPG-3000SE",
     "price": "16999",
     "img": [
@@ -15747,13 +15747,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "b1b028fe-25fc-4021-b905-83a9f27956e2",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "53cf10b0-a75a-4bd2-91f0-2fb7d20b6878",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий KONNER&SOHNEN Basic KSB 2800C",
     "price": "11599",
     "img": [
@@ -15842,13 +15842,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "8ddcd3eb-cd9c-47c8-88a2-50bb76843273",
-    "brandId": "8236f9d7-9d8e-4d1f-810f-8584a4d79587",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "77b7381f-1945-451a-a80a-8b1acecde4d0",
+    "brandId": "673a7dc8-00f8-40af-9efa-994cac2014cb",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий ITC POWER GG34EI 3200/3400W",
     "price": "31999",
     "img": [
@@ -15929,13 +15929,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "aa0aa75a-48fa-407b-925d-495cc95f3194",
-    "brandId": "0f342606-6f22-4700-ac00-93eabdadcf80",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "cfe60047-dbb2-4b32-9fd2-ab5b73f8bac0",
+    "brandId": "ff8e4851-d522-4069-a6ce-8815697c43bb",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор дизельний QUBE QED4000XE 2.6/3.0kW",
     "price": "25763",
     "img": [
@@ -16028,13 +16028,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "e1c57532-a3b1-4920-98cd-a47fc0a2b054",
-    "brandId": "7243080d-8c60-4acb-adf2-c43d5926de76",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "ca6726bc-3abe-4e00-81f2-84ec98fbf411",
+    "brandId": "172f3a3a-1b29-40b8-83c4-91c1f1834601",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор UNIPOWER H6250IE (5.5 кВт)",
     "price": "48300",
     "img": [
@@ -16127,13 +16127,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "925e8a8a-7dc1-4872-b71a-18244034d184",
-    "brandId": "998ceba1-5306-4da0-92d0-e8837cbe8749",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "6f014cd9-d29f-4d3c-a0c0-fa2ae1b33773",
+    "brandId": "3ff1f63a-f0c2-43f7-9fa3-b081bcc5ce54",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий EnerSol EPG-7500SE",
     "price": "35999",
     "img": [
@@ -16230,13 +16230,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "6c6dd490-52cd-4f22-ace0-30130f758051",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "9c236590-795c-4a05-b5b9-ba9e793292a1",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор інверторний KONNER&SOHNEN KSB 21i S",
     "price": "22999",
     "img": [
@@ -16329,13 +16329,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "db98cf39-8151-40e3-ab7a-39a4724aab8c",
-    "brandId": "7243080d-8c60-4acb-adf2-c43d5926de76",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "9a9ba984-5eae-47e8-ace0-e39f0e54c8b4",
+    "brandId": "172f3a3a-1b29-40b8-83c4-91c1f1834601",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор UNIPOWER H4500I-1 (3.5 КВТ)",
     "price": "19500",
     "img": [
@@ -16428,13 +16428,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "5ddd484a-a6a7-492d-a152-3345dc504d47",
-    "brandId": "7af06022-cd99-4de8-9dc1-83d5dd440435",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "8eea1c00-73b4-4e1b-b06c-e23e480451f6",
+    "brandId": "cdc118e6-73fc-4c06-ab55-5d3c8a3b0b63",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор дизельний FORTE Fgd9000E (63492)",
     "price": "70169",
     "img": [
@@ -16527,13 +16527,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "776becda-a524-4e31-8598-548c40b84296",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "0060d285-23b2-40bf-9bdf-1c1a6e448ad6",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор KONNER&SOHNEN KS 15-1E ATSR АВР(ATS) (KS15-1EATSR)",
     "price": "146999",
     "img": [
@@ -16638,13 +16638,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "d15248d6-5e48-4293-b2bd-16069fb92801",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "4baf528f-2f38-43b2-9c30-892e160f262f",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор бензиновий KONNER&SOHNEN KS 48V-DC",
     "price": "52999",
     "img": [
@@ -16729,13 +16729,13 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   },
   {
-    "id": "0fa30d1c-f40a-4c27-9d45-73a4a2512455",
-    "brandId": "15d7a625-3601-4483-a5f9-250d0f8eb743",
-    "categoryId": "d706cec3-7ffd-4a81-a313-6bbaa37b1aac",
+    "id": "79c8517f-8a4e-487c-9048-e5040af6fe7d",
+    "brandId": "a267d942-2569-4ed3-9b6f-35bec2bd41fe",
+    "categoryId": "a2606d00-5ac5-4c24-be51-7b8d9bb0fb75",
     "title": "Генератор дизельний KONNER&SOHNEN KS 9200HDES-1/3 ATSR",
     "price": "87999",
     "img": [
@@ -16828,7 +16828,7 @@
       }
     ],
     "rating": "0",
-    "createdAt": "2024-12-23T00:12:54.359Z",
-    "updatedAt": "2024-12-23T00:12:54.359Z"
+    "createdAt": "2025-01-09T22:31:53.316Z",
+    "updatedAt": "2025-01-09T22:31:53.316Z"
   }
 ]

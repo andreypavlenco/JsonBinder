@@ -2,24 +2,15 @@ import * as path from 'path';
 import { createReadStream } from 'fs';
 import { Injectable, BadRequestException } from '@nestjs/common';
 import { CreateProductsDto } from 'src/products/dto/create-products-dto';
-import { CacheService } from 'src/cache/cache.service';
+
 
 @Injectable()
 export class ReadFileService {
-  private readonly cacheKey = 'file:data';
+ 
 
-  constructor(private readonly cacheService: CacheService) {}
+  constructor() {}
 
   async readFile(): Promise<CreateProductsDto[]> {
-    const cachedData = await this.cacheService.retrieveFromCache(this.cacheKey);
-
-    if (cachedData) {
-      return cachedData;
-    }
-    return this.readFileFromDisk();
-  }
-
-  private async readFileFromDisk(): Promise<CreateProductsDto[]> {
     const absolutePath = path.join(process.cwd(), 'loading_files/data.json');
 
     return new Promise((resolve, reject) => {
@@ -34,7 +25,7 @@ export class ReadFileService {
         try {
           const fileContent = Buffer.concat(chunks).toString();
           const jsonData: CreateProductsDto[] = JSON.parse(fileContent);
-          await this.cacheService.cacheData(this.cacheKey, jsonData);
+    
           resolve(jsonData);
         } catch (error) {
           reject(new BadRequestException('Invalid JSON format', error));

@@ -1,5 +1,3 @@
-import { CacheModule } from './cache/cache.module';
-import { RedisModule } from './redis/redis.module';
 import { ProductsImportFromJsonModule } from './products/products-import-from-json/products-import.module';
 import { BrandsImportFromJsonModule } from './brands/brands-import-from-json/brands-import.module';
 import { Module } from '@nestjs/common';
@@ -15,15 +13,13 @@ import { ImportFromJsonModule } from './import-from-json/import-from-json.module
 import { APP_FILTER } from '@nestjs/core';
 import { HttpExceptionFilter } from './shared/filters/http-exception.filter';
 import { ErrorHandlerModule } from './shared/error-handler/error-handler.module';
-import { RepositoryModule } from './repositories/repository/repository.module';
+
 
 @Module({
   imports: [
-    RepositoryModule,
+   
     ErrorHandlerModule,
     ImportFromJsonModule,
-    CacheModule,
-    RedisModule,
     JsonUploadModule,
     ProductsImportFromJsonModule,
     CategoriesImportFromJsonModule,
