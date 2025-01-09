@@ -1,10 +1,10 @@
-import { Inject, Injectable, NotFoundException } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { ProductRepository } from 'src/modules/products/repository/products.repository';
 import { CreateProductsDto } from './dto/create-products-dto';
 import { Products } from '@prisma/client';
 import { UpdateProductsDto } from './dto/update-products-dto';
 import { ERROR_MESSAGES } from 'src/common/constants/error-messages';
-import NotFoundError from 'src/common/error-handler/error-handler';
+import NotFoundError from 'src/common/exceptions/not-found.exception';
 
 @Injectable()
 export class ProductsService {
@@ -31,30 +31,30 @@ export class ProductsService {
     }
   }
 
-    async findById(id: string): Promise<Products> {
-      try {
-        const product = await this.productsRepository.findById(id);
-        console.log(product)
-        if (!product) {
-          throw new NotFoundError('product',id);
-        }
-        return product;
-      } catch (error) {
-        if (error.status === 404) {
-          throw error
-        }  
+  async findById(id: string): Promise<Products> {
+    try {
+      const product = await this.productsRepository.findById(id);
+      if (!product) {
+        throw new NotFoundError(ERROR_MESSAGES.PRODUCT_NOT_FOUND, id);
       }
+      return product;
+    } catch (error) {
+      if (error instanceof NotFoundError) {
+        throw error;
+      }
+      throw new Error(ERROR_MESSAGES.RETRIEVE_PRODUCTS);
     }
+  }
 
   async delete(id: string): Promise<{ title: string }> {
     try {
       const product = await this.productsRepository.delete(id);
       if (!product) {
-        throw new NotFoundException(ERROR_MESSAGES.PRODUCT_NOT_FOUND + `${id}`);
+        throw new NotFoundError(ERROR_MESSAGES.PRODUCT_NOT_FOUND, id);
       }
       return product;
     } catch (error) {
-      if (error instanceof NotFoundException) {
+      if (error instanceof NotFoundError) {
         throw error;
       }
       throw new Error(ERROR_MESSAGES.DELETE_PRODUCT);
@@ -65,11 +65,11 @@ export class ProductsService {
     try {
       const product = await this.productsRepository.update(id, dto);
       if (!product) {
-        throw new NotFoundException(ERROR_MESSAGES.PRODUCT_NOT_FOUND + `${id}`);
+        throw new NotFoundError(ERROR_MESSAGES.PRODUCT_NOT_FOUND, id);
       }
       return product;
     } catch (error) {
-      if (error instanceof NotFoundException) {
+      if (error instanceof NotFoundError) {
         throw error;
       }
       throw new Error(ERROR_MESSAGES.UPDATE_PRODUCT);

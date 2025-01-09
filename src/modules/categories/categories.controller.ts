@@ -1,6 +1,7 @@
 import { Body, Controller, Delete, Get, Param, Patch } from '@nestjs/common';
 import { CategoriesService } from './categories.service';
 import { UpdateCategoriesDto } from './dto/update-categories-dto';
+import { IdParamDto } from 'src/common/dto/id-param.dto';
 
 @Controller('categories')
 export class CategoriesController {
@@ -12,17 +13,17 @@ export class CategoriesController {
   }
 
   @Delete(':id')
-  delete(@Param('id') id: string) {
-    return this.categoriesService.delete(id);
+  delete(@Param() params: IdParamDto) {
+    return this.categoriesService.delete(params.id);
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() dto: UpdateCategoriesDto) {
-    return this.categoriesService.update(id, dto);
+  update(@Param() params: IdParamDto, @Body() dto: UpdateCategoriesDto) {
+    return this.categoriesService.update(params.id, dto);
   }
 
   @Get(':id')
-  findId(@Param('id') id: string) {
-    return this.categoriesService.findId(id);
+  findId(@Param() params: IdParamDto) {
+    return this.categoriesService.findId(params.id);
   }
 }
