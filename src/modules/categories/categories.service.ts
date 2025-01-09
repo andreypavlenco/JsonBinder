@@ -1,9 +1,10 @@
-import { Inject, Injectable, NotFoundException } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { CategoriesRepository } from 'src/modules/categories/repository/categories.repository';
 import { CreateCategoriesDto } from './dto/create-categories-dto';
 import { Categories } from '@prisma/client';
 import { UpdateCategoriesDto } from './dto/update-categories-dto';
 import { ERROR_MESSAGES } from 'src/common/constants/error-messages';
+import NotFoundError from 'src/common/exceptions/not-found.exception';
 
 @Injectable()
 export class CategoriesService {
@@ -32,13 +33,11 @@ export class CategoriesService {
     try {
       const category = await this.categoriesRepository.findById(id);
       if (!category) {
-        throw new NotFoundException(
-          ERROR_MESSAGES.CATEGORY_NOT_FOUND + `${id}`,
-        );
+        throw new NotFoundError(ERROR_MESSAGES.CATEGORY_NOT_FOUND, id);
       }
       return category;
     } catch (error) {
-      if (error instanceof NotFoundException) {
+      if (error instanceof NotFoundError) {
         throw error;
       }
       throw new Error(ERROR_MESSAGES.RETRIEVE_CATEGORY);
@@ -49,13 +48,11 @@ export class CategoriesService {
     try {
       const category = await this.categoriesRepository.delete(id);
       if (!category) {
-        throw new NotFoundException(
-          ERROR_MESSAGES.CATEGORY_NOT_FOUND + `${id}`,
-        );
+        throw new NotFoundError(ERROR_MESSAGES.CATEGORY_NOT_FOUND, id);
       }
       return category;
     } catch (error) {
-      if (error instanceof NotFoundException) {
+      if (error instanceof NotFoundError) {
         throw error;
       }
       throw new Error(ERROR_MESSAGES.DELETE_CATEGORY);
@@ -66,13 +63,11 @@ export class CategoriesService {
     try {
       const category = await this.categoriesRepository.update(id, dto);
       if (!category) {
-        throw new NotFoundException(
-          ERROR_MESSAGES.CATEGORY_NOT_FOUND + `${id}`,
-        );
+        throw new NotFoundError(ERROR_MESSAGES.CATEGORY_NOT_FOUND, id);
       }
       return category;
     } catch (error) {
-      if (error instanceof NotFoundException) {
+      if (error instanceof NotFoundError) {
         throw error;
       }
       throw new Error(ERROR_MESSAGES.UPDATE_CATEGORY);
