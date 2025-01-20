@@ -1,15 +1,16 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { CategoriesRepository } from 'src/modules/categories/repository/categories.repository';
-import { CreateCategoriesDto } from './dto/create-categories-dto';
 import { Categories } from '@prisma/client';
-import { UpdateCategoriesDto } from './dto/update-categories-dto';
 import { ERROR_MESSAGES } from 'src/common/constants/error-messages';
 import NotFoundError from 'src/common/exceptions/not-found.exception';
+import { CreateCategoriesDto, UpdateCategoriesDto } from './dto';
+import { CATEGORIES_REPOSITORY_TOKEN } from 'src/common/constants/repository-token';
+import { handleHttpException } from 'src/common/exceptions/handle-http.exception';
 
 @Injectable()
 export class CategoriesService {
   constructor(
-    @Inject('CATEGORIES_REPOSITORY')
+    @Inject(CATEGORIES_REPOSITORY_TOKEN)
     private readonly categoriesRepository: CategoriesRepository,
   ) {}
 
@@ -29,7 +30,7 @@ export class CategoriesService {
     }
   }
 
-  async findId(id: string): Promise<Categories> {
+  async findById(id: string): Promise<Categories> {
     try {
       const category = await this.categoriesRepository.findById(id);
       if (!category) {
@@ -37,10 +38,7 @@ export class CategoriesService {
       }
       return category;
     } catch (error) {
-      if (error instanceof NotFoundError) {
-        throw error;
-      }
-      throw new Error(ERROR_MESSAGES.RETRIEVE_CATEGORY);
+      handleHttpException(error, ERROR_MESSAGES.RETRIEVE_CATEGORY);
     }
   }
 
@@ -52,10 +50,7 @@ export class CategoriesService {
       }
       return category;
     } catch (error) {
-      if (error instanceof NotFoundError) {
-        throw error;
-      }
-      throw new Error(ERROR_MESSAGES.DELETE_CATEGORY);
+      handleHttpException(error, ERROR_MESSAGES.DELETE_CATEGORY);
     }
   }
 
@@ -67,10 +62,7 @@ export class CategoriesService {
       }
       return category;
     } catch (error) {
-      if (error instanceof NotFoundError) {
-        throw error;
-      }
-      throw new Error(ERROR_MESSAGES.UPDATE_CATEGORY);
+      handleHttpException(error, ERROR_MESSAGES.UPDATE_CATEGORY);
     }
   }
 }
