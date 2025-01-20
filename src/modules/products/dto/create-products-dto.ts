@@ -1,4 +1,3 @@
-import { MiddlewareBuilder } from '@nestjs/core';
 import {
   ArrayNotEmpty,
   IsArray,
@@ -7,18 +6,11 @@ import {
   IsNumber,
   IsString,
   IsUrl,
-  isURL,
   IsUUID,
   Length,
   Max,
   Min,
 } from 'class-validator';
-
-// @TODO check:
-// length (empty sting is useless) (DB throw the error if big size)
-// numbers after point for decimal
-// @IsUrl if img must be url
-// uuid if foreign key
 
 export class CreateProductsDto {
   @IsUUID()
@@ -45,7 +37,6 @@ export class CreateProductsDto {
   brandId: string;
 
   @IsArray()
-  @IsUrl()
   description: string[];
 
   @IsNumber()
