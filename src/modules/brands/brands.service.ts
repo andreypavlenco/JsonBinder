@@ -1,22 +1,22 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { BrandsRepository } from 'src/modules/brands/repository/brands.repository';
-import { CreateBrandsDto } from './dto/create-brands-dto';
 import { Brands } from '@prisma/client';
-import { UpdateBrandsDto } from './dto/update-brands-dto';
 import { ERROR_MESSAGES } from 'src/common/constants/error-messages';
 import NotFoundError from 'src/common/exceptions/not-found.exception';
+import { BRAND_REPOSITORY_TOKEN } from 'src/common/constants/repository-token';
+import { CreateBrandsDto, UpdateBrandsDto } from './dto';
+import { handleHttpException } from 'src/common/exceptions/handle-http.exception';
 
 @Injectable()
 export class BrandsService {
   constructor(
-    @Inject('BRANDS_REPOSITORY')
+    @Inject(BRAND_REPOSITORY_TOKEN)
     private readonly brandsRepository: BrandsRepository,
   ) {}
 
   async createMany(brands: CreateBrandsDto[]): Promise<Brands[]> {
     try {
-      const brand = await this.brandsRepository.createMany(brands);
-      return brand;
+      return await this.brandsRepository.createMany(brands);
     } catch (error) {
       throw new Error(ERROR_MESSAGES.SAVE_BRANDS);
     }
@@ -24,14 +24,13 @@ export class BrandsService {
 
   async findAll(): Promise<Brands[]> {
     try {
-      const brands = await this.brandsRepository.findAll();
-      return brands;
+      return await this.brandsRepository.findAll();
     } catch (error) {
       throw new Error(ERROR_MESSAGES.RETRIEVE_BRANDS);
     }
   }
 
-  async findId(id: string): Promise<Brands> {
+  async findById(id: string): Promise<Brands> {
     try {
       const brand = await this.brandsRepository.findById(id);
       if (!brand) {
@@ -39,10 +38,7 @@ export class BrandsService {
       }
       return brand;
     } catch (error) {
-      if (error instanceof NotFoundError) {
-        throw error;
-      }
-      throw new Error(ERROR_MESSAGES.RETRIEVE_BRAND);
+      handleHttpException(error, ERROR_MESSAGES.RETRIEVE_BRAND);
     }
   }
 
@@ -54,10 +50,7 @@ export class BrandsService {
       }
       return brand;
     } catch (error) {
-      if (error instanceof NotFoundError) {
-        throw error;
-      }
-      throw new Error(ERROR_MESSAGES.DELETE_BRAND);
+      handleHttpException(error, ERROR_MESSAGES.DELETE_BRAND);
     }
   }
 
@@ -69,10 +62,7 @@ export class BrandsService {
       }
       return brand;
     } catch (error) {
-      if (error instanceof NotFoundError) {
-        throw error;
-      }
-      throw new Error(ERROR_MESSAGES.UPDATE_BRAND);
+      handleHttpException(error, ERROR_MESSAGES.UPDATE_BRAND);
     }
   }
 }

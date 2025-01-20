@@ -18,12 +18,13 @@ export class BrandsController {
   }
 
   @Patch(':id')
+  // @TODO dto.title can be empty string
   update(@Param() params: IdParamDto, @Body() dto: UpdateBrandsDto) {
     return this.brandsService.update(params.id, dto);
   }
 
   @Get(':id')
   findId(@Param() params: IdParamDto) {
-    return this.brandsService.findId(params.id);
+    return this.brandsService.findById(params.id);
   }
 }
