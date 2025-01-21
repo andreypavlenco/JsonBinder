@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, Param, Patch } from '@nestjs/common';
 import { CategoriesService } from './categories.service';
-import { UpdateCategoriesDto } from './dto/update-categories-dto';
-import { IdParamDto } from 'src/common/dto/id-param.dto';
+import { IdParamDto } from 'src/common/dto';
+import { UpdateCategoriesDto } from './dto';
 
 @Controller('categories')
 export class CategoriesController {
@@ -24,6 +24,6 @@ export class CategoriesController {
 
   @Get(':id')
   findId(@Param() params: IdParamDto) {
-    return this.categoriesService.findId(params.id);
+    return this.categoriesService.findById(params.id);
   }
 }

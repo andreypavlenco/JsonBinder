@@ -8,19 +8,19 @@ export class ImportFromJsonService {
   constructor(
     private readonly brandsImportFromJson: BrandsImportFormJsonService,
     private readonly categoriesImportFromJson: CategoriesImportFromJsonService,
-    private readonly productsImportfromJson: ProductsImportFromJsonService,
+    private readonly productsImportFromJson: ProductsImportFromJsonService,
   ) {}
 
   importBrands() {
-    this.brandsImportFromJson.importUniqueBrands();
+    return this.brandsImportFromJson.importUniqueBrands();
   }
 
   importCategories() {
-    this.categoriesImportFromJson.importUniqueCategories();
+    return this.categoriesImportFromJson.importUniqueCategories();
   }
 
   importProducts() {
-    this.productsImportfromJson.importUniqueProducts();
+    return this.productsImportFromJson.importUniqueProducts();
   }
 
   async importFullJson() {

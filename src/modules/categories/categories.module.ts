@@ -3,6 +3,7 @@ import { CategoriesService } from './categories.service';
 import { CategoriesController } from './categories.controller';
 import { PrismaModule } from 'prisma/prisma.module';
 import { CategoriesRepository } from './repository/categories.repository';
+import { CATEGORIES_REPOSITORY_TOKEN } from 'src/common/constants/repository-token';
 
 @Module({
   imports: [PrismaModule],
@@ -10,7 +11,7 @@ import { CategoriesRepository } from './repository/categories.repository';
   providers: [
     CategoriesService,
     {
-      provide: 'CATEGORIES_REPOSITORY',
+      provide: CATEGORIES_REPOSITORY_TOKEN,
       useClass: CategoriesRepository,
     },
   ],

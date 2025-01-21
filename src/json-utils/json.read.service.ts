@@ -6,8 +6,6 @@ import { ERROR_MESSAGES } from 'src/common/constants/error-messages';
 
 @Injectable()
 export class ReadJsonService {
-  constructor() {}
-
   async readJson(): Promise<CreateProductsDto[]> {
     const absolutePath = path.join(process.cwd(), 'loading_files/data.json');
 

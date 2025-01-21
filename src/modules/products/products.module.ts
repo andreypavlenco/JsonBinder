@@ -3,6 +3,7 @@ import { ProductsController } from './products.controller';
 import { ProductsService } from './products.service';
 import { ProductRepository } from './repository/products.repository';
 import { PrismaModule } from 'prisma/prisma.module';
+import { PRODUCT_REPOSITORY_TOKEN } from 'src/common/constants/repository-token';
 
 @Module({
   imports: [PrismaModule],
@@ -10,7 +11,7 @@ import { PrismaModule } from 'prisma/prisma.module';
   providers: [
     ProductsService,
     {
-      provide: 'PRODUCT_REPOSITORY',
+      provide: PRODUCT_REPOSITORY_TOKEN,
       useClass: ProductRepository,
     },
   ],

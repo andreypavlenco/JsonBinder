@@ -6,7 +6,7 @@ import { CreateCategoriesDto } from '../../modules/categories/dto/create-categor
 import { ReadJsonService } from 'src/json-utils/json.read.service';
 import { ERROR_MESSAGES } from 'src/common/constants/error-messages';
 import { WriteJsonService } from 'src/json-utils/json.write.service';
-import { checkUnique } from 'src/common/utils/check-unique';
+import { checkUnique } from 'src/common/utils';
 
 @Injectable()
 export class CategoriesImportFromJsonService {
@@ -17,32 +17,26 @@ export class CategoriesImportFromJsonService {
   ) {}
 
   async importUniqueCategories(): Promise<Categories[]> {
-    try {
-      const products = await this.readJsonService.readJson();
-      const categoryNames = extractUniqueCategories(products);
-      const existCategories = await this.categoriesService.findAll();
-      const uniqueCategories = checkUnique<Categories, CreateCategoriesDto>(
-        existCategories,
-        categoryNames,
-      );
-      if (uniqueCategories.length === 0) {
-        throw new BadRequestException(ERROR_MESSAGES.NO_NEW_CATEGORIES);
-      }
-      return this.createCategories(uniqueCategories);
-    } catch (error) {
-      throw error;
+    const [products, existCategories] = await Promise.all([
+      this.readJsonService.readJson(),
+      this.categoriesService.findAll(),
+    ]);
+    const categoryNames = extractUniqueCategories(products);
+    const uniqueCategories = checkUnique<Categories, CreateCategoriesDto>(
+      existCategories,
+      categoryNames,
+    );
+    if (uniqueCategories.length === 0) {
+      throw new BadRequestException(ERROR_MESSAGES.NO_NEW_CATEGORIES);
     }
+    return this.createCategories(uniqueCategories);
   }
 
   private async createCategories(
     categories: CreateCategoriesDto[],
   ): Promise<Categories[]> {
-    try {
-      const category = await this.categoriesService.createMany(categories);
-      this.writeJsonService.writeCategoriesToJson(category);
-      return category;
-    } catch (error) {
-      throw error;
-    }
+    const category = await this.categoriesService.createMany(categories);
+    await this.writeJsonService.writeCategoriesToJson(category);
+    return category;
   }
 }

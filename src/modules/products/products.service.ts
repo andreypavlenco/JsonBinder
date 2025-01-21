@@ -1,22 +1,22 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { ProductRepository } from 'src/modules/products/repository/products.repository';
-import { CreateProductsDto } from './dto/create-products-dto';
 import { Products } from '@prisma/client';
-import { UpdateProductsDto } from './dto/update-products-dto';
 import { ERROR_MESSAGES } from 'src/common/constants/error-messages';
 import NotFoundError from 'src/common/exceptions/not-found.exception';
+import { PRODUCT_REPOSITORY_TOKEN } from 'src/common/constants/repository-token';
+import { CreateProductsDto, UpdateProductsDto } from './dto';
+import { handleHttpException } from 'src/common/exceptions/handle-http.exception';
 
 @Injectable()
 export class ProductsService {
   constructor(
-    @Inject('PRODUCT_REPOSITORY')
+    @Inject(PRODUCT_REPOSITORY_TOKEN)
     private readonly productsRepository: ProductRepository,
   ) {}
 
   async createMany(dto: CreateProductsDto[]): Promise<Products[]> {
     try {
-      const products = await this.productsRepository.createMany(dto);
-      return products;
+      return await this.productsRepository.createMany(dto);
     } catch (error) {
       throw new Error(ERROR_MESSAGES.SAVE_PRODUCTS);
     }
@@ -24,8 +24,7 @@ export class ProductsService {
 
   async findAll(): Promise<Products[]> {
     try {
-      const products = await this.productsRepository.findAll();
-      return products;
+      return await this.productsRepository.findAll();
     } catch (error) {
       throw new Error(ERROR_MESSAGES.RETRIEVE_PRODUCTS);
     }
@@ -39,10 +38,7 @@ export class ProductsService {
       }
       return product;
     } catch (error) {
-      if (error instanceof NotFoundError) {
-        throw error;
-      }
-      throw new Error(ERROR_MESSAGES.RETRIEVE_PRODUCTS);
+      handleHttpException(error, ERROR_MESSAGES.RETRIEVE_PRODUCT);
     }
   }
 
@@ -54,10 +50,7 @@ export class ProductsService {
       }
       return product;
     } catch (error) {
-      if (error instanceof NotFoundError) {
-        throw error;
-      }
-      throw new Error(ERROR_MESSAGES.DELETE_PRODUCT);
+      handleHttpException(error, ERROR_MESSAGES.DELETE_PRODUCT);
     }
   }
 
@@ -69,10 +62,7 @@ export class ProductsService {
       }
       return product;
     } catch (error) {
-      if (error instanceof NotFoundError) {
-        throw error;
-      }
-      throw new Error(ERROR_MESSAGES.UPDATE_PRODUCT);
+      handleHttpException(error, ERROR_MESSAGES.UPDATE_PRODUCT);
     }
   }
 }

@@ -1,27 +1,31 @@
-import { Controller, Post } from '@nestjs/common';
+import { Controller, HttpCode, HttpStatus, Post } from '@nestjs/common';
 import { ImportFromJsonService } from './import-from-json.service';
 
 @Controller('import')
 export class ImportFromJsonController {
-  constructor(private readonly importFromJsonservice: ImportFromJsonService) {}
+  constructor(private readonly importFromJsonService: ImportFromJsonService) {}
 
   @Post('brands')
+  @HttpCode(HttpStatus.CREATED)
   importBrands() {
-    return this.importFromJsonservice.importBrands();
+    return this.importFromJsonService.importBrands();
   }
 
   @Post('categories')
+  @HttpCode(HttpStatus.CREATED)
   importCategories() {
-    return this.importFromJsonservice.importCategories();
+    return this.importFromJsonService.importCategories();
   }
 
   @Post('products')
+  @HttpCode(HttpStatus.CREATED)
   importProducts() {
-    return this.importFromJsonservice.importProducts();
+    return this.importFromJsonService.importProducts();
   }
 
   @Post('full-import')
+  @HttpCode(HttpStatus.CREATED)
   importAll() {
-    return this.importFromJsonservice.importFullJson();
+    return this.importFromJsonService.importFullJson();
   }
 }

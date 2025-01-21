@@ -1,20 +1,16 @@
 export abstract class BaseRepository<TypeModel, CreateDto, UpdateDto> {
   constructor(private readonly entity: any) {}
 
-  get getEntity() {
-    return this.entity;
-  }
-
   createMany(dto: CreateDto[]): Promise<TypeModel[]> {
-    return this.getEntity.createMany({ data: dto });
+    return this.entity.createMany({ data: dto });
   }
 
   findAll(): Promise<TypeModel[]> {
-    return this.getEntity.findMany();
+    return this.entity.findMany();
   }
 
   findById(id: string): Promise<TypeModel | null> {
-    return this.getEntity.findUnique({
+    return this.entity.findUnique({
       where: {
         id,
       },
@@ -22,7 +18,7 @@ export abstract class BaseRepository<TypeModel, CreateDto, UpdateDto> {
   }
 
   delete(id: string): Promise<TypeModel> {
-    return this.getEntity.delete({
+    return this.entity.delete({
       where: {
         id,
       },
@@ -30,7 +26,7 @@ export abstract class BaseRepository<TypeModel, CreateDto, UpdateDto> {
   }
 
   update(id: string, dto: UpdateDto): Promise<TypeModel> {
-    return this.getEntity.update({
+    return this.entity.update({
       where: {
         id,
       },
