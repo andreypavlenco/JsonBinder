@@ -5,7 +5,6 @@ import { CategoriesModule } from './modules/categories/categories.module';
 import { ProductsModule } from './modules/products/products.module';
 import { ImportFromJsonModule } from './data-import-json/import-from-json.module';
 import { APP_FILTER } from '@nestjs/core';
-import { HttpExceptionFilter } from './common/exceptions/filters/http-exception.filter';
 import { JsonUtilsModule } from './json-utils/json.utils.module';
 
 @Module({
@@ -17,11 +16,6 @@ import { JsonUtilsModule } from './json-utils/json.utils.module';
     JsonUtilsModule,
     ProductsModule,
   ],
-  providers: [
-    {
-      provide: APP_FILTER,
-      useClass: HttpExceptionFilter,
-    },
-  ],
+  providers: [],
 })
 export class AppModule {}

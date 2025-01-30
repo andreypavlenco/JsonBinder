@@ -3,6 +3,7 @@ import { BrandsService } from './brands.service';
 import { BrandsController } from './brands.controller';
 import { PrismaModule } from 'prisma/prisma.module';
 import { BrandsRepository } from './repository/brands.repository';
+import { BRAND_REPOSITORY_TOKEN } from 'src/common/constants/repository-token';
 
 @Module({
   imports: [PrismaModule],
@@ -10,7 +11,7 @@ import { BrandsRepository } from './repository/brands.repository';
   providers: [
     BrandsService,
     {
-      provide: 'BRANDS_REPOSITORY',
+      provide: BRAND_REPOSITORY_TOKEN,
       useClass: BrandsRepository,
     },
   ],

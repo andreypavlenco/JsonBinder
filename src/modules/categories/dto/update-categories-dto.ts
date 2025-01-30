@@ -1,3 +1,3 @@
-import { CreateBrandsDto } from 'src/modules/brands/dto/create-brands-dto';
+import { CreateCategoriesDto } from './create-categories-dto';
 
-export class UpdateCategoriesDto extends CreateBrandsDto {}
+export class UpdateCategoriesDto extends CreateCategoriesDto {}
